@@ -1,0 +1,1292 @@
+/* ------------------------ */
+/* -                      - */
+/* -         SCSS         - */
+/* -   (view on GitHub)   - */
+/* -                      - */
+/* ------------------------ */
+
+// Screen sizes (based on Chrome dev tools)
+$mobile-s: 320px;
+$mobile-m: 375px;
+$mobile-l: 425px;
+$tablet: 768px;
+$laptop: 1024px;
+$desktop-s: 1440px;
+$desktop-m: 1920px;
+$desktop-l: 2560px;
+
+// Sizing
+$footer-height: 350px;
+$container-1-padding: 4%;
+$container-2-padding: 8%;
+$container-3-padding: 16%;
+
+// Colors
+$black: #000;
+$white: #fff;
+$light-grey: #f4f5f6;
+$grey:  #a3a3a3;
+$dark-grey: #727579;
+$navy: #191a1d;
+$coral: #e35768;
+$blue: #7bc9d1;
+$cerner-blue: #179dd6;
+$truman-purple: #6f2d91;
+$truman-gold: #c0b38c;
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Barlow:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
+$barlow: Barlow, Verdana, Arial, Helvetica, sans-serif;
+
+// Mixins
+@mixin transform($property) {
+  -webkit-transform: $property;
+  -moz-transform: $property;
+  -ms-transform: $property;
+  -o-transform: $property;
+  transform: $property;
+}
+
+@mixin border-radius($property) {
+  -webkit-border-radius: $property;
+  -moz-border-radius: $property;
+  -ms-border-radius: $property;
+  -o-border-radius: $property;
+  border-radius: $property;
+}
+
+
+
+
+/* ================================================================ */
+
+
+
+
+/* ------------------- */
+/* -                 - */
+/* -     GENERAL     - */
+/* -                 - */
+/* ------------------- */
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: $black;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+
+/* ---------- */
+/* -  Text  - */
+/* ---------- */
+
+h1 {
+  border-bottom: 2px solid $coral;
+  color: $grey;
+  display: inline-block;
+  font: 600 1em/1 $barlow;
+  margin: 0;
+  padding: 5px 35px 5px 0;
+}
+
+h2 {
+  color: $navy;
+  font: 700 2.8em/1 $barlow;
+  margin: 0;
+  padding: 5px 0;
+}
+
+h3 {
+  color: $white;
+  font: 500 1.75em/1 $barlow;
+  margin: 0;
+  padding: 12px 0;
+}
+
+p {
+  color: $navy;
+  font: 300 1.1em/1.4 $barlow;
+  margin: 0;
+  padding: 10px 0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 0 0 20px;
+}
+
+li {
+  font: 300 1em/1.25 $barlow;
+  padding: 0 0 8px 0;
+  text-indent: -10px;
+}
+
+li::before {
+  content: "- ";
+  color: $navy;
+}
+
+.underline {
+  color: $blue;
+  margin: 0 0 0 auto;
+  padding: 1px 0;
+  position: relative;
+  text-decoration: none;
+  transition: opacity .4s cubic-bezier(.51, .92, .24, 1);
+
+  &::after {
+    --scale: 0;
+    background-color: $blue;
+    content: '';
+    height: 1px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    transform: scaleX(var(--scale));
+    transform-origin: var(--x) 50%;
+    transition: transform .4s cubic-bezier(.51, .92, .24, 1);
+  }
+
+  &:hover::after {
+    --scale: 1;
+  }
+}
+
+
+/* ------- */
+/*  media  */
+/* ------- */
+
+/* - for tablet - */
+@media screen and (min-width: $tablet) {
+  h1 {
+    margin: 0 0 0 -20px;
+  }
+}
+
+
+
+
+/* ---------------- */
+/* -  Containers  - */
+/* ---------------- */
+
+#content-container {
+  background-color: $white;
+  min-height: 100%;
+  overflow: auto;
+  padding: 135px 0 $footer-height + 75px 0;
+  position: relative;
+}
+
+.shadow {
+  box-shadow: 0px 3px 15px rgba(0,0,0,0.125);
+}
+
+.container-1-padding {
+  padding: 0 $container-1-padding;
+}
+
+.container-2-padding {
+  padding: 0 $container-2-padding;
+}
+
+.container-3-padding {
+  padding: 0 $container-3-padding;
+}
+
+
+/* ------- */
+/*  media  */
+/* ------- */
+
+/* - for tablet - */
+@media screen and (min-width: $tablet) {
+  .container-2-padding {
+    padding: 0 $container-2-padding + 6%;
+  }
+  
+  .container-3-padding {
+    padding: 0 $container-3-padding + 4%;
+  }
+}
+
+/* - for laptop - */
+@media screen and (min-width: $laptop) {
+  .container-1-padding {
+    padding: 0 $container-1-padding - 1%;
+  }
+  
+  .container-3-padding {
+    padding: 0 $container-3-padding + 6%;
+  }
+}
+
+/* - for small desktop - */
+@media screen and (min-width: $desktop-s) {
+  .container-2-padding {
+    padding: 0 $container-2-padding + 8%;
+  }
+  
+  .container-3-padding {
+    padding: 0 $container-3-padding + 8%;
+  }
+}
+
+/* - for medium desktop - */
+@media screen and (min-width: $desktop-m) {
+  .container-1-padding {
+    padding: 0 $container-1-padding + 2%;
+  }
+
+  .container-2-padding {
+    padding: 0 $container-2-padding + 12%;
+  }
+  
+  .container-3-padding {
+    padding: 0 $container-3-padding + 12%;
+  }
+}
+
+/* - for large desktop - */
+@media screen and (min-width: $desktop-l) {
+  .container-1-padding {
+    padding: 0 $container-1-padding + 4%;
+  }
+
+  .container-2-padding {
+    padding: 0 $container-2-padding + 16%;
+  }
+  
+  .container-3-padding {
+    padding: 0 $container-3-padding + 16%;
+  }
+}
+
+
+
+
+/* ----------- */
+/* -  Grids  - */
+/* ----------- */
+
+/* grid 2
+  mobile: 1
+          2
+  tablet+: 1 2
+*/
+.grid-2-container {
+  display: grid;
+  grid-gap: 40px;
+  grid-template-areas:
+    auto;
+}
+
+/* grid 2-1
+  mobile: 2
+          1
+  tablet+: 1 2
+*/
+.grid-2-1-item1 { grid-area: one; }
+.grid-2-1-item2 { grid-area: two; }
+
+.grid-2-1-container {
+  display: grid;
+  grid-template-areas:
+    'two'
+    'one';
+}
+
+/* grid 1-1-2-3
+  mobile: 1
+          2
+          3
+  tablet+: 1 1
+            2 3
+*/
+.grid-1-1-2-3-item1 { grid-area: one; }
+.grid-1-1-2-3-item2 { grid-area: two; }
+.grid-1-1-2-item3 { grid-area: three; }
+
+.grid-1-1-2-3-container {
+  display: grid;
+  grid-gap: 40px;
+  grid-template-areas:
+    'one'
+    'two'
+    'three';
+}
+
+/* grid cerner
+  mobile: 1
+          2
+          3
+          4
+  tablet: 1 3
+          2 3
+          4 3
+  laptop: 1 3
+          2 3
+          4 4
+  desktop+: 1 3
+            2 4
+*/
+.grid-cerner-item1 {
+  grid-area: one; 
+  height: auto;
+}
+.grid-cerner-item2 {
+  height: auto;
+  grid-area: two;
+}
+.grid-cerner-item3 { grid-area: three; }
+
+.grid-cerner-container {
+  display: grid;
+  // grid-gap: 30px;
+  grid-template-areas:
+    'one'
+    'two'
+    'three';
+}
+
+
+/* ------- */
+/*  media  */
+/* ------- */
+
+/* - for tablet - */
+@media screen and (min-width: $tablet) {
+  .grid-2-container {
+    grid-template-columns:
+      auto auto;
+  }
+
+  .grid-2-same-size {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-2-1-container {
+    grid-template-areas:
+      'one two';
+  }
+
+  .grid-1-1-2-3-container {
+    grid-template-areas:
+      'one one'
+      'two three';
+  }
+
+  .grid-cerner-container {
+    grid-template-areas:
+      'one two'
+      'three two';
+  }
+}
+
+/* - for laptop - */
+@media screen and (min-width: $laptop) {
+  .grid-cerner-container {
+    grid-template-areas:
+      'one two'
+      'three three';
+  }
+}
+
+/* - for small desktop - */
+@media screen and (min-width: $desktop-s) {
+  .grid-cerner-container {
+    grid-template-areas:
+      'one two'
+      'one three';
+  }
+}
+
+
+
+
+/* ---------- */
+/* -  Felx  - */
+/* ---------- */
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px -20px -20px -20px;
+}
+
+.flex-item {
+  padding: 30px 20px;
+}
+
+
+/* ------- */
+/*  media  */
+/* ------- */
+
+/* - for tablet and bigger - */
+@media screen and (min-width: $tablet) {
+  .flex-item {
+    flex-basis: 50%;
+  }
+}
+
+
+
+
+/* ------------- */
+/* -  Buttons  - */
+/* ------------- */
+
+/* general */
+.rounded-button {
+  border: solid 1px $navy;
+  @include border-radius(999px);
+  color: $navy;
+  display: inline-block;
+  font: 300 1.1em/1 $barlow;
+  margin: 30px auto;
+  padding: 17px 35px 18px 35px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.rounded-button:hover {
+  background-color: $navy;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1), 0 4px 15px 0 rgba(0, 0, 0, 0.12);
+  color: $white;
+}
+
+/* coral & white buttons */
+.coral-white-button {
+  border-color: $coral;
+  color: $coral;
+}
+
+.coral-white-button:hover {
+  background-color: $coral;
+  color: $white;
+}
+
+/* coral & navy buttons */
+.coral-navy-button {
+  border-color: $coral;
+  color: $coral;
+}
+
+.coral-navy-button:hover {
+  background-color: $coral;
+  color: $navy;
+}
+
+/* blue & white buttons */
+.blue-white-button {
+  border-color: $blue;
+  color: $blue;
+}
+
+.blue-white-button:hover {
+  background-color: $blue;
+  color: $white;
+}
+
+/* blue & navy buttons */
+.blue-navy-button {
+  border-color: $blue;
+  color: $blue;
+}
+
+.blue-navy-button:hover {
+  background-color: $blue;
+  color: $navy;
+}
+
+/* make display block */
+.block-button {
+  display: block;
+}
+
+
+/* ------- */
+/*  media  */
+/* ------- */
+
+/* - only for devices without hover - */
+@media (any-hover: none) {
+  .rounded-button {
+    background-color: $navy;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 15px 0 rgba(0, 0, 0, 0.19);
+    color: $white;
+  }
+
+  .coral-white-button {
+    background-color: $coral;
+    color: $white;
+  }
+
+  .coral-navy-button {
+    background-color: $coral;
+    color: $navy;
+  }
+
+  .blue-white-button {
+    background-color: $blue;
+    color: $white;
+  }
+
+  .blue-navy-button {
+    background-color: $blue;
+    color: $navy;
+  }
+}
+
+
+
+
+/* ----------------- */
+/* -  Collapsible  - */
+/* ----------------- */
+
+.collapsible {
+  background-color: $navy;
+  border: none;
+  color: $blue;
+  cursor: pointer;
+  display: block;
+  font: 500 1.3em/1 $barlow;
+  margin: 0 0 5px 0;
+  outline: none;
+  padding-left: 16px;
+  text-align: left;
+  text-indent: -16px;
+  transition: all 0.25s ease-out;
+}
+
+.collapsible::before {
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid currentColor;
+  content: ' ';
+  display: inline-block;
+  margin-right: .7rem;
+  @include transform(translateY(-2px));
+  transition: all .2s ease-out;
+  vertical-align: middle;
+}
+
+.collapsible-active::before {
+  @include transform(rotate(90deg) translateX(-3px));
+}
+
+.collapsible-content {
+  max-height: 0px;
+  overflow: hidden;
+  padding-left: 17px;
+  transition: all .25s ease-in-out;
+}
+
+
+
+
+/* ----------- */
+/* -  Other  - */
+/* ----------- */
+
+.intro-container {
+  padding-bottom: 25px;
+  padding-top: 25px;
+}
+
+.shadow {
+  box-shadow: 0px 3px 15px rgba(0,0,0,0.125);
+}
+
+.light-shadow {
+  box-shadow: 0px 3px 15px rgba(0,0,0,0.0625);
+}
+
+.tags {
+  list-style-type: none;
+  margin: 10px 0 -8px 0;
+  padding: 0;
+
+  li {
+    border: solid 1px $dark-grey;
+    @include border-radius(5px);
+    color: $dark-grey;
+    display: inline-block;
+    font: 400 0.8em/1 $barlow;
+    margin: 0 4px 8px 0;
+    padding: 4px 5px 5px 5px;
+    text-indent: 0;
+  }
+
+  li::before {
+    content: "";
+  }
+}
+
+
+
+
+/* ================================================================ */
+
+
+
+
+/* --------------- */
+/* -             - */
+/* -     NAV     - */
+/* -             - */
+/* --------------- */
+
+nav {
+  background-color: $white;
+  height: 0;
+  margin: 0;
+}
+
+#navbar {
+  display: inline-block;
+  fill: $black;
+  filter: invert(1);
+  margin: 0;
+  mix-blend-mode: difference;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+}
+
+#ar-tab-logo {
+  float: left;
+  transition: all 0.2s ease-in-out;
+  width: 65px;
+}
+
+
+
+
+/* ------------------------ */
+/* -  Menu Icon Inactive  - */
+/* ------------------------ */
+
+.menu-icon {
+  cursor: pointer;
+  display: in-line;
+  float: right;
+  @include transform(translateY(150%));
+}
+
+/* bars */
+#bar-top, #bar-bottom {
+  background-color: $black;
+  @include border-radius(999px);
+  height: 2px;
+  margin: 6px 0;
+  transition: all 0.2s ease-in-out;
+  width: 28px;
+}
+
+
+/* ------- */
+/*  media  */
+/* ------- */
+
+/* - only for devices with hover - */
+@media (any-hover: hover) {
+  /* offset bars */
+  .menu-icon:hover {
+    #bar-top {
+      @include transform(translateX(-5px));
+    }
+
+    #bar-bottom {
+      @include transform(translateX(5px));
+    }
+  }
+}
+
+
+
+
+/* ---------------------- */
+/* -  Menu Icon Active  - */
+/* ---------------------- */
+
+/* cross bars */
+.icon-change {
+  #bar-top {
+    @include transform(translateY(4px) rotate(45deg));
+  }
+
+  #bar-bottom {
+    @include transform(translateY(-4px) rotate(-45deg));
+  }
+}
+
+
+/* ------- */
+/*  media  */
+/* ------- */
+
+/* - only for devices with hover - */
+@media (any-hover: hover) {
+  /* single bar */
+  .icon-change:hover {
+    #bar-top {
+      @include transform(translateY(4px));
+    }
+
+    #bar-bottom {
+      @include transform(translateY(-4px));
+    }
+  }
+}
+
+
+
+
+/* ------------- */
+/* -  Overlay  - */
+/* ------------- */
+
+#nav-overlay {
+  background-color: $navy;
+  height: 0%;
+  left: 0;
+  overflow-y: scroll;
+  position: fixed;
+  top: 0;
+  transition: 0.5s;
+  width: 100%;
+  z-index: 998;
+}
+
+#nav-overlay-grid {
+  grid-gap: 20px;
+  margin: 150px 0 100px 0;
+}
+
+#nav-image {
+  @include border-radius(50%);
+  width: 125px;
+}
+
+#nav-overlay-info {
+  text-align: right;
+
+  h1 {
+    border: none;
+    color: $blue;
+    display: block;
+    font: 500 1.25em/1 $barlow;
+    margin: 20px 0 10px 0;
+  }
+
+  .underline {
+    color: $white;
+    font: 100 1em/1 $barlow;
+    margin-top: 30px;
+
+    &::after {
+      background-color: $white;
+    }
+  }
+}
+
+#nav-overlay-info-display {
+  display: none;
+}
+
+#nav-overlay-links {
+  display: grid;
+  grid-auto-flow: row;
+	grid-gap: 18px;
+  text-align: right;
+
+  .underline {
+    color: $white;
+    font: 600 2.9em/1 $barlow;
+    opacity: .7;
+    padding: 8px 0px;
+
+    &::after {
+      background-color: $white;
+      height: 4px;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  #active {
+    opacity: 1;
+  }
+}
+
+/* prevent background scrolling */
+.noscroll {
+  overflow: hidden;
+}
+
+
+/* ------- */
+/*  media  */
+/* ------- */
+
+/* - for tablet - */
+@media screen and (min-width: $tablet) {
+  #nav-overlay-info {
+    text-align: left;
+  }
+  
+  #nav-overlay-info-display {
+    display: block;
+  }
+}
+
+
+
+
+/* ================================================================ */
+
+
+
+
+/* ------------------ */
+/* -                - */
+/* -     FOOTER     - */
+/* -                - */
+/* ------------------ */
+
+/* --------- */
+/* -  Sub  - */
+/* --------- */
+
+footer {
+  background-color: $navy;
+  bottom: 0;
+  clear: both;
+  height: $footer-height;
+  margin-top: -$footer-height;
+  position: relative;
+  width: 100%;
+
+  #footer-contact-container {
+    background-color: $light-grey;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    text-align: center;
+
+    h1 {
+      border: none;
+      color: $dark-grey;
+      display: block;
+      font: italic 600 3.25em/1 $barlow;
+      margin: 0;
+      padding: 0;
+    }
+
+    .rounded-button {
+      margin: 20px 0 0 0;
+    }
+  }
+
+  #footer-links-external {
+    border-bottom: 1px solid $dark-grey;
+    display: table;
+    padding: 25px 0;
+    width: 100%;
+
+    h2 {
+      color: $grey;
+      display: table-cell;
+      font: 200 1em/1 $barlow;
+      vertical-align: middle;
+    }
+
+    .icon {
+      color: $grey;
+      display: table-cell;
+      float: right;
+      height: 25px;
+      margin-left: 13px;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .icon:hover {
+      color: $light-grey;
+    }
+  }
+}
+
+
+
+
+/* ================================================================ */
+
+
+
+
+/* ----------------- */
+/* -               - */
+/* -     INDEX     - */
+/* -               - */
+/* ----------------- */
+
+/* ----------- */
+/* -  Intro  - */
+/* ----------- */
+
+#index-intro-container {
+  padding-bottom: 185px;
+  padding-top: 25px;
+  text-align: center;
+  
+  h1 {
+    border: none;
+    font: italic 500 1.75em/1.25 $barlow;
+    margin: 0;
+    padding: 4px 0;
+  }
+
+  h2 {
+    font: 600 3em/1 $barlow;
+    padding: 2px 0 9px 0;
+  }
+}
+
+
+/* ------- */
+/*  media  */
+/* ------- */
+
+/* - only for devices without hover - */
+@media (any-hover: none) {
+  #index-intro-container {
+    .rounded-button {
+      background-color: $coral;
+      color: $white;
+    }
+  }
+}
+
+/* - for tablet - */
+@media screen and (min-width: $tablet) {
+  #index-intro-container {
+    padding-top: 45px;
+
+    h2 {
+      font-size: 3.5em;
+    }
+  }
+}
+
+
+
+
+/* ------------------- */
+/* -  Image & About  - */
+/* ------------------- */
+
+#index-image-container {
+  background-color: $navy;
+
+  #index-image {
+    margin-top: -160px;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+  }
+
+  #index-about-grid {
+    padding-bottom: 50px;
+    padding-top: 50px;
+
+    p {
+      color: $light-grey;
+    }
+
+    .grid-2-item {
+      margin: auto 0;
+    }
+  }
+}
+
+
+/* ------- */
+/*  media  */
+/* ------- */
+
+/* - smaller than tablet - */
+@media screen and (max-width: $tablet) {
+  #index-image {
+    padding: 0 !important;
+  }
+  #index-about-grid {
+    .rounded-button {
+      margin-top: 0;
+    }
+  }
+}
+
+
+
+
+/* ------------------------- */
+/* -  Experience and Work  - */
+/* ------------------------- */
+
+#index-links-container {
+  color: $navy;
+  padding-bottom: 80px;
+  padding-top: 80px;
+  text-align: center;
+
+  .grid-2-item {
+    background-color: $light-grey;
+    padding: 30px;  
+    
+    h2 {
+      font-size: 1.75em;
+      text-align: left;
+    }
+
+    p {
+      text-align: left;
+    }
+
+    a {
+      margin-bottom: 0;
+    }
+  }
+}
+
+
+
+
+/* ================================================================ */
+
+
+
+
+/* ----------------- */
+/* -               - */
+/* -     ABOUT     - */
+/* -               - */
+/* ----------------- */
+
+/* About Me page styling will go here */
+
+
+
+
+/* ================================================================ */
+
+
+
+
+/* ---------------------- */
+/* -                    - */
+/* -     EXPERIENCE     - */
+/* -                    - */
+/* ---------------------- */
+
+#experience-work-grid {
+  padding-bottom: 100px;
+  padding-top: 50px;
+
+  #experience-work-cerner,
+  #experience-work-lavner,
+  #experience-work-website {
+    background-color: $light-grey;
+    padding: 25px;
+  }
+
+  h1 {
+    border: none;
+    color: $navy;
+    font-size: 0.9em;
+    margin: 0;
+    padding: 0;
+    white-space: pre;
+  }
+
+  h2 {
+    color: $coral;
+    font-size: 2em;
+    padding: 3px 0 20px 0;
+  }
+
+  p {
+    padding: 0 0 10px 0;
+  }
+
+  h1 .underline {
+    color: $navy;
+
+    &::after {
+      background-color: $navy;
+    }
+  }
+
+  #experience-work-cerner-logo {
+    #cerner-logo-2 {
+      fill: $grey;
+      margin: auto;
+      max-height: 225px;
+      opacity: .5;
+      padding: 10px 0 20px 0;
+      transition: all .4s ease-in-out;
+      width: 100%;
+    }
+    
+    #cerner-logo-2:hover {
+      fill: $cerner-blue;
+      opacity: 1;
+    }
+  }
+}
+
+#experience-ed-container {
+  background-color: $navy;
+  padding-bottom: 75px;
+  padding-top: 75px;
+
+  h1 {
+    border: none;
+    color: $grey;
+    font-size: 0.9em;
+    margin: 0;
+    padding: 0;
+    white-space: pre;
+  }
+
+  h2 {
+    color: $white;
+    font-size: 2em;
+    padding: 3px 0 20px 0;
+  }
+
+  h3 {
+    color: $blue;
+    font-size: 1.3em;
+    padding-bottom: 5px;
+  }
+
+  p {
+    color: $white;
+    font-size: 1em;
+    padding: 0 0 5px 0;
+  }
+
+  .tags {
+    margin-left: 17px;
+  }
+
+  #experience-ed-grid {
+    grid-gap: 40px;
+
+    #experience-ed-title {
+      margin: auto 0;
+      // text-align: middle;
+    }
+  }
+
+  #truman-logo {
+    fill: $dark-grey;
+    margin: auto 0 auto auto;
+    max-height: 225px;
+    padding-bottom: 40px;
+    transition: all .4s ease-in-out;
+    width: 100%;
+  }
+  
+  #truman-logo:hover {
+    fill: $truman-gold;
+  }
+}
+
+
+/* ------- */
+/*  media  */
+/* ------- */
+
+/* - for tablet - */
+@media screen and (min-width: $tablet) {
+  #experience-work-grid {
+    #experience-work-cerner,
+    #experience-work-lavner,
+    #experience-work-website {
+      padding: 40px;
+    }
+  }
+
+  #experience-work-cerner-logo {
+    margin-right: 30px;
+  }
+}
+
+
+
+
+/* ================================================================ */
+
+
+
+
+/* ------------------- */
+/* -                 - */
+/* -     MY WORK     - */
+/* -                 - */
+/* ------------------- */
+
+/* My work page styling will go here */
+
+
+
+
+/* ================================================================ */
+
+
+
+
+/* ------------------- */
+/* -                 - */
+/* -     CONTACT     - */
+/* -                 - */
+/* ------------------- */
+
+/* Contact page styling will go here */
+
+
+
+
+/* ================================================================ */
+
+
+
+
+/* ------------------ */
+/* -                - */
+/* -     FOOTER     - */
+/* -                - */
+/* ------------------ */
+
+/* Footer styling will go here */
