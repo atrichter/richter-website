@@ -24,7 +24,7 @@ $container-3-padding: 16%;
 // Colors
 $black: #000;
 $white: #fff;
-$light-grey: #f4f5f6;
+$light-grey: #ebecee;
 $grey:  #a3a3a3;
 $dark-grey: #727579;
 $navy: #191a1d;
@@ -898,7 +898,7 @@ footer {
       border: none;
       color: $dark-grey;
       display: block;
-      font: italic 600 3.25em/1 $barlow;
+      font: italic 600 3.1em/1 $barlow;
       margin: 0;
       padding: 0;
     }
@@ -969,6 +969,13 @@ footer {
   h2 {
     font: 600 3em/1 $barlow;
     padding: 2px 0 9px 0;
+  }
+
+  .rounded-button {
+    background-color: $coral;
+    border-color: $coral;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1), 0 4px 15px 0 rgba(0, 0, 0, 0.12);
+    color: $white;
   }
 }
 
@@ -1092,7 +1099,47 @@ footer {
 /* -               - */
 /* ----------------- */
 
-/* About Me page styling will go here */
+#about-grid {
+  grid-gap: 0;
+
+  #about-content {
+    background-color: $light-grey;
+    padding: 30px;
+
+    p {
+      // color: $light-grey;
+    }
+  }
+
+  #about-image-container {
+    width: 100%;
+
+    #about-image {
+      display: block;
+      height: 100%;
+      object-fit: cover;
+      margin: 0;
+      width: 100%;
+    }
+  }
+}
+
+
+/* ------- */
+/*  media  */
+/* ------- */
+
+/* - smaller than laptop - */
+@media screen and (max-width: $laptop) {
+  #about-grid {
+    #about-image-container {
+      #about-image {
+        display: none;
+      }
+    }
+  }
+}
+
 
 
 
@@ -1151,7 +1198,7 @@ footer {
       fill: $grey;
       margin: auto;
       max-height: 225px;
-      opacity: .5;
+      // opacity: .5;
       padding: 10px 0 20px 0;
       transition: all .4s ease-in-out;
       width: 100%;
@@ -1273,20 +1320,60 @@ footer {
 /* -                 - */
 /* ------------------- */
 
-/* Contact page styling will go here */
+#contact-grid {
+  grid-gap: 0;
+
+  #contact-content {
+    background-color: $navy;
+    padding: 30px;
+    vertical-align: middle;
+
+    p {
+      color: $light-grey;
+    }
+
+    .rounded-button {
+      display: block;
+      // margin-bottom: 0;
+    }
+  }
+
+  #contact-image-container {
+    width: 100%;
+
+    #contact-image {
+      display: block;
+      height: 100%;
+      object-fit: cover;
+      margin: 0;
+      width: 100%;
+    }
+  }
+}
 
 
+/* ------- */
+/*  media  */
+/* ------- */
 
+/* - smaller than laptop - */
+@media screen and (max-width: $laptop) {
+  #contact-grid {
+    #contact-image-container {
+      #contact-image {
+        display: none;
+      }
+    }
+  }
+}
 
-/* ================================================================ */
-
-
-
-
-/* ------------------ */
-/* -                - */
-/* -     FOOTER     - */
-/* -                - */
-/* ------------------ */
-
-/* Footer styling will go here */
+/* - smaller than large mobile - */
+@media screen and (max-width: $mobile-l) {
+  #contact-grid {
+    #contact-content {
+      .rounded-button {
+        font-size: 1em;
+      }
+    }
+  }
+}

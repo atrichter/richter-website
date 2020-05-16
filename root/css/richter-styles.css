@@ -236,7 +236,7 @@ li::before {
           2
           3
   tablet+: 1 1
-            2 3
+           2 3
 */
 .grid-1-1-2-3-item1 {
   grid-area: one;
@@ -773,7 +773,7 @@ footer {
   width: 100%;
 }
 footer #footer-contact-container {
-  background-color: #f4f5f6;
+  background-color: #ebecee;
   padding-bottom: 50px;
   padding-top: 50px;
   text-align: center;
@@ -782,7 +782,7 @@ footer #footer-contact-container h1 {
   border: none;
   color: #727579;
   display: block;
-  font: italic 600 3.25em/1 Barlow, Verdana, Arial, Helvetica, sans-serif;
+  font: italic 600 3.1em/1 Barlow, Verdana, Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -810,7 +810,7 @@ footer #footer-links-external .icon {
   transition: all 0.2s ease-in-out;
 }
 footer #footer-links-external .icon:hover {
-  color: #f4f5f6;
+  color: #ebecee;
 }
 
 /* ================================================================ */
@@ -836,6 +836,12 @@ footer #footer-links-external .icon:hover {
 #index-intro-container h2 {
   font: 600 3em/1 Barlow, Verdana, Arial, Helvetica, sans-serif;
   padding: 2px 0 9px 0;
+}
+#index-intro-container .rounded-button {
+  background-color: #e35768;
+  border-color: #e35768;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1), 0 4px 15px 0 rgba(0, 0, 0, 0.12);
+  color: #fff;
 }
 
 /* ------- */
@@ -874,7 +880,7 @@ footer #footer-links-external .icon:hover {
   padding-top: 50px;
 }
 #index-image-container #index-about-grid p {
-  color: #f4f5f6;
+  color: #ebecee;
 }
 #index-image-container #index-about-grid .grid-2-item {
   margin: auto 0;
@@ -903,7 +909,7 @@ footer #footer-links-external .icon:hover {
   text-align: center;
 }
 #index-links-container .grid-2-item {
-  background-color: #f4f5f6;
+  background-color: #ebecee;
   padding: 30px;
 }
 #index-links-container .grid-2-item h2 {
@@ -923,7 +929,33 @@ footer #footer-links-external .icon:hover {
 /* -     ABOUT     - */
 /* -               - */
 /* ----------------- */
-/* About Me page styling will go here */
+#about-grid {
+  grid-gap: 0;
+}
+#about-grid #about-content {
+  background-color: #ebecee;
+  padding: 30px;
+}
+#about-grid #about-image-container {
+  width: 100%;
+}
+#about-grid #about-image-container #about-image {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  margin: 0;
+  width: 100%;
+}
+
+/* ------- */
+/*  media  */
+/* ------- */
+/* - smaller than laptop - */
+@media screen and (max-width: 1024px) {
+  #about-grid #about-image-container #about-image {
+    display: none;
+  }
+}
 /* ================================================================ */
 /* ---------------------- */
 /* -                    - */
@@ -937,7 +969,7 @@ footer #footer-links-external .icon:hover {
 #experience-work-grid #experience-work-cerner,
 #experience-work-grid #experience-work-lavner,
 #experience-work-grid #experience-work-website {
-  background-color: #f4f5f6;
+  background-color: #ebecee;
   padding: 25px;
 }
 #experience-work-grid h1 {
@@ -966,7 +998,6 @@ footer #footer-links-external .icon:hover {
   fill: #a3a3a3;
   margin: auto;
   max-height: 225px;
-  opacity: 0.5;
   padding: 10px 0 20px 0;
   transition: all 0.4s ease-in-out;
   width: 100%;
@@ -1053,13 +1084,45 @@ footer #footer-links-external .icon:hover {
 /* -     CONTACT     - */
 /* -                 - */
 /* ------------------- */
-/* Contact page styling will go here */
-/* ================================================================ */
-/* ------------------ */
-/* -                - */
-/* -     FOOTER     - */
-/* -                - */
-/* ------------------ */
-/* Footer styling will go here */
+#contact-grid {
+  grid-gap: 0;
+}
+#contact-grid #contact-content {
+  background-color: #191a1d;
+  padding: 30px;
+  vertical-align: middle;
+}
+#contact-grid #contact-content p {
+  color: #ebecee;
+}
+#contact-grid #contact-content .rounded-button {
+  display: block;
+}
+#contact-grid #contact-image-container {
+  width: 100%;
+}
+#contact-grid #contact-image-container #contact-image {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  margin: 0;
+  width: 100%;
+}
+
+/* ------- */
+/*  media  */
+/* ------- */
+/* - smaller than laptop - */
+@media screen and (max-width: 1024px) {
+  #contact-grid #contact-image-container #contact-image {
+    display: none;
+  }
+}
+/* - smaller than large mobile - */
+@media screen and (max-width: 425px) {
+  #contact-grid #contact-content .rounded-button {
+    font-size: 1em;
+  }
+}
 
 /*# sourceMappingURL=richter-styles.css.map */
