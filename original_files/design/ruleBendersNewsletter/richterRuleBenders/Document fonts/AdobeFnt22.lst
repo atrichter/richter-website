@@ -1,0 +1,330 @@
+%!Adobe-FontList 1.22
+%Locale:0x409
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:ACaslonPro-BoldItalic
+FamilyName:Adobe Caslon Pro
+StyleName:Bold Italic
+MenuName:Adobe Caslon Pro Bold
+StyleBits:1
+WeightClass:700
+WidthClass:5
+AngleClass:1
+FullName:Adobe Caslon Pro Bold Italic
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/Newsletter/richterRuleBenders/Document fonts/ACaslonPro-BoldItalic.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:169548
+FileModTime:412714728
+DesignSize:120
+NameArray:0,Mac,4,Adobe Caslon Pro Bold Italic
+NameArray:0,Win,1,Adobe Caslon Pro Bold
+NameArray:0,Win,16,Adobe Caslon Pro
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:ACaslonPro-Regular
+FamilyName:Adobe Caslon Pro
+StyleName:Regular
+MenuName:Adobe Caslon Pro
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Adobe Caslon Pro
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/Newsletter/richterRuleBenders/Document fonts/ACaslonPro-Regular.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:167176
+FileModTime:412714728
+DesignSize:120
+NameArray:0,Mac,4,Adobe Caslon Pro
+NameArray:0,Win,1,Adobe Caslon Pro
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:ACaslonPro-Semibold
+FamilyName:Adobe Caslon Pro
+StyleName:Semibold
+MenuName:Adobe Caslon Pro
+StyleBits:2
+WeightClass:600
+WidthClass:5
+AngleClass:0
+FullName:Adobe Caslon Pro Semibold
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/Newsletter/richterRuleBenders/Document fonts/ACaslonPro-Semibold.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:170020
+FileModTime:412714728
+DesignSize:120
+NameArray:0,Mac,18,Adobe Caslon Pro SmBd
+NameArray:0,Mac,4,Adobe Caslon Pro Semibold
+NameArray:0,Win,1,Adobe Caslon Pro
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/Newsletter/richterRuleBenders/Document fonts/AdobeFnt21.lst
+FileLength:7835
+FileModTime:607457791
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/Newsletter/richterRuleBenders/Document fonts/AdobeFnt22.lst
+FileLength:8162
+FileModTime:612658805
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Dutch801BT-Roman
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/Newsletter/richterRuleBenders/Document fonts/Dutch801BT-Roman
+ResourceID:15326
+MacStyle:0
+FileLength:11847
+FileModTime:579713746
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:Dutch801BT-Roman
+FamilyName:Dutch 801 BT
+StyleName:Roman
+MenuName:Dutch 801 BT Roman
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Dutch 801 BT Roman
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/Newsletter/richterRuleBenders/Document fonts/DutchBTRom
+DataFormat:POSTResource
+UsesStandardEncoding:yes
+isCFF:no
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:38633
+FileModTime:232380246
+DesignSize:-1
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:GoldMine
+FamilyName:GoldMine
+StyleName:Regular
+MenuName:GoldMine
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:GoldMine
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/Newsletter/richterRuleBenders/Document fonts/GoldMine
+DataFormat:sfntResource
+ResourceID:1229
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:106775
+FileModTime:579713750
+NameArray:0,Mac,4,GoldMine
+NameArray:0,Win,1,GoldMine
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:MinionPro-Regular
+FamilyName:Minion Pro
+StyleName:Regular
+MenuName:Minion Pro
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Minion Pro
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/Newsletter/richterRuleBenders/Document fonts/MinionPro-Regular.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:218640
+FileModTime:412714730
+DesignSize:110
+NameArray:0,Mac,4,Minion Pro
+NameArray:0,Win,1,Minion Pro
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:OPTIEngraversOldEnglish
+FamilyName:OPTI Engravers Old English
+StyleName:Regular
+MenuName:OPTIEngraversOldEnglish
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:OPTIEngraversOldEnglish
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/Newsletter/richterRuleBenders/Document fonts/OPTIEngOldEng
+DataFormat:POSTResource
+UsesStandardEncoding:no
+isCFF:no
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:61899
+FileModTime:232380346
+DesignSize:-1
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:OPTIEngraversOldEnglish
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/Newsletter/richterRuleBenders/Document fonts/OPTIEngraversOldEnglish
+ResourceID:7474
+MacStyle:0
+FileLength:8092
+FileModTime:579713767
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:Rosewood-Regular
+FamilyName:Rosewood
+StyleName:Regular
+MenuName:Rosewood Regular
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Rosewood Regular
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/Newsletter/richterRuleBenders/Document fonts/RosewReg
+DataFormat:POSTResource
+UsesStandardEncoding:yes
+isCFF:no
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:65717
+FileModTime:232380356
+DesignSize:-1
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Rosewood-Regular
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/Newsletter/richterRuleBenders/Document fonts/Rosewood-Regular
+ResourceID:6688
+MacStyle:0
+FileLength:26499
+FileModTime:579713770
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:SwistblnkMonthoers
+FamilyName:Swistblnk Monthoers
+StyleName:Regular
+MenuName:Swistblnk Monthoers
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Swistblnk Monthoers
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/Newsletter/richterRuleBenders/Document fonts/SwistblnkMonthoers.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:206180
+FileModTime:445655266
+NameArray:0,Mac,18,Swistblnk Monthoers
+NameArray:0,Mac,4,Swistblnk Monthoers
+NameArray:0,Win,1,Swistblnk Monthoers
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:ThirstyRoughBolOne
+FamilyName:Thirsty Rough
+StyleName:Bold One
+MenuName:Thirsty Rough Reg One
+StyleBits:2
+WeightClass:600
+WidthClass:5
+AngleClass:0
+FullName:Thirsty Rough Bol One
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/Newsletter/richterRuleBenders/Document fonts/ThirstyRoughBolOne.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:439360
+FileModTime:427646512
+NameArray:0,Mac,4,Thirsty Rough Bol One
+NameArray:0,Win,1,Thirsty Rough Reg One
+NameArray:0,Win,16,Thirsty Rough
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:ThirstyRoughReg
+FamilyName:Thirsty Rough
+StyleName:Regular
+MenuName:Thirsty Rough Reg
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Thirsty Rough Reg
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/Newsletter/richterRuleBenders/Document fonts/ThirstyRoughReg.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:326268
+FileModTime:427646512
+NameArray:0,Mac,4,Thirsty Rough Reg
+NameArray:0,Win,1,Thirsty Rough Reg
+NameArray:0,Win,16,Thirsty Rough
+%EndFont
+
