@@ -1,0 +1,88 @@
+%!Adobe-FontList 1.20
+%Locale:0x409
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:AYTAvalon-Book
+FamilyName:AYT Avalon
+StyleName:Book
+MenuName:AYT Avalon
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:AYT Avalon Book
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Website/design/Met/richterPioneersPackaged2/Document fonts/AYTAvalon-Book.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:42380
+FileModTime:352479900
+NameArray:0,Mac,4,AYT Avalon Book
+NameArray:0,Win,1,AYT Avalon
+NameArray:0,Win,16,AYT Avalon
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:AYTAvalon-Medium
+FamilyName:AYT Avalon
+StyleName:Medium
+MenuName:AYT Avalon Medium
+StyleBits:0
+WeightClass:500
+WidthClass:5
+AngleClass:0
+FullName:AYT Avalon Medium
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Website/design/Met/richterPioneersPackaged2/Document fonts/AYTAvalon-Medium.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:43024
+FileModTime:352479900
+NameArray:0,Mac,4,AYT Avalon Medium
+NameArray:0,Win,1,AYT Avalon Medium
+NameArray:0,Win,16,AYT Avalon
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:/Users/atrichter624/Desktop/Website/design/Met/richterPioneersPackaged2/Document fonts/AdobeFnt21.lst
+FileLength:1828
+FileModTime:607458338
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:Metropolis1920
+FamilyName:Metropolis 1920
+StyleName:Regular
+MenuName:Metropolis 1920
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Metropolis 1920
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Website/design/Met/richterPioneersPackaged2/Document fonts/Metropolis1920.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:38064
+FileModTime:394609248
+NameArray:0,Mac,4,Metropolis 1920
+NameArray:0,Win,1,Metropolis 1920
+%EndFont
+

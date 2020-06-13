@@ -1,0 +1,81 @@
+%!Adobe-FontList 1.22
+%Locale:0x409
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:/Users/atrichter624/Desktop/Ultimate/Poster 2018-2019/poster Folder/Document fonts/AdobeFnt22.lst
+FileLength:1681
+FileModTime:612924535
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:JosefinSlab-Bold
+FamilyName:Josefin Slab
+StyleName:Bold
+MenuName:Josefin Slab
+StyleBits:0
+WeightClass:700
+WidthClass:5
+AngleClass:0
+FullName:Josefin Slab Bold
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Ultimate/Poster 2018-2019/poster Folder/Document fonts/JosefinSlab-Bold.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:46556
+FileModTime:314566832
+NameArray:0,Mac,4,Josefin Slab Bold
+NameArray:0,Win,1,Josefin Slab
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:JosefinSlab-BoldItalic
+FamilyName:Josefin Slab
+StyleName:Bold Italic
+MenuName:Josefin Slab
+StyleBits:1
+WeightClass:700
+WidthClass:5
+AngleClass:0
+FullName:Josefin Slab Bold Italic
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Ultimate/Poster 2018-2019/poster Folder/Document fonts/JosefinSlab-BoldItalic.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:42848
+FileModTime:314566830
+NameArray:0,Mac,4,Josefin Slab Bold Italic
+NameArray:0,Win,1,Josefin Slab
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Lato-Black
+FamilyName:Lato
+StyleName:Black
+MenuName:Lato Black
+StyleBits:0
+WeightClass:900
+WidthClass:5
+AngleClass:0
+FullName:Lato Black
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Ultimate/Poster 2018-2019/poster Folder/Document fonts/Lato-Black.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:114588
+FileModTime:355164704
+NameArray:0,Mac,4,Lato Black
+NameArray:0,Win,1,Lato Black
+NameArray:0,Win,16,Lato
+%EndFont
+

@@ -1,0 +1,106 @@
+%!Adobe-FontList 1.22
+%Locale:0x409
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:/Users/atrichter624/Desktop/Ultimate/Poster 2019-2020/poster Folder/Document fonts/AdobeFnt22.lst
+FileLength:2238
+FileModTime:612927595
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Barlow-Black
+FamilyName:Barlow
+StyleName:Black
+MenuName:Barlow Black
+StyleBits:0
+WeightClass:900
+WidthClass:5
+AngleClass:0
+FullName:Barlow Black
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Ultimate/Poster 2019-2020/poster Folder/Document fonts/Barlow-Black.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:88572
+FileModTime:530686800
+NameArray:0,Mac,4,Barlow Black
+NameArray:0,Win,1,Barlow Black
+NameArray:0,Win,16,Barlow
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Barlow-BoldItalic
+FamilyName:Barlow
+StyleName:Bold Italic
+MenuName:Barlow
+StyleBits:3
+WeightClass:700
+WidthClass:5
+AngleClass:1
+FullName:Barlow Bold Italic
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Ultimate/Poster 2019-2020/poster Folder/Document fonts/Barlow-BoldItalic.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:90784
+FileModTime:530686800
+NameArray:0,Mac,4,Barlow Bold Italic
+NameArray:0,Win,1,Barlow
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Barlow-ExtraBold
+FamilyName:Barlow
+StyleName:ExtraBold
+MenuName:Barlow ExtraBold
+StyleBits:0
+WeightClass:800
+WidthClass:5
+AngleClass:0
+FullName:Barlow ExtraBold
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Ultimate/Poster 2019-2020/poster Folder/Document fonts/Barlow-ExtraBold.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:91856
+FileModTime:530686800
+NameArray:0,Mac,4,Barlow ExtraBold
+NameArray:0,Win,1,Barlow ExtraBold
+NameArray:0,Win,16,Barlow
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Barlow-Medium
+FamilyName:Barlow
+StyleName:Medium
+MenuName:Barlow Medium
+StyleBits:0
+WeightClass:500
+WidthClass:5
+AngleClass:0
+FullName:Barlow Medium
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Ultimate/Poster 2019-2020/poster Folder/Document fonts/Barlow-Medium.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:89352
+FileModTime:530686800
+NameArray:0,Mac,4,Barlow Medium
+NameArray:0,Win,1,Barlow Medium
+NameArray:0,Win,16,Barlow
+%EndFont
+

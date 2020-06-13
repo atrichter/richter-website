@@ -1,0 +1,108 @@
+%!Adobe-FontList 1.20
+%Locale:0x409
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:/Users/atrichter624/Desktop/Design II/09-WebDesignComplete/RichterDesignComplete/Document fonts/AdobeFnt21.lst
+FileLength:2274
+FileModTime:595488729
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:MinionPro-Regular
+FamilyName:Minion Pro
+StyleName:Regular
+MenuName:Minion Pro
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Minion Pro
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Design II/09-WebDesignComplete/RichterDesignComplete/Document fonts/MinionPro-Regular.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:218640
+FileModTime:412714730
+DesignSize:110
+NameArray:0,Mac,4,Minion Pro
+NameArray:0,Win,1,Minion Pro
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Barlow-Medium
+FamilyName:Barlow
+StyleName:Medium
+MenuName:Barlow Medium
+StyleBits:0
+WeightClass:500
+WidthClass:5
+AngleClass:0
+FullName:Barlow Medium
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Design II/09-WebDesignComplete/RichterDesignComplete/Document fonts/Barlow-Medium.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:89352
+FileModTime:530686800
+NameArray:0,Mac,4,Barlow Medium
+NameArray:0,Win,1,Barlow Medium
+NameArray:0,Win,16,Barlow
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Barlow-Regular
+FamilyName:Barlow
+StyleName:Regular
+MenuName:Barlow
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Barlow Regular
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Design II/09-WebDesignComplete/RichterDesignComplete/Document fonts/Barlow-Regular.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:85664
+FileModTime:530686800
+NameArray:0,Mac,4,Barlow Regular
+NameArray:0,Win,1,Barlow
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Barlow-Black
+FamilyName:Barlow
+StyleName:Black
+MenuName:Barlow Black
+StyleBits:0
+WeightClass:900
+WidthClass:5
+AngleClass:0
+FullName:Barlow Black
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Design II/09-WebDesignComplete/RichterDesignComplete/Document fonts/Barlow-Black.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:88572
+FileModTime:530686800
+NameArray:0,Mac,4,Barlow Black
+NameArray:0,Win,1,Barlow Black
+NameArray:0,Win,16,Barlow
+%EndFont
+

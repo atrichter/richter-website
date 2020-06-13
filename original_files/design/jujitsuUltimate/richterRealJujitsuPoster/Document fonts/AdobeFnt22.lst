@@ -1,0 +1,57 @@
+%!Adobe-FontList 1.22
+%Locale:0x409
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:/Users/atrichter624/Desktop/Ultimate/ActualPoster/theActualJujitsu2019Poster/Document fonts/AdobeFnt22.lst
+FileLength:1116
+FileModTime:612927899
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:ComicSansMS-Bold
+FamilyName:Comic Sans MS
+StyleName:Bold
+MenuName:Comic Sans MS
+StyleBits:2
+WeightClass:700
+WidthClass:5
+AngleClass:0
+FullName:Comic Sans MS Bold
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Ultimate/ActualPoster/theActualJujitsu2019Poster/Document fonts/Comic Sans MS Bold.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:120120
+FileModTime:612927899
+NameArray:0,Mac,4,Comic Sans MS Bold
+NameArray:0,Win,1,Comic Sans MS
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Papyrus-Condensed
+FamilyName:Papyrus
+StyleName:Condensed
+MenuName:Papyrus
+StyleBits:0
+WeightClass:400
+WidthClass:3
+AngleClass:0
+FullName:Papyrus Condensed
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Ultimate/ActualPoster/theActualJujitsu2019Poster/Document fonts/Papyrus.ttc
+TTCOffset:32
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:1110432
+FileModTime:612927899
+NameArray:0,Mac,4,Papyrus Condensed
+%EndFont
+

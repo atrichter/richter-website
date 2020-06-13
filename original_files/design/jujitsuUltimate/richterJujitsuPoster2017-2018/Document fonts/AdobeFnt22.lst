@@ -1,0 +1,159 @@
+%!Adobe-FontList 1.22
+%Locale:0x409
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:/Users/atrichter624/Desktop/Ultimate/Poster 2017-2018/poster Folder/Document fonts/AdobeFnt22.lst
+FileLength:3414
+FileModTime:612924169
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:ArcherPro-Medium
+FamilyName:ArcherPro
+StyleName:Medium
+MenuName:ArcherPro Medium
+StyleBits:0
+WeightClass:350
+WidthClass:5
+AngleClass:0
+FullName:ArcherPro Medium
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Ultimate/Poster 2017-2018/poster Folder/Document fonts/ArcherPro-Medium.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:85644
+FileModTime:223958438
+NameArray:0,Mac,4,ArcherPro Medium
+NameArray:0,Win,1,ArcherPro Medium
+NameArray:0,Win,16,ArcherPro
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:ArcherPro-MediumItalic
+FamilyName:ArcherPro
+StyleName:Medium Italic
+MenuName:ArcherPro Medium
+StyleBits:1
+WeightClass:350
+WidthClass:5
+AngleClass:1
+FullName:ArcherPro Medium Italic
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Ultimate/Poster 2017-2018/poster Folder/Document fonts/ArcherPro-MediumItalic.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:63926
+FileModTime:223970916
+NameArray:0,Mac,4,ArcherPro Medium Italic
+NameArray:0,Win,1,ArcherPro Medium
+NameArray:0,Win,16,ArcherPro
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:CompactaBT-Bold
+FamilyName:Compacta BT
+StyleName:Bold
+MenuName:Compacta BT Bold
+StyleBits:2
+WeightClass:700
+WidthClass:5
+AngleClass:0
+FullName:Compacta BT Bold
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Ultimate/Poster 2017-2018/poster Folder/Document fonts/CompaBTBol
+DataFormat:POSTResource
+UsesStandardEncoding:yes
+isCFF:no
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:33099
+FileModTime:232380236
+DesignSize:-1
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:CompactaBT-Roman
+FamilyName:Compacta BT
+StyleName:Roman
+MenuName:Compacta
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Compacta
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Ultimate/Poster 2017-2018/poster Folder/Document fonts/CompaBTRom
+DataFormat:POSTResource
+UsesStandardEncoding:yes
+isCFF:no
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:31961
+FileModTime:232380238
+DesignSize:-1
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:CompactaBT-Bold
+OutlineFileName:/Users/atrichter624/Desktop/Ultimate/Poster 2017-2018/poster Folder/Document fonts/CompactaBT-Bold
+ResourceID:12801
+MacStyle:0
+FileLength:7477
+FileModTime:579713744
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:CompactaBT-Roman
+OutlineFileName:/Users/atrichter624/Desktop/Ultimate/Poster 2017-2018/poster Folder/Document fonts/CompactaBT-Roman
+ResourceID:15580
+MacStyle:0
+FileLength:6781
+FileModTime:579713744
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:MinionPro-Regular
+FamilyName:Minion Pro
+StyleName:Regular
+MenuName:Minion Pro
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Minion Pro
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Ultimate/Poster 2017-2018/poster Folder/Document fonts/MinionPro-Regular.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:218640
+FileModTime:412714730
+DesignSize:110
+NameArray:0,Mac,4,Minion Pro
+NameArray:0,Win,1,Minion Pro
+%EndFont
+
