@@ -1,0 +1,157 @@
+%!Adobe-FontList 1.20
+%Locale:0x409
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:/Users/atrichter624/Desktop/Website/design/DollHousePoster/richterDollHousePosterPackaged/Document fonts/AdobeFnt21.lst
+FileLength:37
+FileModTime:607460991
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:GearedSlab-Bold
+FamilyName:Geared Slab
+StyleName:Bold
+MenuName:Geared Slab
+StyleBits:2
+WeightClass:700
+WidthClass:3
+AngleClass:0
+FullName:Geared Slab Bold
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Website/design/DollHousePoster/richterDollHousePosterPackaged/Document fonts/GearedSlab-Bold.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:82656
+FileModTime:349466334
+NameArray:0,Mac,18,Geared Slab Bold
+NameArray:0,Mac,4,Geared Slab Bold
+NameArray:0,Win,1,Geared Slab
+NameArray:0,Win,16,Geared Slab
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:GearedSlab-Extrabold
+FamilyName:Geared Slab
+StyleName:Extrabold
+MenuName:Geared Slab
+StyleBits:0
+WeightClass:800
+WidthClass:3
+AngleClass:0
+FullName:Geared Slab Extrabold
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Website/design/DollHousePoster/richterDollHousePosterPackaged/Document fonts/GearedSlab-Extrabold.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:74764
+FileModTime:349466338
+NameArray:0,Mac,18,Geared Slab Extrabold
+NameArray:0,Mac,4,Geared Slab Extrabold
+NameArray:0,Win,1,Geared Slab
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:GearedSlab-Regular
+FamilyName:Geared Slab
+StyleName:Regular
+MenuName:Geared Slab
+StyleBits:0
+WeightClass:400
+WidthClass:3
+AngleClass:0
+FullName:Geared Slab Regular
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Website/design/DollHousePoster/richterDollHousePosterPackaged/Document fonts/GearedSlab-Regular.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:73088
+FileModTime:349466344
+NameArray:0,Mac,18,Geared Slab Regular
+NameArray:0,Mac,4,Geared Slab Regular
+NameArray:0,Win,1,Geared Slab
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:GearedSlab-Thin
+FamilyName:Geared Slab
+StyleName:Thin
+MenuName:Geared Slab
+StyleBits:0
+WeightClass:250
+WidthClass:3
+AngleClass:0
+FullName:Geared Slab Thin
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Website/design/DollHousePoster/richterDollHousePosterPackaged/Document fonts/GearedSlab-Thin.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:93344
+FileModTime:349466340
+NameArray:0,Mac,18,Geared Slab Thin
+NameArray:0,Mac,4,Geared Slab Thin
+NameArray:0,Win,1,Geared Slab
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Realist-Regular
+FamilyName:Realist
+StyleName:Regular
+MenuName:Realist
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Realist-Regular
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Website/design/DollHousePoster/richterDollHousePosterPackaged/Document fonts/Realist-Regular.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:100056
+FileModTime:456106176
+NameArray:0,Mac,4,Realist-Regular
+NameArray:0,Win,1,Realist
+NameArray:0,Win,16,Realist
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:Realist
+FamilyName:Realist
+StyleName:Regular
+MenuName:Realist
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Realist
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Website/design/DollHousePoster/richterDollHousePosterPackaged/Document fonts/Realist.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:92824
+FileModTime:450055664
+NameArray:0,Mac,4,Realist
+NameArray:0,Win,1,Realist
+%EndFont
+
