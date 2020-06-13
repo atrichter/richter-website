@@ -213,6 +213,36 @@ li::before {
   grid-template-areas: auto;
 }
 
+/* grid 4
+  mobile: 1 2
+          3 4
+  tablet+: 1 2 3 4
+*/
+.grid-4-container {
+  display: grid;
+  grid-gap: 40px;
+  grid-template-areas: auto auto;
+}
+
+.grid-4-same-size {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* grid 6
+  mobile: 1 2 3
+          4 5 6
+  tablet+: 1 2 3 4 5 6
+*/
+.grid-6-container {
+  display: grid;
+  grid-gap: 40px;
+  grid-template-areas: auto auto auto;
+}
+
+.grid-6-same-size {
+  grid-template-columns: repeat(3, 1fr);
+}
+
 /* grid 2-1
   mobile: 2
           1
@@ -300,6 +330,22 @@ li::before {
 
   .grid-2-same-size {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-4-container {
+    grid-template-columns: auto auto auto auto;
+  }
+
+  .grid-4-same-size {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .grid-6-container {
+    grid-template-columns: auto auto auto auto auto auto;
+  }
+
+  .grid-6-same-size {
+    grid-template-columns: repeat(6, 1fr);
   }
 
   .grid-2-1-container {
@@ -527,11 +573,11 @@ li::before {
 }
 .tags li {
   border: solid 1px #727579;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
-  border-radius: 5px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px;
   color: #727579;
   display: inline-block;
   font: 400 0.8em/1 Barlow, Verdana, Arial, Helvetica, sans-serif;
@@ -813,6 +859,82 @@ footer #footer-links-external .icon:hover {
   color: #ebecee;
 }
 
+/* ------------------------------- */
+/* -  Experience and Work Links  - */
+/* ------------------------------- */
+#exp-work-links-container {
+  padding-bottom: 40px;
+  padding-top: 80px;
+  text-align: center;
+}
+#exp-work-links-container .grid-2-item {
+  background-color: #ebecee;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  padding: 30px;
+}
+#exp-work-links-container .grid-2-item h2 {
+  color: #e35768;
+  font-size: 1.85em;
+  text-align: left;
+}
+#exp-work-links-container .grid-2-item .exp-work-graphic {
+  display: block;
+  padding: 10px 25px 0 25px;
+  transition: all 0.4s ease-in-out;
+  width: 100%;
+}
+#exp-work-links-container .grid-2-item p {
+  text-align: left;
+}
+#exp-work-links-container .grid-2-item .rounded-button {
+  margin: 15px 0 0 0;
+}
+
+#cerner-logo-2 {
+  fill: #a3a3a3;
+}
+
+#cerner-logo-2:hover {
+  fill: #179dd6;
+}
+
+/* ------- */
+/*  media  */
+/* ------- */
+/* - for large mobile - */
+@media screen and (min-width: 425px) {
+  #exp-work-links-container .grid-2-item .exp-work-graphic {
+    padding: 25px 60px 15px 60px;
+  }
+}
+/* - for tablet - */
+@media screen and (min-width: 425px) {
+  #exp-work-links-container .grid-2-item .exp-work-graphic {
+    padding: 15px 25px 5px 25px;
+  }
+}
+/* - for laptop - */
+@media screen and (min-width: 1024px) {
+  #exp-work-links-container .grid-2-item .exp-work-graphic {
+    padding: 15px 60px 5px 60px;
+  }
+}
+/* - for small desktop - */
+@media screen and (min-width: 1440px) {
+  #exp-work-links-container .grid-2-item .exp-work-graphic {
+    padding: 20px 80px 5px 80px;
+  }
+}
+/* - for medium desktop - */
+@media screen and (min-width: 1920px) {
+  #exp-work-links-container .grid-2-item .exp-work-graphic {
+    padding: 30px 110px 5px 110px;
+  }
+}
 /* ================================================================ */
 /* ----------------- */
 /* -               - */
@@ -899,30 +1021,6 @@ footer #footer-links-external .icon:hover {
     margin-top: 0;
   }
 }
-/* ------------------------- */
-/* -  Experience and Work  - */
-/* ------------------------- */
-#index-links-container {
-  color: #191a1d;
-  padding-bottom: 80px;
-  padding-top: 80px;
-  text-align: center;
-}
-#index-links-container .grid-2-item {
-  background-color: #ebecee;
-  padding: 30px;
-}
-#index-links-container .grid-2-item h2 {
-  font-size: 1.75em;
-  text-align: left;
-}
-#index-links-container .grid-2-item p {
-  text-align: left;
-}
-#index-links-container .grid-2-item a {
-  margin-bottom: 0;
-}
-
 /* ================================================================ */
 /* ----------------- */
 /* -               - */
@@ -930,16 +1028,41 @@ footer #footer-links-external .icon:hover {
 /* -               - */
 /* ----------------- */
 #about-grid {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
   grid-gap: 0;
 }
 #about-grid #about-content {
   background-color: #ebecee;
+  -webkit-border-top-left-radius: 10px;
+  -webkit-border-bottom-left-radius: 10px;
+  -moz-border-top-left-radius: 10px;
+  -moz-border-bottom-left-radius: 10px;
+  -ms-border-top-left-radius: 10px;
+  -ms-border-bottom-left-radius: 10px;
+  -o-border-top-left-radius: 10px;
+  -o-border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
   padding: 30px;
 }
 #about-grid #about-image-container {
   width: 100%;
 }
 #about-grid #about-image-container #about-image {
+  -webkit-border-top-right-radius: 10px;
+  -webkit-border-bottom-right-radius: 10px;
+  -moz-border-top-right-radius: 10px;
+  -moz-border-bottom-right-radius: 10px;
+  -ms-border-top-right-radius: 10px;
+  -ms-border-bottom-right-radius: 10px;
+  -o-border-top-right-radius: 10px;
+  -o-border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
   display: block;
   height: 100%;
   object-fit: cover;
@@ -952,6 +1075,13 @@ footer #footer-links-external .icon:hover {
 /* ------- */
 /* - smaller than laptop - */
 @media screen and (max-width: 1024px) {
+  #about-grid #about-content {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+  }
   #about-grid #about-image-container #about-image {
     display: none;
   }
@@ -970,6 +1100,11 @@ footer #footer-links-external .icon:hover {
 #experience-work-grid #experience-work-lavner,
 #experience-work-grid #experience-work-website {
   background-color: #ebecee;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
   padding: 25px;
 }
 #experience-work-grid h1 {
@@ -995,15 +1130,11 @@ footer #footer-links-external .icon:hover {
   background-color: #191a1d;
 }
 #experience-work-grid #experience-work-cerner-logo #cerner-logo-2 {
-  fill: #a3a3a3;
   margin: auto;
   max-height: 225px;
   padding: 10px 0 20px 0;
   transition: all 0.4s ease-in-out;
   width: 100%;
-}
-#experience-work-grid #experience-work-cerner-logo #cerner-logo-2:hover {
-  fill: #179dd6;
 }
 
 #experience-ed-container {
@@ -1076,7 +1207,220 @@ footer #footer-links-external .icon:hover {
 /* -     MY WORK     - */
 /* -                 - */
 /* ------------------- */
-/* My work page styling will go here */
+#work-content {
+  /* thumbnails */
+  /* logos */
+}
+#work-content #work-thumbnails-grid {
+  grid-gap: 15px;
+  padding: 15px 0 0 0;
+}
+#work-content #work-thumbnails-grid .thumbnail {
+  float: left;
+  max-width: 100%;
+  position: relative;
+}
+#work-content #work-thumbnails-grid .thumbnail img {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  float: left;
+  width: 100%;
+}
+#work-content #work-thumbnails-grid .thumbnail .thumbnail-description {
+  align-items: center;
+  bottom: 0;
+  color: #fff;
+  display: flex;
+  font: italic 700 1.8em/1 Barlow, Verdana, Arial, Helvetica, sans-serif;
+  justify-content: center;
+  left: 0;
+  opacity: 0;
+  padding: 15px;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+  transition: all 0.3s ease-in-out;
+  visibility: hidden;
+}
+#work-content #work-thumbnails-grid .thumbnail .thumbnail-text {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  transition: all 0.25s ease-in-out;
+  transform: translateY(-3em);
+}
+#work-content #work-thumbnails-grid .thumbnail::before {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  bottom: 0;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: all 0.3s ease-in-out;
+}
+#work-content #work-thumbnails-grid .thumbnail:hover::before {
+  box-shadow: inset 0 0 125px black;
+}
+#work-content #work-thumbnails-grid .thumbnail:hover .thumbnail-description {
+  visibility: visible;
+  opacity: 1;
+}
+#work-content #work-thumbnails-grid .thumbnail:hover .thumbnail-text {
+  transform: translateY(0);
+}
+#work-content #work-logos-grid {
+  grid-gap: 25px;
+  padding: 38px 15px 15px 15px;
+}
+#work-content #work-logos-grid .work-logo {
+  display: inline-block;
+  height: 0;
+  padding-top: 92.88%;
+  /* (img-height / img-width * container-width) */
+  transition: all 0.2s ease-in-out;
+  width: 100%;
+}
+#work-content #work-logos-grid #jujitsuShield {
+  background: transparent url("../images/thumbnails/jujitsuShield-grey-300.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#work-content #work-logos-grid #jujitsuShield:hover {
+  background: transparent url("../images/thumbnails/jujitsuShield-300.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#work-content #work-logos-grid #jujitsuTsunamiB {
+  background: transparent url("../images/thumbnails/jujitsuTsunamiB-alt-grey-300.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#work-content #work-logos-grid #jujitsuTsunamiB:hover {
+  background: transparent url("../images/thumbnails/jujitsuTsunamiB-300.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#work-content #work-logos-grid #jujitsuBigDogs {
+  background: transparent url("../images/thumbnails/jujitsuBigDogs-alt-grey-300.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#work-content #work-logos-grid #jujitsuBigDogs:hover {
+  background: transparent url("../images/thumbnails/jujitsuBigDogs-logo-300.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#work-content #work-logos-grid #jujitsuBurst {
+  background: transparent url("../images/thumbnails/jujitsuBurst-alt-grey-300.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#work-content #work-logos-grid #jujitsuBurst:hover {
+  background: transparent url("../images/thumbnails/jujitsuBurst-300.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#work-content #work-logos-grid #jujitsuText {
+  background: transparent url("../images/thumbnails/jujitsuText-grey-300.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#work-content #work-logos-grid #jujitsuText:hover {
+  background: transparent url("../images/thumbnails/jujitsuText-300.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#work-content #work-logos-grid #jujitsuTUB {
+  background: transparent url("../images/thumbnails/jujitsuTUB-logo-grey-300.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#work-content #work-logos-grid #jujitsuTUB:hover {
+  background: transparent url("../images/thumbnails/jujitsuTUB-logo-purple-300.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* ------- */
+/*  media  */
+/* ------- */
+/* - only for devices without hover - */
+@media (any-hover: none) {
+  #work-content #work-logos-grid #jujitsuShield {
+    background: transparent url("../images/thumbnails/jujitsuShield-300.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  #work-content #work-logos-grid #jujitsuTsunamiB {
+    background: transparent url("../images/thumbnails/jujitsuTsunamiB-300.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  #work-content #work-logos-grid #jujitsuBigDogs {
+    background: transparent url("../images/thumbnails/jujitsuBigDogs-logo-300.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  #work-content #work-logos-grid #jujitsuBurst {
+    background: transparent url("../images/thumbnails/jujitsuBurst-300.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  #work-content #work-logos-grid #jujitsuText {
+    background: transparent url("../images/thumbnails/jujitsuText-300.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  #work-content #work-logos-grid #jujitsuTUB {
+    background: transparent url("../images/thumbnails/jujitsuTUB-logo-purple-300.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+/* - for laptop - */
+@media screen and (min-width: 1024px) {
+  #work-content #work-thumbnails-grid {
+    grid-gap: 25px;
+    padding: 25px 0 0 0;
+  }
+  #work-content #work-logos-grid {
+    grid-gap: 40px;
+    padding: 48px 25px 20px 25px;
+  }
+}
+/* - for large desktop - */
+@media screen and (min-width: 1440px) {
+  #work-content #work-thumbnails-grid {
+    grid-gap: 35px;
+    padding: 35px 0 0 0;
+  }
+}
 /* ================================================================ */
 /* ------------------- */
 /* -                 - */
@@ -1084,10 +1428,25 @@ footer #footer-links-external .icon:hover {
 /* -                 - */
 /* ------------------- */
 #contact-grid {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
   grid-gap: 0;
 }
 #contact-grid #contact-content {
   background-color: #191a1d;
+  -webkit-border-top-left-radius: 10px;
+  -webkit-border-bottom-left-radius: 10px;
+  -moz-border-top-left-radius: 10px;
+  -moz-border-bottom-left-radius: 10px;
+  -ms-border-top-left-radius: 10px;
+  -ms-border-bottom-left-radius: 10px;
+  -o-border-top-left-radius: 10px;
+  -o-border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
   padding: 30px;
   vertical-align: middle;
 }
@@ -1101,6 +1460,16 @@ footer #footer-links-external .icon:hover {
   width: 100%;
 }
 #contact-grid #contact-image-container #contact-image {
+  -webkit-border-top-right-radius: 10px;
+  -webkit-border-bottom-right-radius: 10px;
+  -moz-border-top-right-radius: 10px;
+  -moz-border-bottom-right-radius: 10px;
+  -ms-border-top-right-radius: 10px;
+  -ms-border-bottom-right-radius: 10px;
+  -o-border-top-right-radius: 10px;
+  -o-border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
   display: block;
   height: 100%;
   object-fit: cover;
@@ -1113,6 +1482,13 @@ footer #footer-links-external .icon:hover {
 /* ------- */
 /* - smaller than laptop - */
 @media screen and (max-width: 1024px) {
+  #contact-grid #contact-content {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+  }
   #contact-grid #contact-image-container #contact-image {
     display: none;
   }

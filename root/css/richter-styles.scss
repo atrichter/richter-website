@@ -57,6 +57,32 @@ $barlow: Barlow, Verdana, Arial, Helvetica, sans-serif;
   border-radius: $property;
 }
 
+@mixin border-right-radius($property) {
+  -webkit-border-top-right-radius: $property;
+  -webkit-border-bottom-right-radius: $property;
+  -moz-border-top-right-radius: $property;
+  -moz-border-bottom-right-radius: $property;
+  -ms-border-top-right-radius: $property;
+  -ms-border-bottom-right-radius: $property;
+  -o-border-top-right-radius: $property;
+  -o-border-bottom-right-radius: $property;
+  border-top-right-radius: $property;
+  border-bottom-right-radius: $property;
+}
+
+@mixin border-left-radius($property) {
+  -webkit-border-top-left-radius: $property;
+  -webkit-border-bottom-left-radius: $property;
+  -moz-border-top-left-radius: $property;
+  -moz-border-bottom-left-radius: $property;
+  -ms-border-top-left-radius: $property;
+  -ms-border-bottom-left-radius: $property;
+  -o-border-top-left-radius: $property;
+  -o-border-bottom-left-radius: $property;
+  border-top-left-radius: $property;
+  border-bottom-left-radius: $property;
+}
+
 
 
 
@@ -298,6 +324,38 @@ li::before {
     auto;
 }
 
+/* grid 4
+  mobile: 1 2
+          3 4
+  tablet+: 1 2 3 4
+*/
+.grid-4-container {
+  display: grid;
+  grid-gap: 40px;
+  grid-template-areas:
+    auto auto;
+}
+
+.grid-4-same-size {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* grid 6
+  mobile: 1 2 3
+          4 5 6
+  tablet+: 1 2 3 4 5 6
+*/
+.grid-6-container {
+  display: grid;
+  grid-gap: 40px;
+  grid-template-areas:
+    auto auto auto;
+}
+
+.grid-6-same-size {
+  grid-template-columns: repeat(3, 1fr);
+}
+
 /* grid 2-1
   mobile: 2
           1
@@ -380,6 +438,24 @@ li::before {
 
   .grid-2-same-size {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-4-container {
+    grid-template-columns:
+      auto auto auto auto;
+  }
+
+  .grid-4-same-size {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .grid-6-container {
+    grid-template-columns:
+      auto auto auto auto auto auto;
+  }
+
+  .grid-6-same-size {
+    grid-template-columns: repeat(6, 1fr);
   }
 
   .grid-2-1-container {
@@ -629,7 +705,7 @@ li::before {
 
   li {
     border: solid 1px $dark-grey;
-    @include border-radius(5px);
+    @include border-radius(6px);
     color: $dark-grey;
     display: inline-block;
     font: 400 0.8em/1 $barlow;
@@ -941,6 +1017,114 @@ footer {
 
 
 
+/* ------------------------------- */
+/* -  Experience and Work Links  - */
+/* ------------------------------- */
+
+#exp-work-links-container {
+  padding-bottom: 40px;
+  padding-top: 80px;
+  text-align: center;
+
+  .grid-2-item {
+    background-color: $light-grey;
+    @include border-radius(10px);
+    padding: 30px;  
+    
+    h2 {
+      color: $coral;
+      font-size: 1.85em;
+      text-align: left;
+    }
+
+    .exp-work-graphic {
+      display: block;
+      padding: 10px 25px 0 25px;
+      transition: all .4s ease-in-out;
+      width: 100%;
+    }
+
+    p {
+      text-align: left;
+    }
+
+    .rounded-button {
+      margin: 15px 0 0 0;
+    }
+  }
+}
+
+#cerner-logo-2 {
+  fill: $grey;
+}
+
+#cerner-logo-2:hover {
+  fill: $cerner-blue;
+}
+
+
+/* ------- */
+/*  media  */
+/* ------- */
+
+/* - for large mobile - */
+@media screen and (min-width: $mobile-l) {
+  #exp-work-links-container {
+    .grid-2-item {
+      .exp-work-graphic {
+        padding: 25px 60px 15px 60px;
+      }
+    }
+  }
+}
+
+/* - for tablet - */
+@media screen and (min-width: $mobile-l) {
+  #exp-work-links-container {
+    .grid-2-item {
+      .exp-work-graphic {
+        padding: 15px 25px 5px 25px;
+      }
+    }
+  }
+}
+
+/* - for laptop - */
+@media screen and (min-width: $laptop) {
+  #exp-work-links-container {
+    .grid-2-item {
+      .exp-work-graphic {
+        padding: 15px 60px 5px 60px;
+      }
+    }
+  }
+}
+
+/* - for small desktop - */
+@media screen and (min-width: $desktop-s) {
+  #exp-work-links-container {
+    .grid-2-item {
+      .exp-work-graphic {
+        padding: 20px 80px 5px 80px;
+      }
+    }
+  }
+}
+
+/* - for medium desktop - */
+@media screen and (min-width: $desktop-m) {
+  #exp-work-links-container {
+    .grid-2-item {
+      .exp-work-graphic {
+        padding: 30px 110px 5px 110px;
+      }
+    }
+  }
+}
+
+
+
+
 /* ================================================================ */
 
 
@@ -1058,38 +1242,6 @@ footer {
 
 
 
-/* ------------------------- */
-/* -  Experience and Work  - */
-/* ------------------------- */
-
-#index-links-container {
-  color: $navy;
-  padding-bottom: 80px;
-  padding-top: 80px;
-  text-align: center;
-
-  .grid-2-item {
-    background-color: $light-grey;
-    padding: 30px;  
-    
-    h2 {
-      font-size: 1.75em;
-      text-align: left;
-    }
-
-    p {
-      text-align: left;
-    }
-
-    a {
-      margin-bottom: 0;
-    }
-  }
-}
-
-
-
-
 /* ================================================================ */
 
 
@@ -1102,10 +1254,12 @@ footer {
 /* ----------------- */
 
 #about-grid {
+  @include border-radius(10px);
   grid-gap: 0;
 
   #about-content {
     background-color: $light-grey;
+    @include border-left-radius(10px);
     padding: 30px;
   }
 
@@ -1113,6 +1267,7 @@ footer {
     width: 100%;
 
     #about-image {
+      @include border-right-radius(10px);
       display: block;
       height: 100%;
       object-fit: cover;
@@ -1130,6 +1285,10 @@ footer {
 /* - smaller than laptop - */
 @media screen and (max-width: $laptop) {
   #about-grid {
+    #about-content {
+      @include border-radius(10px);
+    }
+
     #about-image-container {
       #about-image {
         display: none;
@@ -1161,6 +1320,7 @@ footer {
   #experience-work-lavner,
   #experience-work-website {
     background-color: $light-grey;
+    @include border-radius(5px);
     padding: 25px;
   }
 
@@ -1193,16 +1353,11 @@ footer {
 
   #experience-work-cerner-logo {
     #cerner-logo-2 {
-      fill: $grey;
       margin: auto;
       max-height: 225px;
       padding: 10px 0 20px 0;
       transition: all .4s ease-in-out;
       width: 100%;
-    }
-    
-    #cerner-logo-2:hover {
-      fill: $cerner-blue;
     }
   }
 }
@@ -1299,7 +1454,251 @@ footer {
 /* -                 - */
 /* ------------------- */
 
-/* My work page styling will go here */
+#work-content {
+  /* thumbnails */
+  #work-thumbnails-grid {
+    grid-gap: 15px;
+    padding: 15px 0 0 0;
+
+    .thumbnail {
+      float: left;
+      max-width: 100%;
+      position: relative;
+      
+      img {
+        @include border-radius(5px);
+        float: left;
+        width: 100%;
+      }
+
+      .thumbnail-description {
+        align-items: center;
+        bottom: 0;
+        color: $white;
+        display: flex;
+        font: italic 700 1.8em/1 $barlow;
+        justify-content: center;
+        left: 0;
+        opacity: 0;
+        padding: 15px;
+        position: absolute;
+        right: 0;
+        text-align: center;
+        top: 0;
+        transition: all 0.3s ease-in-out;
+        visibility: hidden;
+      }
+      
+      .thumbnail-text {
+        text-shadow: 2px 2px 4px rgba(0,0,0,.5);
+        transition: all 0.25s ease-in-out;
+        transform: translateY(-3em);
+      }
+    }
+
+    .thumbnail::before {
+      @include border-radius(5px);
+      bottom: 0;
+      box-shadow: inset 0 0 10px rgba(0,0,0,.1);
+      content: "";
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .thumbnail:hover::before {
+      box-shadow: inset 0 0 125px rgba(0,0,0,1);
+    }
+
+    .thumbnail:hover .thumbnail-description {
+      visibility: visible;
+      opacity: 1;
+    }
+    
+    .thumbnail:hover .thumbnail-text {
+      transform: translateY(0);
+    }
+  }
+
+  /* logos */
+  #work-logos-grid {
+    grid-gap: 25px;
+    padding: 38px 15px 15px 15px;
+
+    .work-logo {
+      display: inline-block;
+      height: 0;
+      padding-top: 92.88%;   /* (img-height / img-width * container-width) */
+      transition: all 0.2s ease-in-out;
+      width: 100%;
+    }
+
+    #jujitsuShield {
+      background: transparent url("../images/thumbnails/jujitsuShield-grey-300.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    #jujitsuShield:hover {
+      background: transparent url("../images/thumbnails/jujitsuShield-300.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    #jujitsuTsunamiB {
+      background: transparent url("../images/thumbnails/jujitsuTsunamiB-alt-grey-300.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    #jujitsuTsunamiB:hover {
+      background: transparent url("../images/thumbnails/jujitsuTsunamiB-300.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    #jujitsuBigDogs {
+      background: transparent url("../images/thumbnails/jujitsuBigDogs-alt-grey-300.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    #jujitsuBigDogs:hover {
+      background: transparent url("../images/thumbnails/jujitsuBigDogs-logo-300.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    #jujitsuBurst {
+      background: transparent url("../images/thumbnails/jujitsuBurst-alt-grey-300.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    #jujitsuBurst:hover {
+      background: transparent url("../images/thumbnails/jujitsuBurst-300.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    #jujitsuText {
+      background: transparent url("../images/thumbnails/jujitsuText-grey-300.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    #jujitsuText:hover {
+      background: transparent url("../images/thumbnails/jujitsuText-300.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    #jujitsuTUB {
+      background: transparent url("../images/thumbnails/jujitsuTUB-logo-grey-300.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    #jujitsuTUB:hover {
+      background: transparent url("../images/thumbnails/jujitsuTUB-logo-purple-300.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+}
+
+
+/* ------- */
+/*  media  */
+/* ------- */
+
+/* - only for devices without hover - */
+@media (any-hover: none) {
+  #work-content {
+    #work-logos-grid {
+      #jujitsuShield {
+        background: transparent url("../images/thumbnails/jujitsuShield-300.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+
+      #jujitsuTsunamiB {
+        background: transparent url("../images/thumbnails/jujitsuTsunamiB-300.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+  
+      #jujitsuBigDogs {
+        background: transparent url("../images/thumbnails/jujitsuBigDogs-logo-300.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+  
+      #jujitsuBurst {
+        background: transparent url("../images/thumbnails/jujitsuBurst-300.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+  
+      #jujitsuText {
+        background: transparent url("../images/thumbnails/jujitsuText-300.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+  
+      #jujitsuTUB {
+        background: transparent url("../images/thumbnails/jujitsuTUB-logo-purple-300.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+}
+
+/* - for laptop - */
+@media screen and (min-width: $laptop) {
+  #work-content {
+    #work-thumbnails-grid {
+      grid-gap: 25px;
+      padding: 25px 0 0 0;
+    }
+
+    #work-logos-grid {
+      grid-gap: 40px;
+      padding: 48px 25px 20px 25px;
+    }
+  }
+}
+
+/* - for large desktop - */
+@media screen and (min-width: $desktop-s) {
+  #work-content {
+    #work-thumbnails-grid {
+      grid-gap: 35px;
+      padding: 35px 0 0 0;
+    }
+  }
+}
 
 
 
@@ -1316,10 +1715,12 @@ footer {
 /* ------------------- */
 
 #contact-grid {
+  @include border-radius(10px);
   grid-gap: 0;
 
   #contact-content {
     background-color: $navy;
+    @include border-left-radius(10px);
     padding: 30px;
     vertical-align: middle;
 
@@ -1336,6 +1737,7 @@ footer {
     width: 100%;
 
     #contact-image {
+      @include border-right-radius(10px);
       display: block;
       height: 100%;
       object-fit: cover;
@@ -1353,6 +1755,10 @@ footer {
 /* - smaller than laptop - */
 @media screen and (max-width: $laptop) {
   #contact-grid {
+    #contact-content {
+      @include border-radius(10px);
+    }
+
     #contact-image-container {
       #contact-image {
         display: none;
