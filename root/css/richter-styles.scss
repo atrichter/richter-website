@@ -750,11 +750,91 @@ nav {
   z-index: 999;
 }
 
-#ar-tab-logo {
-  float: left;
-  transition: all 0.2s ease-in-out;
-  width: 65px;
+#home-logo {
+  #ar-tab-logo {
+    float: left;
+    transition: all 0.2s ease-in-out;
+    width: 65px;
+  }
+
+  #andrew, #richter {
+    color: $black;
+    float: left;
+    font: italic 800 1.75em/1 $barlow;
+    opacity: 0;
+    transition: all 0.25s ease;
+    visibility: hidden;
+  }
+
+  #andrew {
+    padding-left: .5em;
+    @include transform(translateY(125%) translateX(1.5em));
+  }
+
+  #richter {
+    padding-left: .2em;
+    @include transform(translateY(125%) translateX(2.5em));
+  }
 }
+
+#home-logo:hover #andrew,
+#home-logo:hover #richter {
+  opacity: 1;
+  @include transform(translateY(125%) translateX(0));
+  visibility: visible;
+}
+
+//   .thumbnail-description {
+//     align-items: center;
+//     bottom: 0;
+//     color: $white;
+//     display: flex;
+//     font: italic 700 1.8em/1 $barlow;
+//     justify-content: center;
+//     left: 0;
+//     opacity: 0;
+//     padding: 15px;
+//     position: absolute;
+//     right: 0;
+//     text-align: center;
+//     top: 0;
+//     transition: all 0.3s ease-in-out;
+//     visibility: hidden;
+//   }
+  
+//   .thumbnail-text {
+//     text-shadow: 2px 2px 4px rgba(0,0,0,.5);
+//     transition: all 0.25s ease-in-out;
+//     transform: translateY(-3em);
+//   }
+// }
+
+// .thumbnail::before {
+//   @include border-radius(5px);
+//   bottom: 0;
+//   box-shadow: inset 0 0 10px rgba(0,0,0,.1);
+//   content: "";
+//   left: 0;
+//   position: absolute;
+//   right: 0;
+//   top: 0;
+//   transition: all 0.3s ease-in-out;
+// }
+
+// .thumbnail:hover::before {
+//   box-shadow: inset 0 0 125px rgba(0,0,0,1);
+// }
+
+// .thumbnail:hover .thumbnail-description {
+//   visibility: visible;
+//   opacity: 1;
+// }
+
+// .thumbnail:hover .thumbnail-text {
+//   transform: translateY(0);
+// }
+// }
+// }
 
 
 
@@ -1492,7 +1572,7 @@ footer {
       .thumbnail-text {
         text-shadow: 2px 2px 4px rgba(0,0,0,.5);
         transition: all 0.25s ease-in-out;
-        transform: translateY(-3em);
+        @include transform(translateY(-3em));
       }
     }
 
@@ -1513,12 +1593,12 @@ footer {
     }
 
     .thumbnail:hover .thumbnail-description {
-      visibility: visible;
       opacity: 1;
+      visibility: visible;
     }
     
     .thumbnail:hover .thumbnail-text {
-      transform: translateY(0);
+      @include transform(translateY(0));
     }
   }
 
