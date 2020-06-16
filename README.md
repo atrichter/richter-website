@@ -21,23 +21,23 @@ LinkedIn: [https://www.linkedin.com/in/andrewtrichter/](https://www.linkedin.com
 
 ## Process
 
-1. **Research**
+1. **Research**\
 Finding examples of portfolio websites for inspiration and color palette exploration.
 
-1. **Sketching**
+1. **Sketching**\
 Rough sketches of ideas for page layouts and asset design.
 
-1. **Asset creation**
+1. **Asset creation**\
 Taking photos and creating needed logos, icons, and more for the site.
 
-1. **Mockups**
+1. **Mockups**\
 Digital mockups of page layouts to replicate with code.
 
-1. **Coding**
+1. **Coding**\
 Writing HTML, Sass/CSS, and JavaScript to create pages.
 
-1. **Optimization**
+1. **Optimization**\
 Optimize images for faster loading times and condense styling sheets.
 
-1. **Repeat for updates**
+1. **Repeat for updates**\
 For new functionalities and pages, repeat steps.
