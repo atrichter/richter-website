@@ -1,12 +1,12 @@
-%!Adobe-FontList 1.20
+%!Adobe-FontList 1.22
 %Locale:0x409
 
 %BeginFont
 Handler:DirectoryHandler
 FontType:Invalid
-OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/resume/richterResumeAlt/Document fonts/AdobeFnt21.lst
-FileLength:6439
-FileModTime:611881015
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/resume/richterResumeAlt Folder/Document fonts/AdobeFnt22.lst
+FileLength:6516
+FileModTime:614028746
 %EndFont
 
 %BeginFont
@@ -22,7 +22,7 @@ WidthClass:5
 AngleClass:0
 FullName:Barlow ExtraBold
 WritingScript:Roman
-OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/resume/richterResumeAlt/Document fonts/Barlow-ExtraBold.ttf
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/resume/richterResumeAlt Folder/Document fonts/Barlow-ExtraBold.ttf
 DataFormat:sfntData
 hasSVG:no
 VariableFontType:NonVariableFont
@@ -46,7 +46,7 @@ WidthClass:5
 AngleClass:1
 FullName:Barlow ExtraBold Italic
 WritingScript:Roman
-OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/resume/richterResumeAlt/Document fonts/Barlow-ExtraBoldItalic.ttf
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/resume/richterResumeAlt Folder/Document fonts/Barlow-ExtraBoldItalic.ttf
 DataFormat:sfntData
 hasSVG:no
 VariableFontType:NonVariableFont
@@ -70,7 +70,7 @@ WidthClass:5
 AngleClass:0
 FullName:Barlow ExtraLight
 WritingScript:Roman
-OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/resume/richterResumeAlt/Document fonts/Barlow-ExtraLight.ttf
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/resume/richterResumeAlt Folder/Document fonts/Barlow-ExtraLight.ttf
 DataFormat:sfntData
 hasSVG:no
 VariableFontType:NonVariableFont
@@ -94,7 +94,7 @@ WidthClass:5
 AngleClass:1
 FullName:Barlow ExtraLight Italic
 WritingScript:Roman
-OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/resume/richterResumeAlt/Document fonts/Barlow-ExtraLightItalic.ttf
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/resume/richterResumeAlt Folder/Document fonts/Barlow-ExtraLightItalic.ttf
 DataFormat:sfntData
 hasSVG:no
 VariableFontType:NonVariableFont
@@ -118,7 +118,7 @@ WidthClass:5
 AngleClass:0
 FullName:Barlow Light
 WritingScript:Roman
-OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/resume/richterResumeAlt/Document fonts/Barlow-Light.ttf
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/resume/richterResumeAlt Folder/Document fonts/Barlow-Light.ttf
 DataFormat:sfntData
 hasSVG:no
 VariableFontType:NonVariableFont
@@ -142,7 +142,7 @@ WidthClass:5
 AngleClass:1
 FullName:Barlow Light Italic
 WritingScript:Roman
-OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/resume/richterResumeAlt/Document fonts/Barlow-LightItalic.ttf
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/resume/richterResumeAlt Folder/Document fonts/Barlow-LightItalic.ttf
 DataFormat:sfntData
 hasSVG:no
 VariableFontType:NonVariableFont
@@ -166,7 +166,7 @@ WidthClass:5
 AngleClass:0
 FullName:Barlow Medium
 WritingScript:Roman
-OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/resume/richterResumeAlt/Document fonts/Barlow-Medium.ttf
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/resume/richterResumeAlt Folder/Document fonts/Barlow-Medium.ttf
 DataFormat:sfntData
 hasSVG:no
 VariableFontType:NonVariableFont
@@ -190,7 +190,7 @@ WidthClass:5
 AngleClass:1
 FullName:Barlow Medium Italic
 WritingScript:Roman
-OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/resume/richterResumeAlt/Document fonts/Barlow-MediumItalic.ttf
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/resume/richterResumeAlt Folder/Document fonts/Barlow-MediumItalic.ttf
 DataFormat:sfntData
 hasSVG:no
 VariableFontType:NonVariableFont
@@ -214,7 +214,7 @@ WidthClass:5
 AngleClass:0
 FullName:Barlow Regular
 WritingScript:Roman
-OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/resume/richterResumeAlt/Document fonts/Barlow-Regular.ttf
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/resume/richterResumeAlt Folder/Document fonts/Barlow-Regular.ttf
 DataFormat:sfntData
 hasSVG:no
 VariableFontType:NonVariableFont
@@ -237,7 +237,7 @@ WidthClass:5
 AngleClass:0
 FullName:Barlow SemiBold
 WritingScript:Roman
-OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/resume/richterResumeAlt/Document fonts/Barlow-SemiBold.ttf
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/resume/richterResumeAlt Folder/Document fonts/Barlow-SemiBold.ttf
 DataFormat:sfntData
 hasSVG:no
 VariableFontType:NonVariableFont
@@ -261,7 +261,7 @@ WidthClass:5
 AngleClass:1
 FullName:Barlow SemiBold Italic
 WritingScript:Roman
-OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/resume/richterResumeAlt/Document fonts/Barlow-SemiBoldItalic.ttf
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/resume/richterResumeAlt Folder/Document fonts/Barlow-SemiBoldItalic.ttf
 DataFormat:sfntData
 hasSVG:no
 VariableFontType:NonVariableFont
