@@ -194,6 +194,14 @@ li::before {
   }
 }
 
+.coral {
+  color: $coral;
+
+  &::after {
+    background-color: $coral;
+  }
+}
+
 
 /* ------- */
 /*  media  */
@@ -371,6 +379,21 @@ li::before {
     'one';
 }
 
+/* grid 2-1
+  mobile: 2
+          1
+  tablet+: 1 1 2
+*/
+.grid-2-1-1-item1 { grid-area: one; }
+.grid-2-1-1-item2 { grid-area: two; }
+
+.grid-2-1-1-container {
+  display: grid;
+  grid-template-areas:
+    'two'
+    'one';
+}
+
 /* grid 1-1-2-3
   mobile: 1
           2
@@ -461,6 +484,11 @@ li::before {
   .grid-2-1-container {
     grid-template-areas:
       'one two';
+  }
+
+  .grid-2-1-1-container {
+    grid-template-areas:
+      'one one two';
   }
 
   .grid-1-1-2-3-container {
@@ -784,58 +812,6 @@ nav {
   visibility: visible;
 }
 
-//   .thumbnail-description {
-//     align-items: center;
-//     bottom: 0;
-//     color: $white;
-//     display: flex;
-//     font: italic 700 1.8em/1 $barlow;
-//     justify-content: center;
-//     left: 0;
-//     opacity: 0;
-//     padding: 15px;
-//     position: absolute;
-//     right: 0;
-//     text-align: center;
-//     top: 0;
-//     transition: all 0.3s ease-in-out;
-//     visibility: hidden;
-//   }
-  
-//   .thumbnail-text {
-//     text-shadow: 2px 2px 4px rgba(0,0,0,.5);
-//     transition: all 0.25s ease-in-out;
-//     transform: translateY(-3em);
-//   }
-// }
-
-// .thumbnail::before {
-//   @include border-radius(5px);
-//   bottom: 0;
-//   box-shadow: inset 0 0 10px rgba(0,0,0,.1);
-//   content: "";
-//   left: 0;
-//   position: absolute;
-//   right: 0;
-//   top: 0;
-//   transition: all 0.3s ease-in-out;
-// }
-
-// .thumbnail:hover::before {
-//   box-shadow: inset 0 0 125px rgba(0,0,0,1);
-// }
-
-// .thumbnail:hover .thumbnail-description {
-//   visibility: visible;
-//   opacity: 1;
-// }
-
-// .thumbnail:hover .thumbnail-text {
-//   transform: translateY(0);
-// }
-// }
-// }
-
 
 
 
@@ -1109,6 +1085,7 @@ footer {
   .grid-2-item {
     background-color: $light-grey;
     @include border-radius(10px);
+    box-shadow: inset 0 0 20px rgba(0,0,0,.0625);
     padding: 30px;  
     
     h2 {
@@ -1776,6 +1753,26 @@ footer {
     #work-thumbnails-grid {
       grid-gap: 35px;
       padding: 35px 0 0 0;
+    }
+  }
+}
+
+
+
+
+/* ------------------- */
+/* -  Image & About  - */
+/* ------------------- */
+
+#work-content {
+  #work-grid {
+    grid-gap: 40px;
+
+    #work-imgs {
+      img {
+        margin: 15px 0;
+        width: 100%;
+      }
     }
   }
 }

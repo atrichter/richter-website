@@ -1,0 +1,1920 @@
+%!Adobe-FontList 1.22
+%Locale:0x409
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/AdobeFnt21.lst
+FileLength:37
+FileModTime:607459610
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/AdobeFnt22.lst
+FileLength:48607
+FileModTime:614291608
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:ArcherPro-Bold
+FamilyName:ArcherPro
+StyleName:Bold
+MenuName:ArcherPro Bold
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:ArcherPro Bold
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/ArcherPro-Bold.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:84062
+FileModTime:223936238
+NameArray:0,Mac,4,ArcherPro Bold
+NameArray:0,Win,1,ArcherPro Bold
+NameArray:0,Win,16,ArcherPro
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:ArcherPro-Book
+FamilyName:ArcherPro
+StyleName:Book
+MenuName:ArcherPro Book
+StyleBits:0
+WeightClass:325
+WidthClass:5
+AngleClass:0
+FullName:ArcherPro Book
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/ArcherPro-Book.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:83420
+FileModTime:223942054
+NameArray:0,Mac,4,ArcherPro Book
+NameArray:0,Win,1,ArcherPro Book
+NameArray:0,Win,16,ArcherPro
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:ArcherPro-BookItalic
+FamilyName:ArcherPro
+StyleName:Book Italic
+MenuName:ArcherPro Book
+StyleBits:1
+WeightClass:325
+WidthClass:5
+AngleClass:1
+FullName:ArcherPro Book Italic
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/ArcherPro-BookItalic.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:61110
+FileModTime:223970924
+NameArray:0,Mac,4,ArcherPro Book Italic
+NameArray:0,Win,1,ArcherPro Book
+NameArray:0,Win,16,ArcherPro
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:ArcherPro-ExtraLight
+FamilyName:ArcherPro
+StyleName:Extra Light
+MenuName:ArcherPro Extra Light
+StyleBits:0
+WeightClass:285
+WidthClass:5
+AngleClass:0
+FullName:ArcherPro Extra Light
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/ArcherPro-ExtraLight.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:85852
+FileModTime:223967366
+NameArray:0,Mac,4,ArcherPro Extra Light
+NameArray:0,Win,1,ArcherPro Extra Light
+NameArray:0,Win,16,ArcherPro
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:ArcherPro-Hairline
+FamilyName:ArcherPro
+StyleName:Hairline
+MenuName:ArcherPro Hairline
+StyleBits:0
+WeightClass:250
+WidthClass:5
+AngleClass:0
+FullName:ArcherPro Hairline
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/ArcherPro-Hairline.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:81304
+FileModTime:223956544
+NameArray:0,Mac,4,ArcherPro Hairline
+NameArray:0,Win,1,ArcherPro Hairline
+NameArray:0,Win,16,ArcherPro
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:ArcherPro-Medium
+FamilyName:ArcherPro
+StyleName:Medium
+MenuName:ArcherPro Medium
+StyleBits:0
+WeightClass:350
+WidthClass:5
+AngleClass:0
+FullName:ArcherPro Medium
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/ArcherPro-Medium.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:85644
+FileModTime:223958438
+NameArray:0,Mac,4,ArcherPro Medium
+NameArray:0,Win,1,ArcherPro Medium
+NameArray:0,Win,16,ArcherPro
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:ArcherPro-MediumItalic
+FamilyName:ArcherPro
+StyleName:Medium Italic
+MenuName:ArcherPro Medium
+StyleBits:1
+WeightClass:350
+WidthClass:5
+AngleClass:1
+FullName:ArcherPro Medium Italic
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/ArcherPro-MediumItalic.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:63926
+FileModTime:223970916
+NameArray:0,Mac,4,ArcherPro Medium Italic
+NameArray:0,Win,1,ArcherPro Medium
+NameArray:0,Win,16,ArcherPro
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:ArcherPro-Semibold
+FamilyName:ArcherPro
+StyleName:Semibold
+MenuName:ArcherPro Semibold
+StyleBits:0
+WeightClass:375
+WidthClass:5
+AngleClass:0
+FullName:ArcherPro Semibold
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/ArcherPro-Semibold.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:86272
+FileModTime:223964554
+NameArray:0,Mac,4,ArcherPro Semibold
+NameArray:0,Win,1,ArcherPro Semibold
+NameArray:0,Win,16,ArcherPro
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Arial-Black
+FamilyName:Arial Black
+StyleName:Regular
+MenuName:Arial Black
+StyleBits:0
+WeightClass:900
+WidthClass:5
+AngleClass:0
+FullName:Arial Black
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/Arial-Black.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:122556
+FileModTime:458259446
+NameArray:0,Mac,4,Arial Black
+NameArray:0,Win,1,Arial Black
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:ArialMT
+FamilyName:Arial
+StyleName:Regular
+MenuName:Arial
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Arial
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/ArialMT.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:773236
+FileModTime:458259446
+NameArray:0,Mac,4,Arial
+NameArray:0,Win,1,Arial
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:ArquitectaStd-BlackIt
+FamilyName:Arquitecta Std
+StyleName:Black Italic
+MenuName:Arquitecta Std Black
+StyleBits:1
+WeightClass:900
+WidthClass:5
+AngleClass:0
+FullName:Arquitecta Std Black It
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/ArquitectaStd-BlackIt.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:73316
+FileModTime:512509556
+NameArray:0,Mac,4,Arquitecta Std Black It
+NameArray:0,Win,1,Arquitecta Std Black
+NameArray:0,Win,16,Arquitecta Std
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:ArquitectaStd-BoldIt
+FamilyName:Arquitecta Std
+StyleName:Bold Italic
+MenuName:Arquitecta Std Bold
+StyleBits:1
+WeightClass:700
+WidthClass:5
+AngleClass:0
+FullName:Arquitecta Std Bold It
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/ArquitectaStd-BoldIt.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:77976
+FileModTime:512509556
+NameArray:0,Mac,4,Arquitecta Std Bold It
+NameArray:0,Win,1,Arquitecta Std Bold
+NameArray:0,Win,16,Arquitecta Std
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:ArquitectaStd-Book
+FamilyName:Arquitecta Std
+StyleName:Book
+MenuName:Arquitecta Std Book
+StyleBits:0
+WeightClass:350
+WidthClass:5
+AngleClass:0
+FullName:Arquitecta Std Book
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/ArquitectaStd-Book.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:77504
+FileModTime:512509556
+NameArray:0,Mac,4,Arquitecta Std Book
+NameArray:0,Win,1,Arquitecta Std Book
+NameArray:0,Win,16,Arquitecta Std
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:ArquitectaStd-Heavy
+FamilyName:Arquitecta Std
+StyleName:Heavy
+MenuName:Arquitecta Std Heavy
+StyleBits:0
+WeightClass:850
+WidthClass:5
+AngleClass:0
+FullName:Arquitecta Std Heavy
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/ArquitectaStd-Heavy.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:77980
+FileModTime:512509556
+NameArray:0,Mac,4,Arquitecta Std Heavy
+NameArray:0,Win,1,Arquitecta Std Heavy
+NameArray:0,Win,16,Arquitecta Std
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:ArquitectaStd-HeavyIt
+FamilyName:Arquitecta Std
+StyleName:Heavy Italic
+MenuName:Arquitecta Std Heavy
+StyleBits:1
+WeightClass:850
+WidthClass:5
+AngleClass:0
+FullName:Arquitecta Std Heavy It
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/ArquitectaStd-HeavyIt.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:78200
+FileModTime:512509556
+NameArray:0,Mac,4,Arquitecta Std Heavy It
+NameArray:0,Win,1,Arquitecta Std Heavy
+NameArray:0,Win,16,Arquitecta Std
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:ArquitectaStd-Medium
+FamilyName:Arquitecta Std
+StyleName:Medium
+MenuName:Arquitecta Std Medium
+StyleBits:0
+WeightClass:500
+WidthClass:5
+AngleClass:0
+FullName:Arquitecta Std Medium
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/ArquitectaStd-Medium.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:77456
+FileModTime:512509556
+NameArray:0,Mac,4,Arquitecta Std Medium
+NameArray:0,Win,1,Arquitecta Std Medium
+NameArray:0,Win,16,Arquitecta Std
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:ArquitectaStd-MediumIt
+FamilyName:Arquitecta Std
+StyleName:Medium Italic
+MenuName:Arquitecta Std Medium
+StyleBits:1
+WeightClass:500
+WidthClass:5
+AngleClass:0
+FullName:Arquitecta Std Medium It
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/ArquitectaStd-MediumIt.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:78148
+FileModTime:512509556
+NameArray:0,Mac,4,Arquitecta Std Medium It
+NameArray:0,Win,1,Arquitecta Std Medium
+NameArray:0,Win,16,Arquitecta Std
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:ArquitectaStd-Regular
+FamilyName:Arquitecta Std
+StyleName:Regular
+MenuName:Arquitecta Std
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Arquitecta Std
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/ArquitectaStd-Regular.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:77316
+FileModTime:512509556
+NameArray:0,Mac,4,Arquitecta Std
+NameArray:0,Win,1,Arquitecta Std
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:ArquitectaStd-Thin
+FamilyName:Arquitecta Std
+StyleName:Thin
+MenuName:Arquitecta Std Thin
+StyleBits:0
+WeightClass:100
+WidthClass:5
+AngleClass:0
+FullName:Arquitecta Std Thin
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/ArquitectaStd-Thin.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:64452
+FileModTime:512509556
+NameArray:0,Mac,4,Arquitecta Std Thin
+NameArray:0,Win,1,Arquitecta Std Thin
+NameArray:0,Win,16,Arquitecta Std
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Athelas-Bold
+FamilyName:Athelas
+StyleName:Bold
+MenuName:Athelas
+StyleBits:2
+WeightClass:700
+WidthClass:5
+AngleClass:0
+FullName:Athelas Bold
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/Athelas-Bold.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:627268
+FileModTime:458259446
+NameArray:0,Mac,4,Athelas Bold
+NameArray:0,Win,1,Athelas
+NameArray:0,Win,16,Athelas
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Athelas-BoldItalic
+FamilyName:Athelas
+StyleName:Bold Italic
+MenuName:Athelas
+StyleBits:3
+WeightClass:700
+WidthClass:5
+AngleClass:1
+FullName:Athelas Bold Italic
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/Athelas-BoldItalic.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:556800
+FileModTime:458259446
+NameArray:0,Mac,4,Athelas Bold Italic
+NameArray:0,Win,1,Athelas
+NameArray:0,Win,16,Athelas
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Athelas-Italic
+FamilyName:Athelas
+StyleName:Italic
+MenuName:Athelas
+StyleBits:1
+WeightClass:400
+WidthClass:5
+AngleClass:1
+FullName:Athelas Italic
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/Athelas-Italic.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:590032
+FileModTime:458259446
+NameArray:0,Mac,4,Athelas Italic
+NameArray:0,Win,1,Athelas
+NameArray:0,Win,16,Athelas
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Athelas-Regular
+FamilyName:Athelas
+StyleName:Regular
+MenuName:Athelas
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Athelas Regular
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/Athelas-Regular.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:575196
+FileModTime:458259446
+NameArray:0,Mac,4,Athelas Regular
+NameArray:0,Win,1,Athelas
+NameArray:0,Win,16,Athelas
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:Avenir-Black
+FamilyName:Avenir
+StyleName:95 Black
+MenuName:Avenir 65 Medium
+StyleBits:2
+WeightClass:900
+WidthClass:5
+AngleClass:0
+FullName:12 Avenir 95 Black   09173
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/AveniBla
+DataFormat:POSTResource
+UsesStandardEncoding:yes
+isCFF:no
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:32696
+FileModTime:232380216
+DesignSize:-1
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:Avenir-BlackOblique
+FamilyName:Avenir
+StyleName:95 Black Oblique
+MenuName:Avenir 65 Medium
+StyleBits:3
+WeightClass:900
+WidthClass:5
+AngleClass:1
+FullName:12 Avenir 95 BlackOblique   77173
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/AveniBlaObl
+DataFormat:POSTResource
+UsesStandardEncoding:yes
+isCFF:no
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:44723
+FileModTime:232380216
+DesignSize:-1
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:Avenir-Heavy
+FamilyName:Avenir
+StyleName:85 Heavy
+MenuName:Avenir 55 Roman
+StyleBits:2
+WeightClass:850
+WidthClass:5
+AngleClass:0
+FullName:12 Avenir 85 Heavy   08173
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/AveniHea
+DataFormat:POSTResource
+UsesStandardEncoding:yes
+isCFF:no
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:31687
+FileModTime:232380216
+DesignSize:-1
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:Avenir-HeavyOblique
+FamilyName:Avenir
+StyleName:85 Heavy Oblique
+MenuName:Avenir 55 Roman
+StyleBits:3
+WeightClass:850
+WidthClass:5
+AngleClass:1
+FullName:12 Avenir 85 HeavyOblique   76173
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/AveniHeaObl
+DataFormat:POSTResource
+UsesStandardEncoding:yes
+isCFF:no
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:42955
+FileModTime:232380216
+DesignSize:-1
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:Avenir-Light
+FamilyName:Avenir
+StyleName:35 Light
+MenuName:Avenir 35 Light
+StyleBits:0
+WeightClass:300
+WidthClass:5
+AngleClass:0
+FullName:12 Avenir 35 Light   02173
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/AveniLig
+DataFormat:POSTResource
+UsesStandardEncoding:yes
+isCFF:no
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:30050
+FileModTime:232380216
+DesignSize:-1
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:Avenir-LightOblique
+FamilyName:Avenir
+StyleName:35 Light Oblique
+MenuName:Avenir 35 Light
+StyleBits:1
+WeightClass:300
+WidthClass:5
+AngleClass:1
+FullName:12 Avenir 35 LightOblique   73173
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/AveniLigObl
+DataFormat:POSTResource
+UsesStandardEncoding:yes
+isCFF:no
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:40538
+FileModTime:232380216
+DesignSize:-1
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:Avenir-Medium
+FamilyName:Avenir
+StyleName:65 Medium
+MenuName:Avenir 65 Medium
+StyleBits:0
+WeightClass:500
+WidthClass:5
+AngleClass:0
+FullName:12 Avenir 65 Medium   06173
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/AveniMed
+DataFormat:POSTResource
+UsesStandardEncoding:yes
+isCFF:no
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:30998
+FileModTime:232380216
+DesignSize:-1
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:Avenir-MediumOblique
+FamilyName:Avenir
+StyleName:65 Medium Oblique
+MenuName:Avenir 65 Medium
+StyleBits:1
+WeightClass:500
+WidthClass:5
+AngleClass:1
+FullName:12 Avenir 65 MediumOblique   75173
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/AveniMedObl
+DataFormat:POSTResource
+UsesStandardEncoding:yes
+isCFF:no
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:41857
+FileModTime:232380216
+DesignSize:-1
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:Avenir-Roman
+FamilyName:Avenir
+StyleName:55 Roman
+MenuName:Avenir 55 Roman
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:12 Avenir 55 Roman   05173
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/AveniRom
+DataFormat:POSTResource
+UsesStandardEncoding:yes
+isCFF:no
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:31192
+FileModTime:232380216
+DesignSize:-1
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Avenir-Black
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/Avenir-Black
+ResourceID:14672
+MacStyle:0
+FileLength:5256
+FileModTime:579713739
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Avenir-BlackOblique
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/Avenir-BlackOblique
+ResourceID:14671
+MacStyle:0
+FileLength:4490
+FileModTime:579713739
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Avenir-Heavy
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/Avenir-Heavy
+ResourceID:14678
+MacStyle:0
+FileLength:5255
+FileModTime:579713739
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Avenir-HeavyOblique
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/Avenir-HeavyOblique
+ResourceID:14677
+MacStyle:0
+FileLength:4489
+FileModTime:579713739
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Avenir-Light
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/Avenir-Light
+ResourceID:14682
+MacStyle:0
+FileLength:5079
+FileModTime:579713739
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Avenir-LightOblique
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/Avenir-LightOblique
+ResourceID:14681
+MacStyle:0
+FileLength:4313
+FileModTime:579713739
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Avenir-Medium
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/Avenir-Medium
+ResourceID:14674
+MacStyle:0
+FileLength:7078
+FileModTime:579713739
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Avenir-MediumOblique
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/Avenir-MediumOblique
+ResourceID:14673
+MacStyle:0
+FileLength:5316
+FileModTime:579713739
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Avenir-Roman
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/Avenir-Roman
+ResourceID:14680
+MacStyle:0
+FileLength:7075
+FileModTime:579713739
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Baskerville-Bold
+FamilyName:Baskerville
+StyleName:Bold
+MenuName:Baskerville
+StyleBits:2
+WeightClass:700
+WidthClass:5
+AngleClass:0
+FullName:Baskerville Bold
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/Baskerville-Bold.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:232828
+FileModTime:458259446
+NameArray:0,Mac,4,Baskerville Bold
+NameArray:0,Win,1,Baskerville
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Baskerville-BoldItalic
+FamilyName:Baskerville
+StyleName:Bold Italic
+MenuName:Baskerville
+StyleBits:3
+WeightClass:700
+WidthClass:5
+AngleClass:1
+FullName:Baskerville Bold Italic
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/Baskerville-BoldItalic.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:255376
+FileModTime:458259446
+NameArray:0,Mac,4,Baskerville Bold Italic
+NameArray:0,Win,1,Baskerville
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Baskerville-Italic
+FamilyName:Baskerville
+StyleName:Italic
+MenuName:Baskerville
+StyleBits:1
+WeightClass:400
+WidthClass:5
+AngleClass:1
+FullName:Baskerville Italic
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/Baskerville-Italic.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:234048
+FileModTime:458259446
+NameArray:0,Mac,4,Baskerville Italic
+NameArray:0,Win,1,Baskerville
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Baskerville-SemiBold
+FamilyName:Baskerville
+StyleName:SemiBold
+MenuName:Baskerville
+StyleBits:0
+WeightClass:600
+WidthClass:5
+AngleClass:0
+FullName:Baskerville SemiBold
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/Baskerville-SemiBold.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:237712
+FileModTime:458259446
+NameArray:0,Mac,4,Baskerville SemiBold
+NameArray:0,Win,1,Baskerville
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Baskerville-SemiBoldItalic
+FamilyName:Baskerville
+StyleName:SemiBold Italic
+MenuName:Baskerville
+StyleBits:1
+WeightClass:600
+WidthClass:5
+AngleClass:1
+FullName:Baskerville SemiBold Italic
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/Baskerville-SemiBoldItalic.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:257792
+FileModTime:458259446
+NameArray:0,Mac,4,Baskerville SemiBold Italic
+NameArray:0,Win,1,Baskerville
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Baskerville
+FamilyName:Baskerville
+StyleName:Regular
+MenuName:Baskerville
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Baskerville
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/Baskerville.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:268452
+FileModTime:458259446
+NameArray:0,Mac,4,Baskerville
+NameArray:0,Win,1,Baskerville
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:Baufra-Bold
+FamilyName:Baufra
+StyleName:Bold
+MenuName:Baufra Bold
+StyleBits:0
+WeightClass:700
+WidthClass:5
+AngleClass:0
+FullName:Baufra Bold
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/Baufra-Bold.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:64888
+FileModTime:375634074
+NameArray:0,Mac,4,Baufra Bold
+NameArray:0,Win,1,Baufra Bold
+NameArray:0,Win,16,Baufra
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:Baufra-SemiBold
+FamilyName:Baufra
+StyleName:SemiBold
+MenuName:Baufra SemiBold
+StyleBits:0
+WeightClass:600
+WidthClass:5
+AngleClass:0
+FullName:Baufra SemiBold
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/Baufra-SemiBold.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:65416
+FileModTime:375634090
+NameArray:0,Mac,4,Baufra SemiBold
+NameArray:0,Win,1,Baufra SemiBold
+NameArray:0,Win,16,Baufra
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Dutch801BT-Bold
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/Dutch801BT-Bold
+ResourceID:3433
+MacStyle:0
+FileLength:8083
+FileModTime:579713746
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Dutch801BT-BoldItalic
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/Dutch801BT-BoldItalic
+ResourceID:3434
+MacStyle:0
+FileLength:6527
+FileModTime:579713746
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Dutch801BT-ExtraBold
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/Dutch801BT-ExtraBold
+ResourceID:12805
+MacStyle:0
+FileLength:5997
+FileModTime:579713746
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Dutch801BT-ExtraBoldItalic
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/Dutch801BT-ExtraBoldItalic
+ResourceID:12890
+MacStyle:0
+FileLength:7671
+FileModTime:579713746
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Dutch801BT-Italic
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/Dutch801BT-Italic
+ResourceID:3432
+MacStyle:0
+FileLength:8163
+FileModTime:579713746
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Dutch801BT-Roman
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/Dutch801BT-Roman
+ResourceID:15326
+MacStyle:0
+FileLength:11847
+FileModTime:579713746
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Dutch801BT-SemiBoldItalic
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/Dutch801BT-SemiBoldItalic
+ResourceID:3435
+MacStyle:0
+FileLength:6295
+FileModTime:579713746
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:Dutch801BT-Bold
+FamilyName:Dutch 801 BT
+StyleName:Bold
+MenuName:Dutch 801 BT Bold
+StyleBits:2
+WeightClass:700
+WidthClass:5
+AngleClass:0
+FullName:Dutch 801 BT Bold
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/DutchBTBol
+DataFormat:POSTResource
+UsesStandardEncoding:yes
+isCFF:no
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:38123
+FileModTime:232380246
+DesignSize:-1
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:Dutch801BT-BoldItalic
+FamilyName:Dutch 801 BT
+StyleName:Bold Italic
+MenuName:Dutch 801 BT Bold Italic
+StyleBits:3
+WeightClass:700
+WidthClass:5
+AngleClass:1
+FullName:Dutch 801 BT Bold Italic
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/DutchBTBolIta
+DataFormat:POSTResource
+UsesStandardEncoding:yes
+isCFF:no
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:39373
+FileModTime:232380246
+DesignSize:-1
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:Dutch801BT-ExtraBold
+FamilyName:Dutch 801 BT
+StyleName:Extra Bold
+MenuName:Dutch 801 BT Extra Bold
+StyleBits:2
+WeightClass:800
+WidthClass:5
+AngleClass:0
+FullName:Dutch 801 BT Extra Bold
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/DutchBTExtBol
+DataFormat:POSTResource
+UsesStandardEncoding:yes
+isCFF:no
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:37645
+FileModTime:232380246
+DesignSize:-1
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:Dutch801BT-ExtraBoldItalic
+FamilyName:Dutch 801 BT
+StyleName:Extra Bold Italic
+MenuName:Dutch 801 BT Extra Bold Italic
+StyleBits:3
+WeightClass:800
+WidthClass:5
+AngleClass:1
+FullName:Dutch 801 BT Extra Bold Italic
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/DutchBTExtBolIta
+DataFormat:POSTResource
+UsesStandardEncoding:yes
+isCFF:no
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:40627
+FileModTime:232380246
+DesignSize:-1
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:Dutch801BT-Italic
+FamilyName:Dutch 801 BT
+StyleName:Italic
+MenuName:Dutch 801 BT Italic
+StyleBits:1
+WeightClass:400
+WidthClass:5
+AngleClass:1
+FullName:Dutch 801 BT Italic
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/DutchBTIta
+DataFormat:POSTResource
+UsesStandardEncoding:yes
+isCFF:no
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:41598
+FileModTime:232380246
+DesignSize:-1
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:Dutch801BT-Roman
+FamilyName:Dutch 801 BT
+StyleName:Roman
+MenuName:Dutch 801 BT Roman
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Dutch 801 BT Roman
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/DutchBTRom
+DataFormat:POSTResource
+UsesStandardEncoding:yes
+isCFF:no
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:38633
+FileModTime:232380246
+DesignSize:-1
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:Dutch801BT-SemiBoldItalic
+FamilyName:Dutch 801 BT
+StyleName:Semi Bold Italic
+MenuName:Dutch 801 BT Semi Bold Italic
+StyleBits:3
+WeightClass:600
+WidthClass:5
+AngleClass:1
+FullName:Dutch 801 BT Semi Bold Italic
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/DutchBTSemBolIta
+DataFormat:POSTResource
+UsesStandardEncoding:yes
+isCFF:no
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:38711
+FileModTime:232380246
+DesignSize:-1
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:Futura
+FamilyName:Futura
+StyleName:Medium
+MenuName:Futura Medium
+StyleBits:0
+WeightClass:500
+WidthClass:5
+AngleClass:0
+FullName:Futura Medium
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/Futur
+DataFormat:POSTResource
+UsesStandardEncoding:yes
+isCFF:no
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:25842
+FileModTime:232380260
+DesignSize:-1
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:Futura-Book
+FamilyName:Futura
+StyleName:Book
+MenuName:Futura Book
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Futura Book
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/FuturBoo
+DataFormat:POSTResource
+UsesStandardEncoding:yes
+isCFF:no
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:26074
+FileModTime:232380260
+DesignSize:-1
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:Futura-BookOblique
+FamilyName:Futura
+StyleName:Book Oblique
+MenuName:Futura Book
+StyleBits:1
+WeightClass:400
+WidthClass:5
+AngleClass:1
+FullName:Futura Book Oblique
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/FuturBooObl
+DataFormat:POSTResource
+UsesStandardEncoding:yes
+isCFF:no
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:33665
+FileModTime:232380260
+DesignSize:-1
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:Futura-Oblique
+FamilyName:Futura
+StyleName:Medium Oblique
+MenuName:Futura Medium
+StyleBits:1
+WeightClass:500
+WidthClass:5
+AngleClass:1
+FullName:Futura Medium Oblique
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/FuturObl
+DataFormat:POSTResource
+UsesStandardEncoding:yes
+isCFF:no
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:33564
+FileModTime:232380260
+DesignSize:-1
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Futura
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/Futura
+ResourceID:14836
+MacStyle:0
+FileLength:30190
+FileModTime:579713748
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Futura-Book
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/Futura-Book
+ResourceID:14870
+MacStyle:0
+FileLength:29768
+FileModTime:579713748
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Futura-BookOblique
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/Futura-BookOblique
+ResourceID:14869
+MacStyle:0
+FileLength:29109
+FileModTime:579713748
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Futura-Oblique
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/Futura-Oblique
+ResourceID:14835
+MacStyle:0
+FileLength:29583
+FileModTime:579713748
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Georgia
+FamilyName:Georgia
+StyleName:Regular
+MenuName:Georgia
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Georgia
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/Georgia.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:379588
+FileModTime:458259446
+NameArray:0,Mac,4,Georgia
+NameArray:0,Win,1,Georgia
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:GillSans
+FamilyName:Gill Sans
+StyleName:Regular
+MenuName:Gill Sans
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Gill Sans
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/GillSans.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:102628
+FileModTime:458259446
+NameArray:0,Mac,4,Gill Sans
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:JosefinSlab-Bold
+FamilyName:Josefin Slab
+StyleName:Bold
+MenuName:Josefin Slab
+StyleBits:0
+WeightClass:700
+WidthClass:5
+AngleClass:0
+FullName:Josefin Slab Bold
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/JosefinSlab-Bold.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:46556
+FileModTime:314566832
+NameArray:0,Mac,4,Josefin Slab Bold
+NameArray:0,Win,1,Josefin Slab
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:JosefinSlab-BoldItalic
+FamilyName:Josefin Slab
+StyleName:Bold Italic
+MenuName:Josefin Slab
+StyleBits:1
+WeightClass:700
+WidthClass:5
+AngleClass:0
+FullName:Josefin Slab Bold Italic
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/JosefinSlab-BoldItalic.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:42848
+FileModTime:314566830
+NameArray:0,Mac,4,Josefin Slab Bold Italic
+NameArray:0,Win,1,Josefin Slab
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:JosefinSlab-Italic
+FamilyName:Josefin Slab
+StyleName:Italic
+MenuName:Josefin Slab
+StyleBits:1
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Josefin Slab Italic
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/JosefinSlab-Italic.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:45780
+FileModTime:314566830
+NameArray:0,Mac,4,Josefin Slab Italic
+NameArray:0,Win,1,Josefin Slab
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:JosefinSlab-Light
+FamilyName:Josefin Slab
+StyleName:Light
+MenuName:Josefin Slab
+StyleBits:0
+WeightClass:300
+WidthClass:5
+AngleClass:0
+FullName:Josefin Slab Light
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/JosefinSlab-Light.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:49500
+FileModTime:314566830
+NameArray:0,Mac,4,Josefin Slab Light
+NameArray:0,Win,1,Josefin Slab
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:JosefinSlab-LightItalic
+FamilyName:Josefin Slab
+StyleName:Light Italic
+MenuName:Josefin Slab
+StyleBits:1
+WeightClass:300
+WidthClass:5
+AngleClass:0
+FullName:Josefin Slab Light Italic
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/JosefinSlab-LightItalic.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:48704
+FileModTime:314566830
+NameArray:0,Mac,4,Josefin Slab Light Italic
+NameArray:0,Win,1,Josefin Slab
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:JosefinSlab-SemiBold
+FamilyName:Josefin Slab
+StyleName:SemiBold
+MenuName:Josefin Slab
+StyleBits:0
+WeightClass:600
+WidthClass:5
+AngleClass:0
+FullName:Josefin Slab SemiBold
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/JosefinSlab-SemiBold.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:46112
+FileModTime:314566830
+NameArray:0,Mac,4,Josefin Slab SemiBold
+NameArray:0,Win,1,Josefin Slab
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:JosefinSlab-SemiBoldItalic
+FamilyName:Josefin Slab
+StyleName:SemiBold Italic
+MenuName:Josefin Slab
+StyleBits:1
+WeightClass:600
+WidthClass:5
+AngleClass:0
+FullName:Josefin Slab SemiBold Italic
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/JosefinSlab-SemiBoldItalic.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:43840
+FileModTime:314566830
+NameArray:0,Mac,4,Josefin Slab SemiBold Italic
+NameArray:0,Win,1,Josefin Slab
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:JosefinSlab-ThinItalic
+FamilyName:Josefin Slab
+StyleName:Thin Italic
+MenuName:Josefin Slab
+StyleBits:1
+WeightClass:250
+WidthClass:5
+AngleClass:0
+FullName:Josefin Slab Thin Italic
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/JosefinSlab-ThinItalic.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:37652
+FileModTime:314566828
+NameArray:0,Mac,4,Josefin Slab Thin Italic
+NameArray:0,Win,1,Josefin Slab
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:JosefinSlab
+FamilyName:Josefin Slab
+StyleName:Regular
+MenuName:Josefin Slab
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Josefin Slab
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/JosefinSlab.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:48236
+FileModTime:314566830
+NameArray:0,Mac,4,Josefin Slab
+NameArray:0,Win,1,Josefin Slab
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:KohinoorDevanagari-Regular
+FamilyName:Kohinoor Devanagari
+StyleName:Regular
+MenuName:Kohinoor Devanagari
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Kohinoor Devanagari Regular
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/Kohinoor.ttc
+TTCOffset:44
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:1041880
+FileModTime:556235762
+NameArray:0,Mac,4,Kohinoor Devanagari Regular
+NameArray:0,Win,1,Kohinoor Devanagari
+NameArray:0,Win,16,Kohinoor Devanagari
+NameArray:0,Win,1,		K	9	?		B	0 	&	G	5		>		0	@
+NameArray:0,Win,16,		K	9	?		B	0 	&	G	5		>		0	@
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Lato-Black
+FamilyName:Lato
+StyleName:Black
+MenuName:Lato Black
+StyleBits:0
+WeightClass:900
+WidthClass:5
+AngleClass:0
+FullName:Lato Black
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/Lato-Black.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:114588
+FileModTime:355164704
+NameArray:0,Mac,4,Lato Black
+NameArray:0,Win,1,Lato Black
+NameArray:0,Win,16,Lato
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:MinionPro-Regular
+FamilyName:Minion Pro
+StyleName:Regular
+MenuName:Minion Pro
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Minion Pro
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/MinionPro-Regular.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:218640
+FileModTime:412714730
+DesignSize:110
+NameArray:0,Mac,4,Minion Pro
+NameArray:0,Win,1,Minion Pro
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:MuseoSans-900
+FamilyName:Museo Sans
+StyleName:900
+MenuName:Museo Sans 900
+StyleBits:0
+WeightClass:700
+WidthClass:5
+AngleClass:0
+FullName:Museo Sans 900
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/MuseoSans-900.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:65240
+FileModTime:486952892
+NameArray:0,Mac,4,Museo Sans 900
+NameArray:0,Win,1,Museo Sans 900
+NameArray:0,Win,16,Museo Sans
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:MyanmarMN-Bold
+FamilyName:Myanmar MN
+StyleName:Bold
+MenuName:Myanmar MN
+StyleBits:2
+WeightClass:700
+WidthClass:5
+AngleClass:0
+FullName:Myanmar MN Bold
+WritingScript:Burmese
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/MyanmarMN-Bold.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:223996
+FileModTime:458259456
+NameArray:0,Mac,18,Myanmar MN Bold
+NameArray:0,Mac,4,Myanmar MN Bold
+NameArray:0,Win,1,Myanmar MN
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:MyanmarMN
+FamilyName:Myanmar MN
+StyleName:Regular
+MenuName:Myanmar MN
+StyleBits:0
+WeightClass:250
+WidthClass:5
+AngleClass:0
+FullName:Myanmar MN
+WritingScript:Burmese
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/MyanmarMN.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:222728
+FileModTime:458259456
+NameArray:0,Mac,18,Myanmar MN
+NameArray:0,Mac,4,Myanmar MN
+NameArray:0,Win,1,Myanmar MN
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Times-Roman
+FamilyName:Times
+StyleName:Regular
+MenuName:Times
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Times Roman
+WritingScript:Roman
+OutlineFileName:/Users/atrichter624/Desktop/Portfolio/original_files/design/typographicVariations/richterTypographicVariations/Document fonts/Times.ttc
+TTCOffset:40
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:917516
+FileModTime:556235900
+NameArray:0,Mac,4,Times Roman
+%EndFont
+
