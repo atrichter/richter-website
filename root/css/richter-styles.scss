@@ -1593,13 +1593,6 @@ footer {
     }
 
     #jujitsuShield {
-      background: transparent url("../images/thumbnails/jujitsuShield-grey-300.png");
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: contain;
-    }
-
-    #jujitsuShield:hover {
       background: transparent url("../images/thumbnails/jujitsuShield-300.png");
       background-position: center;
       background-repeat: no-repeat;
@@ -1607,13 +1600,6 @@ footer {
     }
 
     #jujitsuTsunamiB {
-      background: transparent url("../images/thumbnails/jujitsuTsunamiB-alt-grey-300.png");
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: contain;
-    }
-
-    #jujitsuTsunamiB:hover {
       background: transparent url("../images/thumbnails/jujitsuTsunamiB-300.png");
       background-position: center;
       background-repeat: no-repeat;
@@ -1621,13 +1607,6 @@ footer {
     }
 
     #jujitsuBigDogs {
-      background: transparent url("../images/thumbnails/jujitsuBigDogs-alt-grey-300.png");
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: contain;
-    }
-
-    #jujitsuBigDogs:hover {
       background: transparent url("../images/thumbnails/jujitsuBigDogs-logo-300.png");
       background-position: center;
       background-repeat: no-repeat;
@@ -1635,13 +1614,6 @@ footer {
     }
 
     #jujitsuBurst {
-      background: transparent url("../images/thumbnails/jujitsuBurst-alt-grey-300.png");
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: contain;
-    }
-
-    #jujitsuBurst:hover {
       background: transparent url("../images/thumbnails/jujitsuBurst-300.png");
       background-position: center;
       background-repeat: no-repeat;
@@ -1649,13 +1621,6 @@ footer {
     }
 
     #jujitsuText {
-      background: transparent url("../images/thumbnails/jujitsuText-grey-300.png");
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: contain;
-    }
-
-    #jujitsuText:hover {
       background: transparent url("../images/thumbnails/jujitsuText-300.png");
       background-position: center;
       background-repeat: no-repeat;
@@ -1663,13 +1628,6 @@ footer {
     }
 
     #jujitsuTUB {
-      background: transparent url("../images/thumbnails/jujitsuTUB-logo-grey-300.png");
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: contain;
-    }
-
-    #jujitsuTUB:hover {
       background: transparent url("../images/thumbnails/jujitsuTUB-logo-purple-300.png");
       background-position: center;
       background-repeat: no-repeat;
@@ -1683,11 +1641,18 @@ footer {
 /*  media  */
 /* ------- */
 
-/* - only for devices without hover - */
-@media (any-hover: none) {
+/* - only for devices with hover - */
+@media (any-hover: hover) {
   #work-content {
     #work-logos-grid {
       #jujitsuShield {
+        background: transparent url("../images/thumbnails/jujitsuShield-grey-300.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+  
+      #jujitsuShield:hover {
         background: transparent url("../images/thumbnails/jujitsuShield-300.png");
         background-position: center;
         background-repeat: no-repeat;
@@ -1695,6 +1660,13 @@ footer {
       }
 
       #jujitsuTsunamiB {
+        background: transparent url("../images/thumbnails/jujitsuTsunamiB-alt-grey-300.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+  
+      #jujitsuTsunamiB:hover {
         background: transparent url("../images/thumbnails/jujitsuTsunamiB-300.png");
         background-position: center;
         background-repeat: no-repeat;
@@ -1702,6 +1674,13 @@ footer {
       }
   
       #jujitsuBigDogs {
+        background: transparent url("../images/thumbnails/jujitsuBigDogs-alt-grey-300.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+  
+      #jujitsuBigDogs:hover {
         background: transparent url("../images/thumbnails/jujitsuBigDogs-logo-300.png");
         background-position: center;
         background-repeat: no-repeat;
@@ -1709,6 +1688,13 @@ footer {
       }
   
       #jujitsuBurst {
+        background: transparent url("../images/thumbnails/jujitsuBurst-alt-grey-300.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+  
+      #jujitsuBurst:hover {
         background: transparent url("../images/thumbnails/jujitsuBurst-300.png");
         background-position: center;
         background-repeat: no-repeat;
@@ -1716,6 +1702,13 @@ footer {
       }
   
       #jujitsuText {
+        background: transparent url("../images/thumbnails/jujitsuText-grey-300.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+  
+      #jujitsuText:hover {
         background: transparent url("../images/thumbnails/jujitsuText-300.png");
         background-position: center;
         background-repeat: no-repeat;
@@ -1723,11 +1716,33 @@ footer {
       }
   
       #jujitsuTUB {
+        background: transparent url("../images/thumbnails/jujitsuTUB-logo-grey-300.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+  
+      #jujitsuTUB:hover {
         background: transparent url("../images/thumbnails/jujitsuTUB-logo-purple-300.png");
         background-position: center;
         background-repeat: no-repeat;
         background-size: contain;
       }
+    }
+    
+    /* preload hover images */
+    #work-logos-grid::after {
+      content: url("../images/thumbnails/jujitsuShield-300.png")
+               url("../images/thumbnails/jujitsuTsunamiB-300.png")
+               url("../images/thumbnails/jujitsuBigDogs-logo-300.png")
+               url("../images/thumbnails/jujitsuBurst-300.png")
+               url("../images/thumbnails/jujitsuText-300.png")
+               url("../images/thumbnails/jujitsuTUB-logo-purple-300.png");
+      height: 0;
+      overflow: hidden;
+      position: absolute;
+      width: 0;
+      z-index :-1;
     }
   }
 }
