@@ -1505,15 +1505,19 @@ footer #footer-links-external .icon:hover {
     padding: 35px 0 0 0;
   }
 }
-/* ------------------- */
-/* -  Image & About  - */
-/* ------------------- */
+/* ---------------- */
+/* -  Work Pages  - */
+/* ---------------- */
 #work-content #work-grid {
   grid-gap: 40px;
 }
 #work-content #work-grid #work-imgs img {
   margin: 15px 0;
   width: 100%;
+}
+#work-content #work-grid .half {
+  margin-left: 25%;
+  margin-right: 25%;
 }
 
 /* ================================================================ */
@@ -1591,7 +1595,7 @@ footer #footer-links-external .icon:hover {
 /* - smaller than large mobile - */
 @media screen and (max-width: 425px) {
   #contact-grid #contact-content .rounded-button {
-    font-size: 1em;
+    font-size: 3.35vw;
   }
 }
 

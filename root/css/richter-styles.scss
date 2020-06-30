@@ -1775,9 +1775,9 @@ footer {
 
 
 
-/* ------------------- */
-/* -  Image & About  - */
-/* ------------------- */
+/* ---------------- */
+/* -  Work Pages  - */
+/* ---------------- */
 
 #work-content {
   #work-grid {
@@ -1788,6 +1788,11 @@ footer {
         margin: 15px 0;
         width: 100%;
       }
+    }
+
+    .half {
+      margin-left: 25%;
+      margin-right: 25%;
     }
   }
 }
@@ -1864,7 +1869,7 @@ footer {
   #contact-grid {
     #contact-content {
       .rounded-button {
-        font-size: 1em;
+        font-size: 3.35vw;
       }
     }
   }
