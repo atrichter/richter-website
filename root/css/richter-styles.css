@@ -109,6 +109,20 @@ li::before {
   background-color: #e35768;
 }
 
+.navy {
+  color: #191a1d;
+}
+.navy::after {
+  background-color: #191a1d;
+}
+
+.jujitsu-gold {
+  color: #fbb03b;
+}
+.jujitsu-gold::after {
+  background-color: #fbb03b;
+}
+
 /* ------- */
 /*  media  */
 /* ------- */
@@ -617,6 +631,10 @@ li::before {
 .tags li::before {
   content: "";
 }
+.tags .no-border {
+  border: none;
+  padding-left: 0;
+}
 
 /* ================================================================ */
 /* --------------- */
@@ -933,11 +951,11 @@ footer #footer-links-external .icon:hover {
 }
 #exp-work-links-container .grid-2-item {
   background-color: #ebecee;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
-  border-radius: 10px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+  border-radius: 12px;
   box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.0625);
   padding: 30px;
 }
@@ -1092,42 +1110,51 @@ footer #footer-links-external .icon:hover {
 /* -     ABOUT     - */
 /* -               - */
 /* ----------------- */
-#about-grid {
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
-  border-radius: 10px;
+#about-grid,
+#contact-grid {
+  background-color: #ebecee;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+  border-radius: 12px;
   grid-gap: 0;
 }
-#about-grid #about-content {
-  background-color: #ebecee;
-  -webkit-border-top-left-radius: 10px;
-  -webkit-border-bottom-left-radius: 10px;
-  -moz-border-top-left-radius: 10px;
-  -moz-border-bottom-left-radius: 10px;
-  -ms-border-top-left-radius: 10px;
-  -ms-border-bottom-left-radius: 10px;
-  -o-border-top-left-radius: 10px;
-  -o-border-bottom-left-radius: 10px;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
+#about-grid #about-content,
+#about-grid #contact-content,
+#contact-grid #about-content,
+#contact-grid #contact-content {
+  -webkit-border-top-left-radius: 12px;
+  -webkit-border-bottom-left-radius: 12px;
+  -moz-border-top-left-radius: 12px;
+  -moz-border-bottom-left-radius: 12px;
+  -ms-border-top-left-radius: 12px;
+  -ms-border-bottom-left-radius: 12px;
+  -o-border-top-left-radius: 12px;
+  -o-border-bottom-left-radius: 12px;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
   padding: 30px;
 }
-#about-grid #about-image-container {
+#about-grid #about-image-container,
+#about-grid #contact-image-container,
+#contact-grid #about-image-container,
+#contact-grid #contact-image-container {
   width: 100%;
 }
-#about-grid #about-image-container #about-image {
-  -webkit-border-top-right-radius: 10px;
-  -webkit-border-bottom-right-radius: 10px;
-  -moz-border-top-right-radius: 10px;
-  -moz-border-bottom-right-radius: 10px;
-  -ms-border-top-right-radius: 10px;
-  -ms-border-bottom-right-radius: 10px;
-  -o-border-top-right-radius: 10px;
-  -o-border-bottom-right-radius: 10px;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
+#about-grid #about-image-container #about-image,
+#about-grid #about-image-container #contact-image,
+#about-grid #contact-image-container #about-image,
+#about-grid #contact-image-container #contact-image,
+#contact-grid #about-image-container #about-image,
+#contact-grid #about-image-container #contact-image,
+#contact-grid #contact-image-container #about-image,
+#contact-grid #contact-image-container #contact-image {
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+  border-radius: 12px;
   display: block;
   height: 100%;
   object-fit: cover;
@@ -1140,14 +1167,24 @@ footer #footer-links-external .icon:hover {
 /* ------- */
 /* - smaller than laptop - */
 @media screen and (max-width: 1024px) {
-  #about-grid #about-content {
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
-    border-radius: 10px;
+  #about-grid #about-content,
+#about-grid #contact-content,
+#contact-grid #about-content,
+#contact-grid #contact-content {
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+    border-radius: 12px;
   }
-  #about-grid #about-image-container #about-image {
+  #about-grid #about-image-container #about-image,
+#about-grid #about-image-container #contact-image,
+#about-grid #contact-image-container #about-image,
+#about-grid #contact-image-container #contact-image,
+#contact-grid #about-image-container #about-image,
+#contact-grid #about-image-container #contact-image,
+#contact-grid #contact-image-container #about-image,
+#contact-grid #contact-image-container #contact-image {
     display: none;
   }
 }
@@ -1165,11 +1202,11 @@ footer #footer-links-external .icon:hover {
 #experience-work-grid #experience-work-lavner,
 #experience-work-grid #experience-work-website {
   background-color: #ebecee;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
-  border-radius: 5px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px;
   padding: 25px;
 }
 #experience-work-grid h1 {
@@ -1187,12 +1224,6 @@ footer #footer-links-external .icon:hover {
 }
 #experience-work-grid p {
   padding: 0 0 10px 0;
-}
-#experience-work-grid h1 .underline {
-  color: #191a1d;
-}
-#experience-work-grid h1 .underline::after {
-  background-color: #191a1d;
 }
 #experience-work-grid #experience-work-cerner-logo #cerner-logo-2 {
   margin: auto;
@@ -1272,29 +1303,42 @@ footer #footer-links-external .icon:hover {
 /* -     MY WORK     - */
 /* -                 - */
 /* ------------------- */
-#work-content {
+#work-content,
+#jujitsu-content {
   /* thumbnails */
   /* logos */
 }
-#work-content #work-thumbnails-grid {
+#work-content #work-thumbnails-grid,
+#work-content #jujitsu-thumbnails-grid,
+#jujitsu-content #work-thumbnails-grid,
+#jujitsu-content #jujitsu-thumbnails-grid {
   grid-gap: 15px;
   padding: 15px 0 0 0;
 }
-#work-content #work-thumbnails-grid .thumbnail {
+#work-content #work-thumbnails-grid .thumbnail,
+#work-content #jujitsu-thumbnails-grid .thumbnail,
+#jujitsu-content #work-thumbnails-grid .thumbnail,
+#jujitsu-content #jujitsu-thumbnails-grid .thumbnail {
   float: left;
   max-width: 100%;
   position: relative;
 }
-#work-content #work-thumbnails-grid .thumbnail img {
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
-  border-radius: 5px;
+#work-content #work-thumbnails-grid .thumbnail img,
+#work-content #jujitsu-thumbnails-grid .thumbnail img,
+#jujitsu-content #work-thumbnails-grid .thumbnail img,
+#jujitsu-content #jujitsu-thumbnails-grid .thumbnail img {
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px;
   float: left;
   width: 100%;
 }
-#work-content #work-thumbnails-grid .thumbnail .thumbnail-description {
+#work-content #work-thumbnails-grid .thumbnail .thumbnail-description,
+#work-content #jujitsu-thumbnails-grid .thumbnail .thumbnail-description,
+#jujitsu-content #work-thumbnails-grid .thumbnail .thumbnail-description,
+#jujitsu-content #jujitsu-thumbnails-grid .thumbnail .thumbnail-description {
   align-items: center;
   bottom: 0;
   color: #fff;
@@ -1311,7 +1355,10 @@ footer #footer-links-external .icon:hover {
   transition: all 0.3s ease-in-out;
   visibility: hidden;
 }
-#work-content #work-thumbnails-grid .thumbnail .thumbnail-text {
+#work-content #work-thumbnails-grid .thumbnail .thumbnail-text,
+#work-content #jujitsu-thumbnails-grid .thumbnail .thumbnail-text,
+#jujitsu-content #work-thumbnails-grid .thumbnail .thumbnail-text,
+#jujitsu-content #jujitsu-thumbnails-grid .thumbnail .thumbnail-text {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   transition: all 0.25s ease-in-out;
   -webkit-transform: translateY(-3em);
@@ -1320,14 +1367,17 @@ footer #footer-links-external .icon:hover {
   -o-transform: translateY(-3em);
   transform: translateY(-3em);
 }
-#work-content #work-thumbnails-grid .thumbnail::before {
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
-  border-radius: 5px;
+#work-content #work-thumbnails-grid .thumbnail::before,
+#work-content #jujitsu-thumbnails-grid .thumbnail::before,
+#jujitsu-content #work-thumbnails-grid .thumbnail::before,
+#jujitsu-content #jujitsu-thumbnails-grid .thumbnail::before {
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px;
   bottom: 0;
-  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.2);
   content: "";
   left: 0;
   position: absolute;
@@ -1335,25 +1385,36 @@ footer #footer-links-external .icon:hover {
   top: 0;
   transition: all 0.3s ease-in-out;
 }
-#work-content #work-thumbnails-grid .thumbnail:hover::before {
+#work-content #work-thumbnails-grid .thumbnail:hover::before,
+#work-content #jujitsu-thumbnails-grid .thumbnail:hover::before,
+#jujitsu-content #work-thumbnails-grid .thumbnail:hover::before,
+#jujitsu-content #jujitsu-thumbnails-grid .thumbnail:hover::before {
   box-shadow: inset 0 0 125px black;
 }
-#work-content #work-thumbnails-grid .thumbnail:hover .thumbnail-description {
+#work-content #work-thumbnails-grid .thumbnail:hover .thumbnail-description,
+#work-content #jujitsu-thumbnails-grid .thumbnail:hover .thumbnail-description,
+#jujitsu-content #work-thumbnails-grid .thumbnail:hover .thumbnail-description,
+#jujitsu-content #jujitsu-thumbnails-grid .thumbnail:hover .thumbnail-description {
   opacity: 1;
   visibility: visible;
 }
-#work-content #work-thumbnails-grid .thumbnail:hover .thumbnail-text {
+#work-content #work-thumbnails-grid .thumbnail:hover .thumbnail-text,
+#work-content #jujitsu-thumbnails-grid .thumbnail:hover .thumbnail-text,
+#jujitsu-content #work-thumbnails-grid .thumbnail:hover .thumbnail-text,
+#jujitsu-content #jujitsu-thumbnails-grid .thumbnail:hover .thumbnail-text {
   -webkit-transform: translateY(0);
   -moz-transform: translateY(0);
   -ms-transform: translateY(0);
   -o-transform: translateY(0);
   transform: translateY(0);
 }
-#work-content #work-logos-grid {
+#work-content #work-logos-grid,
+#jujitsu-content #work-logos-grid {
   grid-gap: 25px;
   padding: 38px 15px 15px 15px;
 }
-#work-content #work-logos-grid .work-logo {
+#work-content #work-logos-grid .work-logo,
+#jujitsu-content #work-logos-grid .work-logo {
   display: inline-block;
   height: 0;
   padding-top: 92.88%;
@@ -1361,37 +1422,43 @@ footer #footer-links-external .icon:hover {
   transition: all 0.2s ease-in-out;
   width: 100%;
 }
-#work-content #work-logos-grid #jujitsuShield {
+#work-content #work-logos-grid #jujitsuShield,
+#jujitsu-content #work-logos-grid #jujitsuShield {
   background: transparent url("../images/thumbnails/jujitsuShield-300.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
 }
-#work-content #work-logos-grid #jujitsuTsunamiB {
+#work-content #work-logos-grid #jujitsuTsunamiB,
+#jujitsu-content #work-logos-grid #jujitsuTsunamiB {
   background: transparent url("../images/thumbnails/jujitsuTsunamiB-300.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
 }
-#work-content #work-logos-grid #jujitsuBigDogs {
+#work-content #work-logos-grid #jujitsuBigDogs,
+#jujitsu-content #work-logos-grid #jujitsuBigDogs {
   background: transparent url("../images/thumbnails/jujitsuBigDogs-logo-300.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
 }
-#work-content #work-logos-grid #jujitsuBurst {
+#work-content #work-logos-grid #jujitsuBurst,
+#jujitsu-content #work-logos-grid #jujitsuBurst {
   background: transparent url("../images/thumbnails/jujitsuBurst-300.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
 }
-#work-content #work-logos-grid #jujitsuText {
+#work-content #work-logos-grid #jujitsuText,
+#jujitsu-content #work-logos-grid #jujitsuText {
   background: transparent url("../images/thumbnails/jujitsuText-300.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
 }
-#work-content #work-logos-grid #jujitsuTUB {
+#work-content #work-logos-grid #jujitsuTUB,
+#jujitsu-content #work-logos-grid #jujitsuTUB {
   background: transparent url("../images/thumbnails/jujitsuTUB-logo-purple-300.png");
   background-position: center;
   background-repeat: no-repeat;
@@ -1489,18 +1556,25 @@ footer #footer-links-external .icon:hover {
 }
 /* - for laptop - */
 @media screen and (min-width: 1024px) {
-  #work-content #work-thumbnails-grid {
+  #work-content #work-thumbnails-grid,
+#work-content #jujitsu-thumbnails-grid,
+#jujitsu-content #work-thumbnails-grid,
+#jujitsu-content #jujitsu-thumbnails-grid {
     grid-gap: 25px;
     padding: 25px 0 0 0;
   }
-  #work-content #work-logos-grid {
+  #work-content #work-logos-grid,
+#jujitsu-content #work-logos-grid {
     grid-gap: 40px;
     padding: 48px 25px 20px 25px;
   }
 }
 /* - for large desktop - */
 @media screen and (min-width: 1440px) {
-  #work-content #work-thumbnails-grid {
+  #work-content #work-thumbnails-grid,
+#work-content #jujitsu-thumbnails-grid,
+#jujitsu-content #work-thumbnails-grid,
+#jujitsu-content #jujitsu-thumbnails-grid {
     grid-gap: 35px;
     padding: 35px 0 0 0;
   }
@@ -1527,27 +1601,7 @@ footer #footer-links-external .icon:hover {
 /* -                 - */
 /* ------------------- */
 #contact-grid {
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
-  border-radius: 10px;
-  grid-gap: 0;
-}
-#contact-grid #contact-content {
   background-color: #191a1d;
-  -webkit-border-top-left-radius: 10px;
-  -webkit-border-bottom-left-radius: 10px;
-  -moz-border-top-left-radius: 10px;
-  -moz-border-bottom-left-radius: 10px;
-  -ms-border-top-left-radius: 10px;
-  -ms-border-bottom-left-radius: 10px;
-  -o-border-top-left-radius: 10px;
-  -o-border-bottom-left-radius: 10px;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-  padding: 30px;
-  vertical-align: middle;
 }
 #contact-grid #contact-content p {
   color: #ebecee;
@@ -1555,48 +1609,73 @@ footer #footer-links-external .icon:hover {
 #contact-grid #contact-content .rounded-button {
   display: block;
 }
-#contact-grid #contact-image-container {
-  width: 100%;
-}
-#contact-grid #contact-image-container #contact-image {
-  -webkit-border-top-right-radius: 10px;
-  -webkit-border-bottom-right-radius: 10px;
-  -moz-border-top-right-radius: 10px;
-  -moz-border-bottom-right-radius: 10px;
-  -ms-border-top-right-radius: 10px;
-  -ms-border-bottom-right-radius: 10px;
-  -o-border-top-right-radius: 10px;
-  -o-border-bottom-right-radius: 10px;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-  display: block;
-  height: 100%;
-  object-fit: cover;
-  margin: 0;
-  width: 100%;
-}
 
 /* ------- */
 /*  media  */
 /* ------- */
-/* - smaller than laptop - */
-@media screen and (max-width: 1024px) {
-  #contact-grid #contact-content {
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
-    border-radius: 10px;
-  }
-  #contact-grid #contact-image-container #contact-image {
-    display: none;
-  }
-}
 /* - smaller than large mobile - */
 @media screen and (max-width: 425px) {
   #contact-grid #contact-content .rounded-button {
     font-size: 3.35vw;
   }
+}
+/* ================================================================ */
+/* ------------------- */
+/* -                 - */
+/* -     JUJITSU     - */
+/* -                 - */
+/* ------------------- */
+#jujitsu-intro h1 {
+  border-color: #fbb03b;
+}
+
+#jujitsu-content #jujitsu-photos-container {
+  /* thumbnails */
+}
+#jujitsu-content #jujitsu-photos-container h3 {
+  color: #a3a3a3;
+  padding: 40px 0 0 0;
+}
+#jujitsu-content #jujitsu-photos-container #jujitsu-thumbnails-grid {
+  padding-top: 20px;
+}
+#jujitsu-content #jujitsu-photos-container #jujitsu-thumbnails-grid .thumbnail {
+  margin-bottom: 10px;
+}
+#jujitsu-content #jujitsu-photos-container #jujitsu-thumbnails-grid .thumbnail img {
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+  border-radius: 12px;
+}
+#jujitsu-content #jujitsu-photos-container #jujitsu-thumbnails-grid .thumbnail::before {
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+  border-radius: 12px;
+}
+#jujitsu-content #jujitsu-photos-container #jujitsu-thumbnails-grid .thumbnail:hover::before {
+  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.6);
+}
+#jujitsu-content #jujitsu-photos-container #jujitsu-thumbnails-grid h4 {
+  font: 400 1.2em/1 Barlow, Verdana, Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+#jujitsu-content #jujitsu-photos-container #jujitsu-thumbnails-grid .tags {
+  margin-top: 6px;
+}
+#jujitsu-content #jujitsu-videos-container {
+  background-color: #191a1d;
+  margin-top: 50px;
+}
+#jujitsu-content #jujitsu-videos-container #jujitsu-videos {
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+#jujitsu-content #jujitsu-videos-container #jujitsu-videos p {
+  color: #ebecee;
 }
 
 /*# sourceMappingURL=richter-styles.css.map */

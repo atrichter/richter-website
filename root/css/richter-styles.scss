@@ -35,6 +35,11 @@ $blue: #7bc9d1;
 $cerner-blue: #179dd6;
 $truman-purple: #6f2d91;
 $truman-gold: #c0b38c;
+$jujitsu-gold: #fbb03b;
+
+// Border radius
+$border-radius-big: 12px;
+$border-radius-small: 6px;
 
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Barlow:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
@@ -199,6 +204,22 @@ li::before {
 
   &::after {
     background-color: $coral;
+  }
+}
+
+.navy {
+  color: $navy;
+
+  &::after {
+    background-color: $navy;
+  }
+}
+
+.jujitsu-gold {
+  color: $jujitsu-gold;
+
+  &::after {
+    background-color: $jujitsu-gold;
   }
 }
 
@@ -733,7 +754,7 @@ li::before {
 
   li {
     border: solid 1px $dark-grey;
-    @include border-radius(6px);
+    @include border-radius($border-radius-small);
     color: $dark-grey;
     display: inline-block;
     font: 400 0.8em/1 $barlow;
@@ -744,6 +765,11 @@ li::before {
 
   li::before {
     content: "";
+  }
+
+  .no-border {
+    border: none;
+    padding-left: 0;
   }
 }
 
@@ -1084,7 +1110,7 @@ footer {
 
   .grid-2-item {
     background-color: $light-grey;
-    @include border-radius(10px);
+    @include border-radius($border-radius-big);
     box-shadow: inset 0 0 20px rgba(0,0,0,.0625);
     padding: 30px;  
     
@@ -1310,21 +1336,25 @@ footer {
 /* -               - */
 /* ----------------- */
 
-#about-grid {
-  @include border-radius(10px);
+#about-grid,
+#contact-grid {
+  background-color: $light-grey;
+  @include border-radius($border-radius-big);
   grid-gap: 0;
 
-  #about-content {
-    background-color: $light-grey;
-    @include border-left-radius(10px);
+  #about-content,
+  #contact-content {
+    @include border-left-radius($border-radius-big);
     padding: 30px;
   }
 
-  #about-image-container {
+  #about-image-container,
+  #contact-image-container {
     width: 100%;
 
-    #about-image {
-      @include border-right-radius(10px);
+    #about-image,
+    #contact-image {
+      @include border-radius($border-radius-big);
       display: block;
       height: 100%;
       object-fit: cover;
@@ -1341,13 +1371,17 @@ footer {
 
 /* - smaller than laptop - */
 @media screen and (max-width: $laptop) {
-  #about-grid {
-    #about-content {
-      @include border-radius(10px);
+  #about-grid,
+  #contact-grid {
+    #about-content,
+    #contact-content {
+      @include border-radius($border-radius-big);
     }
 
-    #about-image-container {
-      #about-image {
+    #about-image-container,
+    #contact-image-container {
+      #about-image,
+      #contact-image {
         display: none;
       }
     }
@@ -1377,7 +1411,7 @@ footer {
   #experience-work-lavner,
   #experience-work-website {
     background-color: $light-grey;
-    @include border-radius(5px);
+    @include border-radius($border-radius-small);
     padding: 25px;
   }
 
@@ -1398,14 +1432,6 @@ footer {
 
   p {
     padding: 0 0 10px 0;
-  }
-
-  h1 .underline {
-    color: $navy;
-
-    &::after {
-      background-color: $navy;
-    }
   }
 
   #experience-work-cerner-logo {
@@ -1511,9 +1537,11 @@ footer {
 /* -                 - */
 /* ------------------- */
 
-#work-content {
+#work-content,
+#jujitsu-content {
   /* thumbnails */
-  #work-thumbnails-grid {
+  #work-thumbnails-grid,
+  #jujitsu-thumbnails-grid {
     grid-gap: 15px;
     padding: 15px 0 0 0;
 
@@ -1523,7 +1551,7 @@ footer {
       position: relative;
       
       img {
-        @include border-radius(5px);
+        @include border-radius($border-radius-small);
         float: left;
         width: 100%;
       }
@@ -1554,9 +1582,9 @@ footer {
     }
 
     .thumbnail::before {
-      @include border-radius(5px);
+      @include border-radius($border-radius-small);
       bottom: 0;
-      box-shadow: inset 0 0 10px rgba(0,0,0,.1);
+      box-shadow: inset 0 0 20px rgba(0,0,0,.2);
       content: "";
       left: 0;
       position: absolute;
@@ -1749,8 +1777,10 @@ footer {
 
 /* - for laptop - */
 @media screen and (min-width: $laptop) {
-  #work-content {
-    #work-thumbnails-grid {
+  #work-content,
+  #jujitsu-content {
+    #work-thumbnails-grid,
+    #jujitsu-thumbnails-grid {
       grid-gap: 25px;
       padding: 25px 0 0 0;
     }
@@ -1764,8 +1794,10 @@ footer {
 
 /* - for large desktop - */
 @media screen and (min-width: $desktop-s) {
-  #work-content {
-    #work-thumbnails-grid {
+  #work-content,
+  #jujitsu-content {
+    #work-thumbnails-grid,
+    #jujitsu-thumbnails-grid {
       grid-gap: 35px;
       padding: 35px 0 0 0;
     }
@@ -1812,34 +1844,15 @@ footer {
 /* ------------------- */
 
 #contact-grid {
-  @include border-radius(10px);
-  grid-gap: 0;
+  background-color: $navy;
 
   #contact-content {
-    background-color: $navy;
-    @include border-left-radius(10px);
-    padding: 30px;
-    vertical-align: middle;
-
     p {
       color: $light-grey;
     }
 
     .rounded-button {
       display: block;
-    }
-  }
-
-  #contact-image-container {
-    width: 100%;
-
-    #contact-image {
-      @include border-right-radius(10px);
-      display: block;
-      height: 100%;
-      object-fit: cover;
-      margin: 0;
-      width: 100%;
     }
   }
 }
@@ -1849,27 +1862,85 @@ footer {
 /*  media  */
 /* ------- */
 
-/* - smaller than laptop - */
-@media screen and (max-width: $laptop) {
-  #contact-grid {
-    #contact-content {
-      @include border-radius(10px);
-    }
-
-    #contact-image-container {
-      #contact-image {
-        display: none;
-      }
-    }
-  }
-}
-
 /* - smaller than large mobile - */
 @media screen and (max-width: $mobile-l) {
   #contact-grid {
     #contact-content {
       .rounded-button {
         font-size: 3.35vw;
+      }
+    }
+  }
+}
+
+
+
+
+/* ================================================================ */
+
+
+
+
+/* ------------------- */
+/* -                 - */
+/* -     JUJITSU     - */
+/* -                 - */
+/* ------------------- */
+
+#jujitsu-intro {
+  h1 {
+    border-color: $jujitsu-gold;
+  }
+}
+
+#jujitsu-content {
+  #jujitsu-photos-container{
+    h3 {
+      color: $grey;
+      padding: 40px 0 0 0;
+    }
+
+    /* thumbnails */
+    #jujitsu-thumbnails-grid {
+      padding-top: 20px;
+      
+      .thumbnail {
+        margin-bottom: 10px;
+
+        img {
+          @include border-radius($border-radius-big);
+        }
+      }
+
+      .thumbnail::before {
+        @include border-radius($border-radius-big);
+      }
+
+      .thumbnail:hover::before {
+        box-shadow: inset 0 0 30px rgba(0,0,0,.6);
+      }
+
+      h4 {
+        font: 400 1.2em/1 $barlow;
+        margin: 0;
+      }
+
+      .tags {
+        margin-top: 6px;
+      }
+    }
+  }
+
+  #jujitsu-videos-container {
+    background-color: $navy;
+    margin-top: 50px;
+
+    #jujitsu-videos {
+      padding-bottom: 50px;
+      padding-top: 50px;
+
+      p {
+        color: $light-grey;
       }
     }
   }
