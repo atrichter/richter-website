@@ -1657,14 +1657,19 @@ footer #footer-links-external .icon:hover {
   border-radius: 12px;
 }
 #jujitsu-content #jujitsu-photos-container #jujitsu-thumbnails-grid .thumbnail:hover::before {
-  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.6);
+  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.5);
 }
 #jujitsu-content #jujitsu-photos-container #jujitsu-thumbnails-grid h4 {
-  font: 400 1.2em/1 Barlow, Verdana, Arial, Helvetica, sans-serif;
+  font: 500 1.15em/1 Barlow, Verdana, Arial, Helvetica, sans-serif;
   margin: 0;
 }
 #jujitsu-content #jujitsu-photos-container #jujitsu-thumbnails-grid .tags {
+  margin-bottom: -2px;
   margin-top: 6px;
+}
+#jujitsu-content #jujitsu-photos-container #jujitsu-thumbnails-grid .tags li {
+  border-color: #a3a3a3;
+  color: #a3a3a3;
 }
 #jujitsu-content #jujitsu-videos-container {
   background-color: #191a1d;

@@ -1,0 +1,18 @@
+# mod_rewrite
+
+RewriteEngine on
+
+
+# does not apply to existing directories
+
+RewriteCond %{REQUEST_FILENAME} !-directories
+
+
+# check for file with .htm extension
+
+RewriteCond %{REQUEST_FILENAME}\.htm -f
+
+
+# show .htm page
+
+RewriteRule ^(.*)$ $1.htm [NC,L]
