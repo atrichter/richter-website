@@ -9,6 +9,7 @@
     - [experience.htm](experience.htm)
     - [work/index.htm](work/index.htm) (placed inside work folder for simpler routing)
     - [contact.htm](contact.htm)
+    - [jujitsu.htm](jujitsu.htm)
 - [.htaccess](.htaccess) used for removing .htm extensions
 - Rest of files for favicon (need to be in root file for proper functionality)
 

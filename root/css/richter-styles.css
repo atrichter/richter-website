@@ -116,6 +116,13 @@ li::before {
   background-color: #191a1d;
 }
 
+.grey {
+  color: #a3a3a3;
+}
+.grey::after {
+  background-color: #a3a3a3;
+}
+
 .jujitsu-gold {
   color: #fbb03b;
 }
@@ -1657,19 +1664,21 @@ footer #footer-links-external .icon:hover {
   border-radius: 12px;
 }
 #jujitsu-content #jujitsu-photos-container #jujitsu-thumbnails-grid .thumbnail:hover::before {
-  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.4);
 }
 #jujitsu-content #jujitsu-photos-container #jujitsu-thumbnails-grid h4 {
-  font: 500 1.15em/1 Barlow, Verdana, Arial, Helvetica, sans-serif;
+  font: 500 1.2em/1 Barlow, Verdana, Arial, Helvetica, sans-serif;
   margin: 0;
 }
 #jujitsu-content #jujitsu-photos-container #jujitsu-thumbnails-grid .tags {
-  margin-bottom: -2px;
-  margin-top: 6px;
+  margin-bottom: 10px;
+  margin-top: 4px;
 }
 #jujitsu-content #jujitsu-photos-container #jujitsu-thumbnails-grid .tags li {
-  border-color: #a3a3a3;
+  border: none;
   color: #a3a3a3;
+  margin: 0 3px 0 0;
+  padding: 0;
 }
 #jujitsu-content #jujitsu-videos-container {
   background-color: #191a1d;
@@ -1681,6 +1690,19 @@ footer #footer-links-external .icon:hover {
 }
 #jujitsu-content #jujitsu-videos-container #jujitsu-videos p {
   color: #ebecee;
+}
+
+/* ------- */
+/*  media  */
+/* ------- */
+/* - for laptop - */
+@media screen and (min-width: 1024px) {
+  #jujitsu-content #jujitsu-photos-container {
+    /* thumbnails */
+  }
+  #jujitsu-content #jujitsu-photos-container #jujitsu-thumbnails-grid .tags {
+    margin-bottom: 0;
+  }
 }
 
 /*# sourceMappingURL=richter-styles.css.map */
