@@ -352,8 +352,8 @@ li::before {
 }
 
 .grid-cerner-item2 {
-  height: auto;
   grid-area: two;
+  height: auto;
 }
 
 .grid-cerner-item3 {
@@ -423,7 +423,7 @@ li::before {
   }
 }
 /* ---------- */
-/* -  Felx  - */
+/* -  Flex  - */
 /* ---------- */
 .flex-container {
   display: flex;
