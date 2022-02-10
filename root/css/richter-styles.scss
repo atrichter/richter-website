@@ -447,15 +447,12 @@ li::before {
   mobile: 1
           2
           3
-          4
-  tablet: 1 3
-          2 3
-          4 3
-  laptop: 1 3
-          2 3
-          4 4
-  desktop+: 1 3
-            2 4
+  tablet: 1 2
+          3 2
+  laptop: 1 2
+          3 3
+  desktop+: 1 2
+            1 3
 */
 .grid-cerner-item1 {
   grid-area: one; 
