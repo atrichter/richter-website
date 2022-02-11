@@ -32,6 +32,7 @@ $dark-grey: #727579;
 $navy: #191a1d;
 $coral: #e35768;
 $blue: #7bc9d1;
+$sixdeg-orange: #ef7125;
 $cerner-blue: #179dd6;
 $truman-purple: #6f2d91;
 $truman-gold: #c0b38c;
@@ -423,48 +424,48 @@ li::before {
     'one';
 }
 
-/* grid 1-1-2-3
+/* grid 1-1-2-2-3-4
   mobile: 1
           2
           3
+          4
   tablet+: 1 1
-           2 3
+           2 2
+           3 4
 */
-.grid-1-1-2-3-item1 { grid-area: one; }
-.grid-1-1-2-3-item2 { grid-area: two; }
-.grid-1-1-2-item3 { grid-area: three; }
+.grid-1-1-2-2-3-4-item1 { grid-area: one; }
+.grid-1-1-2-2-3-4-item2 { grid-area: two; }
+.grid-1-1-2-2-3-4-item3 { grid-area: three; }
+.grid-1-1-2-2-3-4-item4 { grid-area: four; }
 
-.grid-1-1-2-3-container {
+.grid-1-1-2-2-3-4-container {
   display: grid;
   grid-gap: 40px;
   grid-template-areas:
     'one'
     'two'
-    'three';
+    'three'
+    'four';
 }
 
-/* grid cerner
+/* grid 1-2-3-3
   mobile: 1
           2
           3
-  tablet: 1 2
-          3 2
-  laptop: 1 2
-          3 3
-  desktop+: 1 2
-            1 3
+  laptop+: 1 2
+           3 3
 */
-.grid-cerner-item1 {
+.grid-1-2-3-3-item1 {
   grid-area: one; 
   height: auto;
 }
-.grid-cerner-item2 {
+.grid-1-2-3-3-item2 {
   grid-area: two;
   height: auto;
 }
-.grid-cerner-item3 { grid-area: three; }
+.grid-1-2-3-3-item3 { grid-area: three; }
 
-.grid-cerner-container {
+.grid-1-2-3-3-container {
   display: grid;
   // grid-gap: 30px;
   grid-template-areas:
@@ -517,34 +518,20 @@ li::before {
       'one one two';
   }
 
-  .grid-1-1-2-3-container {
+  .grid-1-1-2-2-3-4-container {
     grid-template-areas:
       'one one'
-      'two three';
-  }
-
-  .grid-cerner-container {
-    grid-template-areas:
-      'one two'
-      'three two';
+      'two two'
+      'three four';
   }
 }
 
 /* - for laptop - */
 @media screen and (min-width: $laptop) {
-  .grid-cerner-container {
+  .grid-1-2-3-3-container {
     grid-template-areas:
       'one two'
       'three three';
-  }
-}
-
-/* - for small desktop - */
-@media screen and (min-width: $desktop-s) {
-  .grid-cerner-container {
-    grid-template-areas:
-      'one two'
-      'one three';
   }
 }
 
@@ -1142,8 +1129,13 @@ footer {
   }
 }
 
+#sixdeg-logo,
 #cerner-logo-2 {
   fill: $grey;
+}
+
+#sixdeg-logo:hover {
+  fill: $sixdeg-orange;
 }
 
 #cerner-logo-2:hover {
@@ -1412,6 +1404,7 @@ footer {
   padding-bottom: 100px;
   padding-top: 50px;
 
+  #experience-work-sixdeg,
   #experience-work-cerner,
   #experience-work-lavner,
   #experience-work-website {
@@ -1437,6 +1430,16 @@ footer {
 
   p {
     padding: 0 0 10px 0;
+  }
+
+  #experience-work-sixdeg-logo {
+    #sixdeg-logo {
+      margin: auto;
+      max-height: 225px;
+      padding: 10px 0 20px 0;
+      transition: all .4s ease-in-out;
+      width: 100%;
+    }
   }
 
   #experience-work-cerner-logo {
@@ -1516,6 +1519,7 @@ footer {
 /* - for tablet - */
 @media screen and (min-width: $tablet) {
   #experience-work-grid {
+    #experience-work-sixdeg,
     #experience-work-cerner,
     #experience-work-lavner,
     #experience-work-website {
@@ -1523,6 +1527,7 @@ footer {
     }
   }
 
+  #experience-work-sixdeg-logo,
   #experience-work-cerner-logo {
     margin-right: 30px;
   }
