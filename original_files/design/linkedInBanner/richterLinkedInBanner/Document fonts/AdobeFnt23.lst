@@ -1,0 +1,56 @@
+%!Adobe-FontList 1.23
+%Locale:0x409
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:/Users/atrichter/github/richter-website/original_files/design/linkedinBanner/richterLinkedInBanner/Document fonts/AdobeFnt23.lst
+FileLength:1129
+FileModTime:666814965
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Barlow-Bold
+FamilyName:Barlow
+StyleName:Bold
+MenuName:Barlow
+StyleBits:2
+WeightClass:700
+WidthClass:5
+AngleClass:0
+FullName:Barlow Bold
+WritingScript:Roman
+OutlineFileName:/Users/atrichter/github/richter-website/original_files/design/linkedinBanner/richterLinkedInBanner/Document fonts/Barlow-Bold.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:102468
+FileModTime:649122502
+NameArray:0,Win,1,Barlow
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Barlow-SemiBoldItalic
+FamilyName:Barlow
+StyleName:SemiBold Italic
+MenuName:Barlow SemiBold
+StyleBits:1
+WeightClass:600
+WidthClass:5
+AngleClass:1
+FullName:Barlow SemiBold Italic
+WritingScript:Roman
+OutlineFileName:/Users/atrichter/github/richter-website/original_files/design/linkedinBanner/richterLinkedInBanner/Document fonts/Barlow-SemiBoldItalic.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:105904
+FileModTime:649122502
+NameArray:0,Win,1,Barlow SemiBold
+NameArray:0,Win,16,Barlow
+%EndFont
+
