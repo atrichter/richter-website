@@ -11,6 +11,7 @@
     "deploy": "sanity deploy",
     "deploy-graphql": "sanity graphql deploy",
     "lint": "eslint .",
+    "types:check": "tsc --project ./tsconfig.json --noEmit"
   },
   "keywords": [
     "sanity"
