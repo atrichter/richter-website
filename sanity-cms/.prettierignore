@@ -1,0 +1,13 @@
+.vscode
+node_modules
+static
+build
+dist
+script
+
+# V3
+.sanity
+
+# Yarn
+.yarn
+.yarnrc.yml

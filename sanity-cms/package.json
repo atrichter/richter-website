@@ -11,6 +11,8 @@
     "deploy": "sanity deploy",
     "deploy-graphql": "sanity graphql deploy",
     "lint": "eslint .",
+    "fmt": "prettier --write .",
+    "fmt:check": "prettier --check .",
     "types:check": "tsc --project ./tsconfig.json --noEmit"
   },
   "keywords": [
@@ -29,11 +31,5 @@
     "eslint": "^9.28",
     "prettier": "^3.5",
     "typescript": "^5.8"
-  },
-  "prettier": {
-    "semi": false,
-    "printWidth": 100,
-    "bracketSpacing": false,
-    "singleQuote": true
   }
 }
