@@ -19,17 +19,19 @@
     "sanity"
   ],
   "dependencies": {
-    "@sanity/vision": "^4.10.2",
-    "react": "^19.1",
-    "react-dom": "^19.1",
-    "sanity": "^4.10.2",
-    "styled-components": "^6.1.18"
+    "@sanity/cli": "^5.8.1",
+    "@sanity/codegen": "^5.9.3",
+    "@sanity/vision": "^5.8.1",
+    "react": "^19.2.2",
+    "react-dom": "^19.2.2",
+    "sanity": "^5.8.1",
+    "styled-components": "^6.3.9"
   },
   "devDependencies": {
-    "@sanity/eslint-config-studio": "^5.0.2",
-    "@types/react": "^19.1",
+    "@sanity/eslint-config-studio": "^6.0.0",
+    "@types/react": "^19.2.13",
     "eslint": "^9.28",
-    "prettier": "^3.5",
+    "prettier": "^3.8.1",
     "typescript": "^5.8"
   }
 }
