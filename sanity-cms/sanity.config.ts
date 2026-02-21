@@ -2,13 +2,14 @@ import { defineConfig } from 'sanity'
 import { structureTool } from 'sanity/structure'
 import { visionTool } from '@sanity/vision'
 import { schemaTypes } from './schemaTypes'
+import { DatasetNavbar } from './components/DatasetNavbar'
 
 export default defineConfig({
   name: 'default',
   title: 'richter-website',
 
   projectId: '650bubqo',
-  dataset: 'production',
+  dataset: process.env.SANITY_STUDIO_DATASET ?? 'development',
 
   plugins: [
     structureTool({
