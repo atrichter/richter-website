@@ -1,13 +1,3 @@
-import blockContent from './blockContent'
-import {
-  styledText,
-  styledHeadingText,
-  styledBodyText,
-} from './styledText'
+import types from './types'
 
-export const schemaTypes = [
-  blockContent,
-  styledText,
-  styledHeadingText,
-  styledBodyText,
-]
+export const schemaTypes = [...types]

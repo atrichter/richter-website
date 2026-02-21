@@ -17,7 +17,6 @@ export const bodyStyles = [
   { title: 'Quote', value: 'blockquote' },
 ] as const
 
-/** All options: body (Normal, Quote) + headings (H1–H4). */
 export const textStyles = [
   bodyStyles[0],
   ...headingStyles,
