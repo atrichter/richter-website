@@ -11,6 +11,12 @@ export default defineConfig({
   projectId: '650bubqo',
   dataset: process.env.SANITY_STUDIO_DATASET ?? 'development',
 
+  studio: {
+    components: {
+      navbar: DatasetNavbar,
+    },
+  },
+
   plugins: [
     structureTool({
       structure: (S) =>
