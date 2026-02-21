@@ -10,7 +10,19 @@ export default defineConfig({
   projectId: '650bubqo',
   dataset: 'production',
 
-  plugins: [structureTool(), visionTool()],
+  plugins: [
+    structureTool({
+      structure: (S) =>
+        S.list()
+          .title('Content')
+          .items([
+            S.documentListItem()
+              .id('homepage')
+              .schemaType('homepage'),
+          ]),
+    }),
+    visionTool(),
+  ],
 
   schema: {
     types: schemaTypes,
