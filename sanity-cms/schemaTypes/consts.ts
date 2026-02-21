@@ -17,10 +17,6 @@ export const bodyStyles = [
   { title: 'Quote', value: 'blockquote' },
 ] as const
 
-export const textStyles = [
-  bodyStyles[0],
-  ...headingStyles,
-  bodyStyles[1],
-] as const
+export const textStyles = [bodyStyles[0], ...headingStyles, bodyStyles[1]] as const
 
 export type TextStyleValue = (typeof textStyles)[number]['value']

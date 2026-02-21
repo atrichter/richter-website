@@ -8,13 +8,7 @@ export function DatasetNavbar(props: NavbarProps) {
 
   return (
     <Stack>
-      <Card
-        padding={2}
-        paddingX={3}
-        radius={2}
-        shadow={1}
-        tone={isProduction ? 'critical' : 'primary'}
-      >
+      <Card padding={2} paddingX={3} radius={2} shadow={1} tone={isProduction ? 'critical' : 'primary'}>
         <Text size={1} weight="semibold">
           Dataset: {dataset}
         </Text>

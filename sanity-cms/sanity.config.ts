@@ -23,11 +23,7 @@ export default defineConfig({
       structure: (S) =>
         S.list()
           .title('Content')
-          .items([
-            S.documentListItem()
-              .id('homepage')
-              .schemaType('homepage'),
-          ]),
+          .items([S.documentListItem().id('homepage').schemaType('homepage')]),
     }),
     media(),
     visionTool(),
