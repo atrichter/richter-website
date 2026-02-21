@@ -21,10 +21,10 @@
   "dependencies": {
     "@sanity/cli": "^5.8.1",
     "@sanity/codegen": "^5.9.3",
-    "@sanity/vision": "^5.8.1",
+    "@sanity/vision": "5.11.0",
     "react": "^19.2.2",
     "react-dom": "^19.2.2",
-    "sanity": "^5.8.1",
+    "sanity": "5.11.0",
     "styled-components": "^6.3.9"
   },
   "devDependencies": {
