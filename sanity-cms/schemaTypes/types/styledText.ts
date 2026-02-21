@@ -19,7 +19,6 @@ const styledText = defineType({
       name: 'style',
       title: 'Style',
       type: 'string',
-      initialValue: 'normal',
       options: {
         list: [...textStyles],
         layout: 'dropdown',
@@ -47,7 +46,6 @@ const styledHeadingText = defineType({
       name: 'style',
       title: 'Style',
       type: 'string',
-      initialValue: 'h2',
       options: {
         list: [...headingStyles],
         layout: 'dropdown',
@@ -75,7 +73,6 @@ const styledBodyText = defineType({
       name: 'style',
       title: 'Style',
       type: 'string',
-      initialValue: 'normal',
       options: {
         list: [...bodyStyles],
         layout: 'dropdown',
