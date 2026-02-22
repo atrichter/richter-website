@@ -1,5 +1,6 @@
 import { defineField, defineType } from 'sanity'
 import { HomeIcon } from '@sanity/icons'
+import { ImageInput } from '../../components/ImageInput'
 
 export default defineType({
   name: 'homepage',
@@ -29,15 +30,15 @@ export default defineType({
           title: 'Description',
           type: 'styledBodyText',
         }),
-        {
+        defineField({
           name: 'heroImage',
           title: 'Hero Image',
           type: 'image',
           options: { hotspot: true },
-          fields: [
-            { name: 'alt', title: 'Alt Text', type: 'string' },
-          ],
-        },
+          components: {
+            input: ImageInput,
+          },
+        }),
       ],
     }),
     defineField({
