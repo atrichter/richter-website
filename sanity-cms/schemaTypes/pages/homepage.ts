@@ -1,5 +1,6 @@
 import { defineField, defineType } from 'sanity'
 import { HomeIcon } from '@sanity/icons'
+import { styledTextFieldValidation } from '../types/styledText'
 
 export default defineType({
   name: 'homepage',
@@ -7,6 +8,12 @@ export default defineType({
   type: 'document',
   icon: HomeIcon,
   fields: [
+    defineField({
+      name: 'test',
+      title: 'Test',
+      type: 'string',
+      validation: (Rule) => Rule.required(),
+    }),
     defineField({
       name: 'hero',
       title: 'Hero Section',
@@ -16,13 +23,13 @@ export default defineType({
           name: 'title',
           title: 'Main Title',
           type: 'styledHeadingText',
-          validation: (Rule) => Rule.required(),
+          validation: styledTextFieldValidation(true),
         }),
         defineField({
           name: 'subtitle',
           title: 'Subtitle',
           type: 'styledHeadingText',
-          validation: (Rule) => Rule.required(),
+          validation: styledTextFieldValidation(true),
         }),
         defineField({
           name: 'description',

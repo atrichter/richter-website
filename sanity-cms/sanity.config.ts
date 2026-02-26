@@ -7,10 +7,14 @@ import { media } from 'sanity-plugin-media'
 import { schemaTypes } from './schemaTypes'
 import { DatasetNavbar } from './components/DatasetNavbar'
 import { ImageInput } from './components/ImageInput'
+import { StyledTextInput } from './components/StyledTextInput'
 
 // Map schema type names to custom input components
 const customInputs: Partial<Record<string, React.ComponentType<InputProps>>> = {
   image: ImageInput as React.ComponentType<InputProps>,
+  styledText: StyledTextInput as React.ComponentType<InputProps>,
+  styledHeadingText: StyledTextInput as React.ComponentType<InputProps>,
+  styledBodyText: StyledTextInput as React.ComponentType<InputProps>,
 }
 
 export default defineConfig({

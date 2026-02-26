@@ -99,9 +99,7 @@ export function ImageInput(props: ObjectInputProps<ImageValue>) {
   assetDataRef.current = assetData
 
   useEffect(() => {
-    const hasDirty = METADATA_FIELDS.some(
-      ({ key }) => (edit[key] ?? '') !== (assetData?.[key] ?? '')
-    )
+    const hasDirty = METADATA_FIELDS.some(({ key }) => (edit[key] ?? '') !== (assetData?.[key] ?? ''))
     if (!hasDirty || !assetRef || saving) return
 
     const timer = setTimeout(() => {
