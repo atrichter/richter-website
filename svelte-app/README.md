@@ -64,4 +64,14 @@ yarn build
 
 You can preview the production build with `yarn preview`.
 
+## Sanity CMS
+
+Content is loaded from the Sanity project defined in `sanity-cms/`. Copy `.env.example` to `.env` and set `VITE_SANITY_PROJECT_ID` and `VITE_SANITY_DATASET` to match your Studio (defaults point to the same project/dataset). Reusable building-block components live in `$lib/components/`:
+
+- **StyledText** – single text + style (e.g. hero title, subtitle)
+- **BlockContent** – rich text (headings, paragraphs, links, images) for page content
+- **SanityImage** – responsive images with optional width
+
+The homepage fetches the “Homepage” document and renders hero (title, subtitle, description, image) and page content (block content). Add more pages by adding GROQ queries in `$lib/cms/queries.ts` and using these components.
+
 > To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
