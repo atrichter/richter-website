@@ -11,5 +11,10 @@ export default defineCliConfig({
      * Learn more at https://www.sanity.io/docs/cli#auto-updates
      */
     autoUpdates: true,
+    /**
+     * Set after first `sanity deploy` so CI/non-interactive deploys use this host.
+     * Example: 'richter-website' → https://richter-website.sanity.studio
+     */
+    // host: 'richter-website',
   },
 })

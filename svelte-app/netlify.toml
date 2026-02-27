@@ -1,0 +1,9 @@
+# Netlify config for SvelteKit (adapter-auto uses adapter-netlify on Netlify)
+# If you deploy from repo root, set base = "svelte-app" in the Netlify UI.
+
+[build]
+  command = "yarn build"
+  publish = "build"
+
+[build.environment]
+  NODE_VERSION = "20"
