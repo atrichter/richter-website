@@ -45,7 +45,28 @@ export default defineConfig({
       structure: (S) =>
         S.list()
           .title('Content')
-          .items([S.documentListItem().id('homepage').schemaType('homepage')]),
+          .items([
+            S.documentListItem().id('homepage').schemaType('homepage'),
+            S.listItem()
+              .title('Pages')
+              .child(S.documentTypeList('page').title('Pages')),
+            S.listItem()
+              .title('Components')
+              .child(
+                S.documentList()
+                  .title('Components')
+                  .filter('_type in ["component.card"]')
+              ),
+            S.listItem()
+              .title('Sections')
+              .child(
+                S.documentList()
+                  .title('Sections')
+                  .filter(
+                    '_type in ["section.hero", "section.blockContent", "section.fullWidthMedia", "section.grid"]'
+                  )
+              ),
+          ]),
     }),
     media(),
     visionTool(),

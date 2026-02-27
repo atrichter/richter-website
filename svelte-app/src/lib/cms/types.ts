@@ -56,3 +56,76 @@ export interface HomepageDocument {
 	hero?: HomepageHero | null
 	content?: BlockContentItem[] | null
 }
+
+// --- Page builder: sections (resolved from references) ---
+
+export const SECTION_HERO = 'section.hero'
+export const SECTION_BLOCK_CONTENT = 'section.blockContent'
+export const SECTION_FULL_WIDTH_MEDIA = 'section.fullWidthMedia'
+export const SECTION_GRID = 'section.grid'
+
+export interface SectionHero {
+	_type: typeof SECTION_HERO
+	_id: string
+	title?: StyledText | null
+	subtitle?: StyledText | null
+	background?: SanityImage | null
+	altText?: string | null
+}
+
+export interface SectionBlockContent {
+	_type: typeof SECTION_BLOCK_CONTENT
+	_id: string
+	content?: BlockContentItem[] | null
+}
+
+export interface SectionFullWidthMedia {
+	_type: typeof SECTION_FULL_WIDTH_MEDIA
+	_id: string
+	image?: SanityImage | null
+	altText?: string | null
+}
+
+/** Link object for card (and similar). */
+export interface CardLink {
+	href?: string | null
+	text?: string | null
+}
+
+/** Card component data (used inside grid and elsewhere). */
+export interface CardData {
+	_id: string
+	image?: SanityImage | null
+	imageAlt?: string | null
+	title?: string | null
+	subtitle?: string | null
+	description?: string | null
+	link?: CardLink | null
+}
+
+export const COMPONENT_CARD = 'component.card'
+
+/** Union of component data types that can appear in a grid. Each has _type for discrimination. */
+export type GridItem = (CardData & { _type: typeof COMPONENT_CARD })
+
+/** Grid section: optional heading + list of components (cards, etc.). */
+export interface SectionGrid {
+	_type: typeof SECTION_GRID
+	_id: string
+	heading?: string | null
+	/** Resolved grid items. Add more component types to GridItem as you add them. */
+	items?: GridItem[] | null
+}
+
+export type PageSection =
+	| SectionHero
+	| SectionBlockContent
+	| SectionFullWidthMedia
+	| SectionGrid
+
+export interface PageDocument {
+	_id: string
+	title?: string | null
+	slug?: string | null
+	sections?: PageSection[] | null
+}
