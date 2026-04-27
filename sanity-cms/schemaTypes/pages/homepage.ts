@@ -17,7 +17,7 @@ export default defineType({
     defineField({
       name: 'hero',
       title: 'Hero Section',
-      type: 'object',
+      type: 'object' as const,
       fields: [
         defineField({
           name: 'title',

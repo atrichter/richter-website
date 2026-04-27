@@ -30,7 +30,7 @@ export default defineType({
     defineField({
       name: 'sections',
       title: 'Sections',
-      type: 'array',
+      type: 'array' as const,
       of: [
         defineArrayMember({
           type: 'reference',

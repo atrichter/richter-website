@@ -19,7 +19,7 @@ export default defineType({
     defineField({
       name: 'items',
       title: 'Items',
-      type: 'array',
+      type: 'array' as const,
       description: 'Components to display in the grid (cards, etc.).',
       of: [
         {
