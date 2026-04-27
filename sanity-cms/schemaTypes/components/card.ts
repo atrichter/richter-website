@@ -1,68 +1,51 @@
 import { defineType, defineField } from 'sanity'
-import { CardIcon } from '@sanity/icons'
+import { SquareIcon } from '@sanity/icons'
+import { styledTextFieldValidation } from '../types/styledText'
 
 export const componentCardName = 'component.card'
 
 export default defineType({
   name: componentCardName,
   title: 'Card',
-  icon: CardIcon,
+  icon: SquareIcon,
   type: 'document',
   fields: [
+    defineField({
+      name: 'title',
+      title: 'Title',
+      type: 'styledHeadingText',
+      validation: styledTextFieldValidation(true),
+    }),
+    defineField({
+      name: 'subtitle',
+      title: 'Subtitle',
+      type: 'styledHeadingText',
+    }),
     defineField({
       name: 'image',
       title: 'Image',
       type: 'image',
       options: { hotspot: true },
-      validation: (Rule) => Rule.required(),
-    }),
-    defineField({
-      name: 'imageAlt',
-      title: 'Image Alt Text',
-      type: 'string',
-      validation: (Rule) => Rule.required(),
-    }),
-    defineField({
-      name: 'title',
-      title: 'Title',
-      type: 'string',
-      validation: (Rule) => Rule.required(),
-    }),
-    defineField({
-      name: 'subtitle',
-      title: 'Subtitle',
-      type: 'string',
     }),
     defineField({
       name: 'description',
       title: 'Description',
       type: 'text',
-      rows: 3,
     }),
     defineField({
-      name: 'link',
-      title: 'Link',
-      type: 'object',
-      fields: [
-        defineField({
-          name: 'href',
-          title: 'URL',
-          type: 'url',
-          validation: (Rule) => Rule.required(),
-        }),
-        defineField({
-          name: 'text',
-          title: 'Link Text',
-          type: 'string',
-          description: 'e.g. "Learn more". If empty, title may be used.',
-        }),
-      ],
+      name: 'url',
+      title: 'URL',
+      type: 'url',
     }),
   ],
   preview: {
-    select: { title: 'title' },
-    prepare({ title }) {
-      return { title: title || 'Card' }
+    select: { title: 'title.text', subtitle: 'subtitle.text', media: 'image' },
+    prepare({ title, subtitle, media }) {
+      return {
+        title: title || 'Card',
+        subtitle: subtitle || undefined,
+        media,
+      }
     },
   },
 })
