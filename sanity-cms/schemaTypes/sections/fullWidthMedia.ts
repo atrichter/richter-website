@@ -1,6 +1,7 @@
 import { defineType, defineField } from 'sanity'
 import { ImageIcon } from '@sanity/icons'
 import { componentNameField } from '../fields'
+import { componentMediaName } from '../components'
 
 export const sectionFullWidthMediaName = 'section.fullWidthMedia'
 
@@ -12,10 +13,10 @@ export default defineType({
   fields: [
     componentNameField,
     defineField({
-      name: 'image',
-      title: 'Image',
-      type: 'image',
-      options: { hotspot: true },
+      name: 'media',
+      title: 'Media',
+      type: 'reference',
+      to: [{ type: componentMediaName }],
       validation: (Rule) => Rule.required(),
     }),
   ],

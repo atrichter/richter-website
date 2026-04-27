@@ -2,6 +2,7 @@ import { defineType, defineField } from 'sanity'
 import { SquareIcon } from '@sanity/icons'
 import { styledTextFieldValidation } from '../types/styledText'
 import { definePreview } from '../preview'
+import { componentMediaName } from './index'
 
 export const componentCardName = 'component.card'
 
@@ -23,10 +24,10 @@ export default defineType({
       type: 'styledHeadingText',
     }),
     defineField({
-      name: 'image',
-      title: 'Image',
-      type: 'image',
-      options: { hotspot: true },
+      name: 'media',
+      title: 'Media',
+      type: 'reference',
+      to: [{ type: componentMediaName }],
     }),
     defineField({
       name: 'description',
@@ -42,6 +43,6 @@ export default defineType({
   preview: definePreview({
     title: 'title.text',
     subtitle: 'subtitle.text',
-    media: 'image',
+    media: 'media.image',
   }),
 })

@@ -41,14 +41,22 @@ export const PAGE_BY_SLUG_QUERY = `*[_type == "page" && slug.current == $slug][0
         _id,
         _type,
         _type == "component.card" => {
-          image {
+          media-> {
+            _id,
             _type,
-            asset,
-            "assetUrl": asset->url,
-            hotspot,
-            crop
+            mediaType,
+            image {
+              _type,
+              asset,
+              "assetUrl": asset->url,
+              hotspot,
+              crop
+            },
+            videoUrl
           },
-          imageAlt,
+          // compatibility for existing frontend expectations
+          image: media->image,
+          imageAlt: media->image.asset->altText,
           title,
           subtitle,
           description,
@@ -57,14 +65,22 @@ export const PAGE_BY_SLUG_QUERY = `*[_type == "page" && slug.current == $slug][0
       }
     },
     _type == "section.fullWidthMedia" => {
-      image {
+      media-> {
+        _id,
         _type,
-        asset,
-        "assetUrl": asset->url,
-        hotspot,
-        crop
+        mediaType,
+        image {
+          _type,
+          asset,
+          "assetUrl": asset->url,
+          hotspot,
+          crop
+        },
+        videoUrl
       },
-      altText
+      // keep legacy top-level fields for compatibility with the frontend
+      image: media->image,
+      altText: media->image.asset->altText
     }
   }
 }`

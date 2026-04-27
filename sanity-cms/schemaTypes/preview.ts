@@ -33,12 +33,14 @@ function createDefaultPreview(schemaType: SchemaTypeDefinition) {
   const hasTitle = normalizedFields.some((field) => field.name === 'title')
   const hasName = normalizedFields.some((field) => field.name === 'name')
   const hasImage = normalizedFields.some((field) => field.name === 'image')
+  const hasMedia = normalizedFields.some((field) => field.name === 'media')
 
-  if (!hasTitle && !hasName && !hasImage) return undefined
+  if (!hasTitle && !hasName && !hasImage && !hasMedia) return undefined
 
   return definePreview({
     title: hasTitle ? 'title' : hasName ? 'name' : undefined,
-    media: hasImage ? 'image' : undefined,
+    // prefer a referenced media object's image when present
+    media: hasMedia ? 'media.image' : hasImage ? 'image' : undefined,
   })
 }
 
