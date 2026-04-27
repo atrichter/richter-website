@@ -1,20 +1,9 @@
-type SchemaField = {
-  name?: string
-}
-
-type SchemaTypeLike = {
-  type?: string
-  title?: string
-  fields?: SchemaField[]
-  preview?: unknown
-  [key: string]: unknown
-}
+import type { SchemaTypeDefinition } from 'sanity'
 
 type PreviewPathConfig = {
   title?: string
   subtitle?: string
   media?: string
-  fallbackTitle?: string
 }
 
 export function definePreview(config: PreviewPathConfig) {
@@ -27,7 +16,7 @@ export function definePreview(config: PreviewPathConfig) {
     select,
     prepare(selection: { title?: string; subtitle?: string; media?: any }) {
       return {
-        title: selection.title || config.fallbackTitle || 'Untitled',
+        title: selection.title || 'Undefined',
         subtitle: selection.subtitle || undefined,
         media: selection.media,
       }
@@ -35,25 +24,26 @@ export function definePreview(config: PreviewPathConfig) {
   }
 }
 
-function createDefaultPreview(schemaType: SchemaTypeLike) {
-  const fields = schemaType.fields ?? []
-  if (fields.length === 0) return undefined
+function createDefaultPreview(schemaType: SchemaTypeDefinition) {
+  const fields = ('fields' in schemaType ? schemaType.fields : undefined) as Array<{ name?: string }> | undefined
+  const normalizedFields = fields ?? []
 
-  const hasTitle = fields.some((field) => field.name === 'title')
-  const hasName = fields.some((field) => field.name === 'name')
-  const hasImage = fields.some((field) => field.name === 'image')
+  if (normalizedFields.length === 0) return undefined
+
+  const hasTitle = normalizedFields.some((field) => field.name === 'title')
+  const hasName = normalizedFields.some((field) => field.name === 'name')
+  const hasImage = normalizedFields.some((field) => field.name === 'image')
 
   if (!hasTitle && !hasName && !hasImage) return undefined
 
   return definePreview({
     title: hasTitle ? 'title' : hasName ? 'name' : undefined,
     media: hasImage ? 'image' : undefined,
-    fallbackTitle: schemaType.title || 'Untitled',
   })
 }
 
-export function applyDefaultPreview(schemaType: SchemaTypeLike): SchemaTypeLike {
-  if (schemaType.preview) return schemaType
+export function applyDefaultPreview<T extends SchemaTypeDefinition>(schemaType: T): T {
+  if ('preview' in schemaType && schemaType.preview) return schemaType
 
   const preview = createDefaultPreview(schemaType)
   if (!preview) return schemaType
@@ -61,5 +51,5 @@ export function applyDefaultPreview(schemaType: SchemaTypeLike): SchemaTypeLike 
   return {
     ...schemaType,
     preview,
-  }
+  } as T
 }

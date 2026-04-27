@@ -43,6 +43,5 @@ export default defineType({
   preview: definePreview({
     title: 'title',
     subtitle: 'slug.current',
-    fallbackTitle: 'Untitled Page',
   }),
 })

@@ -43,6 +43,5 @@ export default defineType({
     title: 'title.text',
     subtitle: 'subtitle.text',
     media: 'image',
-    fallbackTitle: 'Card',
   }),
 })

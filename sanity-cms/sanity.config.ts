@@ -55,10 +55,7 @@ export default defineConfig({
               .child(
                 S.list()
                   .title('Sections')
-                  .items([
-                    S.documentTypeListItem('section.fullWidthMedia'),
-                    S.documentTypeListItem('section.grid')
-                  ])
+                  .items([S.documentTypeListItem('section.fullWidthMedia'), S.documentTypeListItem('section.grid')])
               ),
             S.listItem()
               .title('Components')
@@ -66,7 +63,7 @@ export default defineConfig({
               .child(
                 S.list()
                   .title('Components')
-                  .items([S.documentTypeListItem('component.card').title('Cards')])
+                  .items([S.documentTypeListItem('component.card')])
               ),
           ]),
     }),
