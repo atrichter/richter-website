@@ -3,6 +3,7 @@ import type { InputProps } from 'sanity'
 import { defineConfig } from 'sanity'
 import { structureTool } from 'sanity/structure'
 import { visionTool } from '@sanity/vision'
+import { BlockElementIcon, ComponentIcon } from '@sanity/icons'
 import { media } from 'sanity-plugin-media'
 import { schemaTypes } from './schemaTypes'
 import { DatasetNavbar } from './studioComponents/DatasetNavbar'
@@ -47,30 +48,26 @@ export default defineConfig({
           .title('Content')
           .items([
             S.documentListItem().id('homepage').schemaType('homepage').title('Homepage'),
-            S.listItem().title('Pages').child(S.documentTypeList('page').title('Pages')),
+            S.documentTypeListItem('page').title('Pages'),
             S.listItem()
               .title('Sections')
+              .icon(BlockElementIcon)
               .child(
                 S.list()
                   .title('Sections')
                   .items([
-                    S.listItem()
-                      .title('Content Sections')
-                      .child(S.documentTypeList('section.blockContent').title('Content Sections')),
-                    S.listItem()
-                      .title('Full Width Media Sections')
-                      .child(S.documentTypeList('section.fullWidthMedia').title('Full Width Media Sections')),
-                    S.listItem()
-                      .title('Grid Sections')
-                      .child(S.documentTypeList('section.grid').title('Grid Sections')),
+                    S.documentTypeListItem('section.blockContent').title('Content Sections'),
+                    S.documentTypeListItem('section.fullWidthMedia').title('Full Width Media Sections'),
+                    S.documentTypeListItem('section.grid').title('Grid Sections'),
                   ])
               ),
             S.listItem()
               .title('Components')
+              .icon(ComponentIcon)
               .child(
                 S.list()
                   .title('Components')
-                  .items([S.listItem().title('Cards').child(S.documentTypeList('component.card').title('Cards'))])
+                  .items([S.documentTypeListItem('component.card').title('Cards')])
               ),
           ]),
     }),
