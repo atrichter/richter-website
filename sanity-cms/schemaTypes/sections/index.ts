@@ -1,7 +1,7 @@
+import content from './content'
 import fullWidthMedia from './fullWidthMedia'
-import grid from './grid'
 
+export { sectionContentName } from './content'
 export { sectionFullWidthMediaName } from './fullWidthMedia'
-export { sectionGridName } from './grid'
 
-export default [fullWidthMedia, grid]
+export default [content, fullWidthMedia]

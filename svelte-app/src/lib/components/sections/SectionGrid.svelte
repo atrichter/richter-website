@@ -1,10 +1,10 @@
 <script lang="ts">
-	import type { SectionGrid as SectionGridType, GridItem } from '$lib/cms/types'
+	import type { SectionContent, GridItem } from '$lib/cms/types'
 	import { COMPONENT_CARD } from '$lib/cms/types'
 	import Card from '$lib/components/Card.svelte'
 
 	interface Props {
-		section: SectionGridType
+		section: SectionContent
 		class?: string
 	}
 

@@ -51,8 +51,8 @@ export interface HomepageDocument {
 
 // --- Page builder: sections (resolved from references) ---
 
+export const SECTION_CONTENT = 'section.content'
 export const SECTION_FULL_WIDTH_MEDIA = 'section.fullWidthMedia'
-export const SECTION_GRID = 'section.grid'
 
 export interface SectionFullWidthMedia {
 	_type: typeof SECTION_FULL_WIDTH_MEDIA
@@ -67,7 +67,7 @@ export interface CardLink {
 	text?: string | null
 }
 
-/** Card component data (used inside grid and elsewhere). */
+/** Card component data (used inside content sections and elsewhere). */
 export interface CardData {
 	_id: string
 	image?: SanityImage | null
@@ -80,21 +80,21 @@ export interface CardData {
 
 export const COMPONENT_CARD = 'component.card'
 
-/** Union of component data types that can appear in a grid. Each has _type for discrimination. */
+/** Union of component data types that can appear in a content section. Each has _type for discrimination. */
 export type GridItem = (CardData & { _type: typeof COMPONENT_CARD })
 
-/** Grid section: optional heading + list of components (cards, etc.). */
-export interface SectionGrid {
-	_type: typeof SECTION_GRID
+/** Content section: optional heading + list of components (cards, etc.). */
+export interface SectionContent {
+	_type: typeof SECTION_CONTENT
 	_id: string
 	heading?: string | null
-	/** Resolved grid items. Add more component types to GridItem as you add them. */
+	/** Resolved items. Add more component types to GridItem as you add them. */
 	items?: GridItem[] | null
 }
 
 export type PageSection =
+	| SectionContent
 	| SectionFullWidthMedia
-	| SectionGrid
 
 export interface PageDocument {
 	_id: string

@@ -2,7 +2,7 @@
 	import type { PageSection } from '$lib/cms/types'
 	import {
 		SECTION_FULL_WIDTH_MEDIA,
-		SECTION_GRID,
+		SECTION_CONTENT,
 	} from '$lib/cms/types'
 	import SectionFullWidthMedia from '$lib/components/sections/SectionFullWidthMedia.svelte'
 	import SectionGrid from '$lib/components/sections/SectionGrid.svelte'
@@ -18,10 +18,10 @@
 
 <div class="page-builder {className}">
 	{#each sections ?? [] as section (section._id)}
-		{#if section._type === SECTION_FULL_WIDTH_MEDIA}
-			<SectionFullWidthMedia section={section} />
-		{:else if section._type === SECTION_GRID}
+		{#if section._type === SECTION_CONTENT}
 			<SectionGrid section={section} />
+		{:else if section._type === SECTION_FULL_WIDTH_MEDIA}
+			<SectionFullWidthMedia section={section} />
 		{:else}
 			<!-- Unknown section type: {section._type} -->
 		{/if}

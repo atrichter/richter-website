@@ -35,17 +35,7 @@ export const PAGE_BY_SLUG_QUERY = `*[_type == "page" && slug.current == $slug][0
   sections[]-> {
     _id,
     _type,
-    _type == "section.fullWidthMedia" => {
-      image {
-        _type,
-        asset,
-        "assetUrl": asset->url,
-        hotspot,
-        crop
-      },
-      altText
-    },
-    _type == "section.grid" => {
+    _type == "section.content" => {
       heading,
       items[]-> {
         _id,
@@ -65,6 +55,16 @@ export const PAGE_BY_SLUG_QUERY = `*[_type == "page" && slug.current == $slug][0
           link { href, text }
         }
       }
+    },
+    _type == "section.fullWidthMedia" => {
+      image {
+        _type,
+        asset,
+        "assetUrl": asset->url,
+        hotspot,
+        crop
+      },
+      altText
     }
   }
 }`
