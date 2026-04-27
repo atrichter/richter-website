@@ -72,7 +72,7 @@ export default defineConfig({
               .child(
                 S.list()
                   .title('Components')
-                  .items([S.documentTypeListItem('component.card')])
+                  .items([S.documentTypeListItem('component.media'), S.documentTypeListItem('component.card')])
               ),
           ]),
     }),
