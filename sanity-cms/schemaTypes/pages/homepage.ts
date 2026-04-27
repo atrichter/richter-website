@@ -9,12 +9,6 @@ export default defineType({
   icon: HomeIcon,
   fields: [
     defineField({
-      name: 'test',
-      title: 'Test',
-      type: 'string',
-      validation: (Rule) => Rule.required(),
-    }),
-    defineField({
       name: 'hero',
       title: 'Hero',
       type: 'reference' as const,
