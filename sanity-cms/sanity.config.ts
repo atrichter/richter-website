@@ -47,9 +47,7 @@ export default defineConfig({
           .title('Content')
           .items([
             S.documentListItem().id('homepage').schemaType('homepage').title('Homepage'),
-            S.listItem()
-              .title('Pages')
-              .child(S.documentTypeList('page').title('Pages')),
+            S.listItem().title('Pages').child(S.documentTypeList('page').title('Pages')),
             S.listItem()
               .title('Sections')
               .child(
@@ -75,11 +73,7 @@ export default defineConfig({
               .child(
                 S.list()
                   .title('Components')
-                  .items([
-                    S.listItem()
-                      .title('Cards')
-                      .child(S.documentTypeList('component.card').title('Cards')),
-                  ])
+                  .items([S.listItem().title('Cards').child(S.documentTypeList('component.card').title('Cards'))])
               ),
           ]),
     }),
