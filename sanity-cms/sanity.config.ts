@@ -4,7 +4,7 @@ import { defineConfig } from 'sanity'
 import { structureTool } from 'sanity/structure'
 import { visionTool } from '@sanity/vision'
 import { BlockElementIcon, ComponentIcon, HomeIcon } from '@sanity/icons'
-import { media } from 'sanity-plugin-media'
+import { media, mediaAssetSource } from 'sanity-plugin-media'
 import { schemaTypes } from './schemaTypes'
 import { DatasetNavbar } from './studioComponents/DatasetNavbar'
 import { ImageInput } from './studioComponents/inputs/ImageInput'
@@ -38,6 +38,12 @@ export default defineConfig({
         const CustomInput = name && customInputs[name]
         return CustomInput ? React.createElement(CustomInput, props) : props.renderDefault(props)
       },
+    },
+    image: {
+      assetSources: (previousAssetSources) => previousAssetSources.filter((s) => s !== mediaAssetSource),
+    },
+    file: {
+      assetSources: (previousAssetSources) => previousAssetSources.filter((s) => s !== mediaAssetSource),
     },
   },
 
