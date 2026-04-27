@@ -55,9 +55,6 @@ export default defineConfig({
                   .title('Sections')
                   .items([
                     S.listItem()
-                      .title('Hero Sections')
-                      .child(S.documentTypeList('section.hero').title('Hero Sections')),
-                    S.listItem()
                       .title('Content Sections')
                       .child(S.documentTypeList('section.blockContent').title('Content Sections')),
                     S.listItem()

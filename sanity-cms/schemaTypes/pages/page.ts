@@ -1,6 +1,6 @@
 import { defineType, defineField, defineArrayMember } from 'sanity'
 import { DocumentTextIcon } from '@sanity/icons'
-import { sectionHeroName, sectionBlockContentName, sectionFullWidthMediaName, sectionGridName } from '../sections'
+import { sectionBlockContentName, sectionFullWidthMediaName, sectionGridName } from '../sections'
 
 export const pageSchemaName = 'page'
 
@@ -35,7 +35,6 @@ export default defineType({
         defineArrayMember({
           type: 'reference',
           to: [
-            { type: sectionHeroName },
             { type: sectionBlockContentName },
             { type: sectionFullWidthMediaName },
             { type: sectionGridName },

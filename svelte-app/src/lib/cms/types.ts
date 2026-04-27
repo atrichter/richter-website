@@ -42,36 +42,18 @@ export interface BlockContentImage extends SanityImage {
 /** Block content array: blocks and images */
 export type BlockContentItem = PortableTextBlock | BlockContentImage
 
-/** Hero section on homepage */
-export interface HomepageHero {
-	title?: StyledText | null
-	subtitle?: StyledText | null
-	description?: StyledText | null
-	heroImage?: SanityImage | null
-}
-
 export interface HomepageDocument {
 	_id: string
 	test?: string | null
-	hero?: HomepageHero | null
+	hero?: SectionFullWidthMedia | null
 	content?: BlockContentItem[] | null
 }
 
 // --- Page builder: sections (resolved from references) ---
 
-export const SECTION_HERO = 'section.hero'
 export const SECTION_BLOCK_CONTENT = 'section.blockContent'
 export const SECTION_FULL_WIDTH_MEDIA = 'section.fullWidthMedia'
 export const SECTION_GRID = 'section.grid'
-
-export interface SectionHero {
-	_type: typeof SECTION_HERO
-	_id: string
-	title?: StyledText | null
-	subtitle?: StyledText | null
-	background?: SanityImage | null
-	altText?: string | null
-}
 
 export interface SectionBlockContent {
 	_type: typeof SECTION_BLOCK_CONTENT
@@ -118,7 +100,6 @@ export interface SectionGrid {
 }
 
 export type PageSection =
-	| SectionHero
 	| SectionBlockContent
 	| SectionFullWidthMedia
 	| SectionGrid

@@ -5,17 +5,17 @@
 export const HOMEPAGE_QUERY = `*[_type == "homepage"][0] {
   _id,
   test,
-  hero {
-    title { text, style },
-    subtitle { text, style },
-    description { text, style },
-    heroImage {
+  hero-> {
+    _id,
+    _type,
+    image {
       _type,
       asset,
       "assetUrl": asset->url,
       hotspot,
       crop
-    }
+    },
+    altText
   },
   content[] {
     _type,
@@ -35,18 +35,6 @@ export const PAGE_BY_SLUG_QUERY = `*[_type == "page" && slug.current == $slug][0
   sections[]-> {
     _id,
     _type,
-    _type == "section.hero" => {
-      title { text, style },
-      subtitle { text, style },
-      background {
-        _type,
-        asset,
-        "assetUrl": asset->url,
-        hotspot,
-        crop
-      },
-      altText
-    },
     _type == "section.blockContent" => {
       content[] {
         _type,
