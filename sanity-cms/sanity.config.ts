@@ -3,7 +3,7 @@ import type { InputProps } from 'sanity'
 import { defineConfig } from 'sanity'
 import { structureTool } from 'sanity/structure'
 import { visionTool } from '@sanity/vision'
-import { BlockElementIcon, ComponentIcon } from '@sanity/icons'
+import { BlockElementIcon, ComponentIcon, HomeIcon } from '@sanity/icons'
 import { media } from 'sanity-plugin-media'
 import { schemaTypes } from './schemaTypes'
 import { DatasetNavbar } from './studioComponents/DatasetNavbar'
@@ -47,7 +47,10 @@ export default defineConfig({
         S.list()
           .title('Content')
           .items([
-            S.documentListItem().id('homepage').schemaType('homepage').title('Homepage'),
+            S.listItem()
+              .title('Homepage')
+              .icon(HomeIcon)
+              .child(S.editor().id('homepage').schemaType('homepage').documentId('homepage')),
             S.documentTypeListItem('page').title('Pages'),
             S.listItem()
               .title('Sections')
