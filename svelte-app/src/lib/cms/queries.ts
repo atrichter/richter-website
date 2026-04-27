@@ -35,17 +35,6 @@ export const PAGE_BY_SLUG_QUERY = `*[_type == "page" && slug.current == $slug][0
   sections[]-> {
     _id,
     _type,
-    _type == "section.blockContent" => {
-      content[] {
-        _type,
-        _key,
-        style,
-        children[] { _type, text, marks },
-        markDefs[] { _key, _type, href },
-        asset,
-        "assetUrl": asset->url
-      }
-    },
     _type == "section.fullWidthMedia" => {
       image {
         _type,

@@ -51,15 +51,8 @@ export interface HomepageDocument {
 
 // --- Page builder: sections (resolved from references) ---
 
-export const SECTION_BLOCK_CONTENT = 'section.blockContent'
 export const SECTION_FULL_WIDTH_MEDIA = 'section.fullWidthMedia'
 export const SECTION_GRID = 'section.grid'
-
-export interface SectionBlockContent {
-	_type: typeof SECTION_BLOCK_CONTENT
-	_id: string
-	content?: BlockContentItem[] | null
-}
 
 export interface SectionFullWidthMedia {
 	_type: typeof SECTION_FULL_WIDTH_MEDIA
@@ -100,7 +93,6 @@ export interface SectionGrid {
 }
 
 export type PageSection =
-	| SectionBlockContent
 	| SectionFullWidthMedia
 	| SectionGrid
 

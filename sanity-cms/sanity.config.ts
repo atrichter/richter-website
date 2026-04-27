@@ -56,9 +56,8 @@ export default defineConfig({
                 S.list()
                   .title('Sections')
                   .items([
-                    S.documentTypeListItem('section.blockContent').title('Content Sections'),
-                    S.documentTypeListItem('section.fullWidthMedia').title('Full Width Media Sections'),
-                    S.documentTypeListItem('section.grid').title('Grid Sections'),
+                    S.documentTypeListItem('section.fullWidthMedia'),
+                    S.documentTypeListItem('section.grid')
                   ])
               ),
             S.listItem()
