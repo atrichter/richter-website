@@ -1,6 +1,7 @@
 import { defineType, defineField } from 'sanity'
 import { SquareIcon } from '@sanity/icons'
 import { styledTextFieldValidation } from '../types/styledText'
+import { definePreview } from '../preview'
 
 export const componentCardName = 'component.card'
 
@@ -38,14 +39,10 @@ export default defineType({
       type: 'url',
     }),
   ],
-  preview: {
-    select: { title: 'title.text', subtitle: 'subtitle.text', media: 'image' },
-    prepare({ title, subtitle, media }) {
-      return {
-        title: title || 'Card',
-        subtitle: subtitle || undefined,
-        media,
-      }
-    },
-  },
+  preview: definePreview({
+    title: 'title.text',
+    subtitle: 'subtitle.text',
+    media: 'image',
+    fallbackTitle: 'Card',
+  }),
 })

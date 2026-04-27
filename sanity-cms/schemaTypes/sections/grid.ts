@@ -1,6 +1,7 @@
 import { defineType, defineField } from 'sanity'
 import { DashboardIcon } from '@sanity/icons'
 import { componentCardName } from '../components'
+import { componentNameField } from '../fields'
 
 export const sectionGridName = 'section.grid'
 
@@ -10,12 +11,7 @@ export default defineType({
   icon: DashboardIcon,
   type: 'document',
   fields: [
-    defineField({
-      name: 'heading',
-      title: 'Heading',
-      type: 'string',
-      description: 'Optional section heading above the grid.',
-    }),
+    componentNameField,
     defineField({
       name: 'items',
       title: 'Items',
@@ -30,10 +26,4 @@ export default defineType({
       validation: (Rule) => Rule.min(1),
     }),
   ],
-  preview: {
-    select: { heading: 'heading' },
-    prepare({ heading }) {
-      return { title: heading || 'Grid' }
-    },
-  },
 })

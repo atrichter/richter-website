@@ -1,6 +1,7 @@
 import { defineType, defineField, defineArrayMember } from 'sanity'
 import { BookIcon } from '@sanity/icons'
 import { sectionFullWidthMediaName, sectionGridName } from '../sections'
+import { definePreview } from '../preview'
 
 export const pageSchemaName = 'page'
 
@@ -14,7 +15,7 @@ export default defineType({
       name: 'title',
       title: 'Title',
       type: 'string',
-      description: 'Used for Studio and SEO; not necessarily shown on the page.',
+      description: 'Used for Studio and SEO',
       validation: (Rule) => Rule.required(),
     }),
     defineField({
@@ -39,13 +40,9 @@ export default defineType({
       ],
     }),
   ],
-  preview: {
-    select: { title: 'title', slug: 'slug.current' },
-    prepare({ title, slug }) {
-      return {
-        title: title || 'Untitled Page',
-        subtitle: slug ? `/${slug}` : undefined,
-      }
-    },
-  },
+  preview: definePreview({
+    title: 'title',
+    subtitle: 'slug.current',
+    fallbackTitle: 'Untitled Page',
+  }),
 })
