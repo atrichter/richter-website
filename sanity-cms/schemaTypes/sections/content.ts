@@ -1,6 +1,6 @@
-import { defineType, defineField } from 'sanity'
+import { defineType, defineField, defineArrayMember } from 'sanity'
 import { StackCompactIcon } from '@sanity/icons'
-import { componentCardName } from '../components'
+import { componentTextName, componentCardName, componentMediaName } from '../components'
 import { componentNameField } from '../fields'
 
 export const sectionContentName = 'section.content'
@@ -18,19 +18,10 @@ export default defineType({
       description: 'Stack of components in this section',
       type: 'array' as const,
       of: [
-        {
-          type: 'block',
-          title: 'Block Text',
-        },
-        {
-          type: 'image',
-          title: 'Image',
-          options: { hotspot: true },
-        },
-        {
+        defineArrayMember({
           type: 'reference',
-          to: [{ type: componentCardName }],
-        },
+          to: [{ type: componentTextName }, { type: componentMediaName }, { type: componentCardName }],
+        }),
       ],
       validation: (Rule) => Rule.min(1),
     }),
