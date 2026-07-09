@@ -3,11 +3,12 @@ import type { InputProps } from 'sanity'
 import { defineConfig } from 'sanity'
 import { structureTool } from 'sanity/structure'
 import { visionTool } from '@sanity/vision'
-import { media } from 'sanity-plugin-media'
+import { BlockElementIcon, ComponentIcon, HomeIcon } from '@sanity/icons'
+import { media, mediaAssetSource } from 'sanity-plugin-media'
 import { schemaTypes } from './schemaTypes'
-import { DatasetNavbar } from './components/DatasetNavbar'
-import { ImageInput } from './components/ImageInput'
-import { StyledTextInput } from './components/StyledTextInput'
+import { DatasetNavbar } from './studioComponents/DatasetNavbar'
+import { ImageInput } from './studioComponents/inputs/ImageInput'
+import { StyledTextInput } from './studioComponents/inputs/StyledTextInput'
 
 // Map schema type names to custom input components
 const customInputs: Partial<Record<string, React.ComponentType<InputProps>>> = {
@@ -38,6 +39,12 @@ export default defineConfig({
         return CustomInput ? React.createElement(CustomInput, props) : props.renderDefault(props)
       },
     },
+    image: {
+      assetSources: (previousAssetSources) => previousAssetSources.filter((s) => s !== mediaAssetSource),
+    },
+    file: {
+      assetSources: (previousAssetSources) => previousAssetSources.filter((s) => s !== mediaAssetSource),
+    },
   },
 
   plugins: [
@@ -45,7 +52,33 @@ export default defineConfig({
       structure: (S) =>
         S.list()
           .title('Content')
-          .items([S.documentListItem().id('homepage').schemaType('homepage')]),
+          .items([
+            S.listItem()
+              .title('Homepage')
+              .icon(HomeIcon)
+              .child(S.editor().id('homepage').schemaType('homepage').documentId('homepage')),
+            S.documentTypeListItem('page').title('Pages'),
+            S.listItem()
+              .title('Sections')
+              .icon(BlockElementIcon)
+              .child(
+                S.list()
+                  .title('Sections')
+                  .items([S.documentTypeListItem('section.content'), S.documentTypeListItem('section.fullWidthMedia')])
+              ),
+            S.listItem()
+              .title('Components')
+              .icon(ComponentIcon)
+              .child(
+                S.list()
+                  .title('Components')
+                  .items([
+                    S.documentTypeListItem('component.text'),
+                    S.documentTypeListItem('component.media'),
+                    S.documentTypeListItem('component.card'),
+                  ])
+              ),
+          ]),
     }),
     media(),
     visionTool(),

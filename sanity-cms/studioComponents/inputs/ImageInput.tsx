@@ -1,6 +1,6 @@
 import type { ObjectInputProps } from 'sanity'
 import type { ImageValue } from '@sanity/types'
-import { useSanityClient } from '../lib/sanityClient'
+import { useSanityClient } from '../../lib/sanityClient'
 import type { ChangeEvent, Dispatch, SetStateAction } from 'react'
 import { useEffect, useRef, useState, useCallback } from 'react'
 import { Card, Stack, Text, TextArea, Box } from '@sanity/ui'

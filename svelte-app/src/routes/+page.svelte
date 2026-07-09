@@ -1,7 +1,6 @@
 <script lang="ts">
-	import StyledText from '$lib/components/StyledText.svelte'
 	import BlockContent from '$lib/components/BlockContent.svelte'
-	import SanityImage from '$lib/components/SanityImage.svelte'
+	import SectionFullWidthMedia from '$lib/components/sections/SectionFullWidthMedia.svelte'
 
 	let { data } = $props()
 	const homepage = $derived(data?.homepage ?? null)
@@ -10,14 +9,7 @@
 <main class="homepage">
 	{#if homepage}
 		{#if homepage.hero}
-			<header class="hero">
-				<StyledText block={homepage.hero.title} class="hero-title" />
-				<StyledText block={homepage.hero.subtitle} class="hero-subtitle" />
-				<StyledText block={homepage.hero.description} class="hero-description" />
-				{#if homepage.hero.heroImage}
-					<SanityImage image={homepage.hero.heroImage} alt="" class="hero-image" width={1200} />
-				{/if}
-			</header>
+			<SectionFullWidthMedia section={homepage.hero} />
 		{/if}
 
 		{#if homepage.content?.length}
@@ -26,7 +18,7 @@
 			</section>
 		{/if}
 
-		{#if !homepage.hero && !homepage.content?.length}
+		{#if !homepage.content?.length}
 			<p>No content yet. Add content in the Sanity Studio.</p>
 		{/if}
 	{:else}
@@ -36,32 +28,12 @@
 
 <style>
 	.homepage {
-		max-width: 65ch;
-		margin: 0 auto;
-		padding: 2rem 1rem;
-	}
-	.hero {
-		margin-bottom: 2rem;
-	}
-	.hero :global(.hero-title) {
-		font-size: 2.5rem;
-		margin-bottom: 0.5rem;
-	}
-	.hero :global(.hero-subtitle) {
-		font-size: 1.5rem;
-		color: var(--color-text-soft, #555);
-		margin-bottom: 1rem;
-	}
-	.hero :global(.hero-description) {
-		margin-bottom: 1.5rem;
-	}
-	.hero :global(.hero-image) {
-		width: 100%;
-		height: auto;
-		border-radius: 0.5rem;
+		padding: 2rem 0;
 	}
 	.page-content {
-		margin-top: 2rem;
+		max-width: 65ch;
+		margin: 2rem auto 0;
+		padding: 0 1rem;
 	}
 	.page-content :global([data-block]) {
 		margin-bottom: 0.75rem;

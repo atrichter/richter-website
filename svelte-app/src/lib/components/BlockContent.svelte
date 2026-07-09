@@ -55,7 +55,11 @@
 					<svelte:element this={tag} data-block>{@html html}</svelte:element>
 				{/if}
 			{:else if item._type === 'image'}
-				<SanityImageComponent image={item as BlockContentImage} class="block-content-image" />
+				<SanityImageComponent
+					image={item as BlockContentImage}
+					alt={(item as BlockContentImage).alt ?? ''}
+					class="block-content-image"
+				/>
 			{/if}
 		{/each}
 	</div>

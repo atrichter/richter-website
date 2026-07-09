@@ -1,7 +1,7 @@
 import type { ObjectInputProps } from 'sanity'
 import { set, unset, PatchEvent, ChangeIndicator } from 'sanity'
 import { Flex, Box, Select, TextInput } from '@sanity/ui'
-import { textStyles, type TextStyleValue } from '../schemaTypes/consts'
+import { textStyles, type TextStyleValue } from '../../schemaTypes/consts'
 
 type StyledTextValue = { text?: string; style?: TextStyleValue }
 
