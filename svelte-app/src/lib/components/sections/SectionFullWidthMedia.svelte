@@ -8,16 +8,27 @@
 	}
 
 	let { section, class: className = '' }: Props = $props()
+
+	const media = $derived(section.media)
 </script>
 
 <section class="section-full-width-media {className}">
-	{#if section.image}
+	{#if media?.mediaType === 'image' && media.image}
 		<SanityImage
-			image={section.image}
-			alt={section.altText ?? ''}
+			image={media.image}
+			alt={media.image.alt ?? ''}
 			class="section-full-width-media-img"
 			width={1600}
 		/>
+	{:else if media?.mediaType === 'video' && media.videoUrl}
+		<div class="section-full-width-media-video">
+			<iframe
+				src={media.videoUrl}
+				title="Video"
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+				allowfullscreen
+			></iframe>
+		</div>
 	{/if}
 </section>
 
@@ -28,6 +39,12 @@
 	.section-full-width-media-img {
 		width: 100%;
 		height: auto;
+		display: block;
+	}
+	.section-full-width-media-video iframe {
+		width: 100%;
+		aspect-ratio: 16 / 9;
+		border: 0;
 		display: block;
 	}
 </style>
