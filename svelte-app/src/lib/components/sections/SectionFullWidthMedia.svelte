@@ -34,12 +34,17 @@
 
 <style>
 	.section-full-width-media {
+		width: 100%;
 		margin-bottom: 2rem;
 	}
 	.section-full-width-media-img {
 		width: 100%;
+		max-width: 100%;
 		height: auto;
 		display: block;
+	}
+	.section-full-width-media-video {
+		width: 100%;
 	}
 	.section-full-width-media-video iframe {
 		width: 100%;

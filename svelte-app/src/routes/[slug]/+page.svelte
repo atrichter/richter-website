@@ -18,9 +18,7 @@
 
 <style>
 	.page-builder-page {
-		max-width: 65ch;
-		margin: 0 auto;
-		padding: 2rem 1rem;
+		padding: 2rem 0;
 	}
 	.page-title {
 		margin: 0 0 1rem;

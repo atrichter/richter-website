@@ -18,10 +18,12 @@
 
 <div class="page-builder {className}">
 	{#each sections ?? [] as section (section._id)}
-		{#if section._type === SECTION_CONTENT}
-			<SectionGrid section={section} />
-		{:else if section._type === SECTION_FULL_WIDTH_MEDIA}
+		{#if section._type === SECTION_FULL_WIDTH_MEDIA}
 			<SectionFullWidthMedia section={section} />
+		{:else if section._type === SECTION_CONTENT}
+			<div class="page-builder-content">
+				<SectionGrid section={section} />
+			</div>
 		{:else}
 			<!-- Unknown section type: {section._type} -->
 		{/if}
@@ -31,5 +33,10 @@
 <style>
 	.page-builder {
 		width: 100%;
+	}
+	.page-builder-content {
+		max-width: 65ch;
+		margin: 0 auto;
+		padding: 0 1rem;
 	}
 </style>

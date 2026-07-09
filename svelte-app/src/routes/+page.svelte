@@ -28,12 +28,12 @@
 
 <style>
 	.homepage {
-		max-width: 65ch;
-		margin: 0 auto;
-		padding: 2rem 1rem;
+		padding: 2rem 0;
 	}
 	.page-content {
-		margin-top: 2rem;
+		max-width: 65ch;
+		margin: 2rem auto 0;
+		padding: 0 1rem;
 	}
 	.page-content :global([data-block]) {
 		margin-bottom: 0.75rem;

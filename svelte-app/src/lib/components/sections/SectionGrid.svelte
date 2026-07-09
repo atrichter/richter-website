@@ -26,6 +26,7 @@
 						image={item.image}
 						alt={item.image.alt ?? ''}
 						class="section-grid-item section-grid-media"
+						width={640}
 					/>
 				{:else if item._type === COMPONENT_MEDIA && item.mediaType === 'video' && item.videoUrl}
 					<div class="section-grid-item section-grid-media">
@@ -55,6 +56,12 @@
 	}
 	.section-grid-text {
 		grid-column: 1 / -1;
+	}
+	.section-grid-media {
+		max-width: min(100%, 640px);
+		width: 100%;
+		height: auto;
+		display: block;
 	}
 	.section-grid-media iframe {
 		width: 100%;
