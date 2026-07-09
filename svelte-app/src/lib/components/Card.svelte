@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { CardData } from '$lib/cms/types'
 	import SanityImage from '$lib/components/SanityImage.svelte'
+	import StyledText from '$lib/components/StyledText.svelte'
 
 	interface Props {
 		/** Card data (from component.card). */
@@ -10,30 +11,27 @@
 
 	let { card, class: className = '' }: Props = $props()
 
-	const linkHref = $derived(card.link?.href ?? null)
-	const linkText = $derived(
-		card.link?.text?.trim() || card.title?.trim() || 'Read more'
+	const image = $derived(
+		card.media?.mediaType === 'image' ? card.media.image : null
 	)
+	const linkHref = $derived(card.url?.trim() || null)
+	const linkText = $derived(card.title?.text?.trim() || 'Read more')
 	const hasLink = $derived(!!linkHref)
 </script>
 
 <article class="card {className}">
-	{#if card.image}
+	{#if image}
 		<div class="card-image">
 			<SanityImage
-				image={card.image}
-				alt={card.imageAlt ?? ''}
+				image={image}
+				alt={image.alt ?? ''}
 				width={600}
 			/>
 		</div>
 	{/if}
 	<div class="card-body">
-		{#if card.title}
-			<h2 class="card-title">{card.title}</h2>
-		{/if}
-		{#if card.subtitle}
-			<p class="card-subtitle">{card.subtitle}</p>
-		{/if}
+		<StyledText block={card.title} class="card-title" />
+		<StyledText block={card.subtitle} class="card-subtitle" />
 		{#if card.description}
 			<p class="card-description">{card.description}</p>
 		{/if}
@@ -68,12 +66,12 @@
 		display: flex;
 		flex-direction: column;
 	}
-	.card-title {
+	.card-body :global(.card-title) {
 		margin: 0 0 0.25rem;
 		font-size: 1.25rem;
 		font-weight: 600;
 	}
-	.card-subtitle {
+	.card-body :global(.card-subtitle) {
 		margin: 0 0 0.5rem;
 		font-size: 0.9375rem;
 		color: var(--color-text-soft, #555);
