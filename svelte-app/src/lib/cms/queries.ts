@@ -15,6 +15,8 @@ const blockContentProjection = `{
   _type,
   _key,
   style,
+  listItem,
+  level,
   children[] { _type, text, marks },
   markDefs[] { _key, _type, href },
   asset,
