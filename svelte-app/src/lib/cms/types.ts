@@ -32,6 +32,8 @@ export interface PortableTextBlock {
   _type: 'block'
   _key?: string
   style?: string
+  listItem?: 'bullet' | 'number' | null
+  level?: number | null
   children?: PortableTextSpan[]
   markDefs?: { _key: string; _type: string; href?: string }[]
 }
