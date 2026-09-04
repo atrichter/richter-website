@@ -3,7 +3,12 @@
 
   let { data } = $props()
   const page = $derived(data?.page ?? null)
+  const pageTitle = $derived(page?.title ? `Andrew Richter | ${page.title}` : 'Andrew Richter')
 </script>
+
+<svelte:head>
+  <title>{pageTitle}</title>
+</svelte:head>
 
 <main class="page-builder-page">
   {#if page}
