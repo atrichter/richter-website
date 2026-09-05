@@ -1,6 +1,7 @@
 <script lang="ts">
   import { onMount } from 'svelte'
   import { setThemeVariables } from '$lib/theme'
+  import NavBar from '$lib/components/NavBar.svelte'
 
   let { children } = $props()
 
@@ -23,6 +24,8 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
   <link rel="manifest" href="/site.webmanifest" />
 </svelte:head>
+
+<NavBar />
 
 {@render children()}
 
