@@ -154,11 +154,7 @@
       {:else if segment.kind === 'list'}
         {@render renderList(buildListTree(segment.items), segment.listItem)}
       {:else}
-        <SanityImageComponent
-          image={segment.image}
-          alt={segment.image.alt ?? ''}
-          class="block-content-image"
-        />
+        <SanityImageComponent image={segment.image} alt={segment.image.alt ?? ''} class="block-content-image" />
       {/if}
     {/each}
   </div>
