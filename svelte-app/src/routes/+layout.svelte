@@ -1,6 +1,12 @@
 <script lang="ts">
+  import { onMount } from 'svelte'
+  import { setThemeVariables } from '$lib/theme'
 
   let { children } = $props()
+
+  onMount(() => {
+    setThemeVariables()
+  })
 </script>
 
 <svelte:head>
