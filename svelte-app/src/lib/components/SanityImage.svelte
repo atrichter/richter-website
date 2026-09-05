@@ -20,3 +20,11 @@
 {#if srcWithWidth}
   <img src={srcWithWidth} {alt} class={className} loading="lazy" decoding="async" />
 {/if}
+
+<style>
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+</style>
