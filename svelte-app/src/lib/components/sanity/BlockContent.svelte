@@ -1,6 +1,6 @@
 <script lang="ts">
   import type { BlockContentItem, PortableTextBlock, PortableTextSpan, BlockContentImage } from '$lib/cms/types'
-  import SanityImageComponent from './SanityImage.svelte'
+  import SanityImageComponent from '$lib/components/sanity/SanityImage.svelte'
 
   interface Props {
     /** Portable text / block content array from CMS. */

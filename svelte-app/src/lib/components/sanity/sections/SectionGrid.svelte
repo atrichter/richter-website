@@ -1,9 +1,9 @@
 <script lang="ts">
   import type { SectionContent } from '$lib/cms/types'
   import { COMPONENT_CARD, COMPONENT_MEDIA, COMPONENT_TEXT } from '$lib/cms/types'
-  import Card from '$lib/components/Card.svelte'
-  import BlockContent from '$lib/components/BlockContent.svelte'
-  import SanityImage from '$lib/components/SanityImage.svelte'
+  import Card from '$lib/components/sanity/Card.svelte'
+  import BlockContent from '$lib/components/sanity/BlockContent.svelte'
+  import SanityImage from '$lib/components/sanity/SanityImage.svelte'
 
   interface Props {
     section: SectionContent

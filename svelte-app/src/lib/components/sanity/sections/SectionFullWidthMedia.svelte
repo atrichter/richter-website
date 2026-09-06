@@ -1,6 +1,6 @@
 <script lang="ts">
   import type { SectionFullWidthMedia as SectionFullWidthMediaType } from '$lib/cms/types'
-  import SanityImage from '$lib/components/SanityImage.svelte'
+  import SanityImage from '$lib/components/sanity/SanityImage.svelte'
 
   interface Props {
     section: SectionFullWidthMediaType

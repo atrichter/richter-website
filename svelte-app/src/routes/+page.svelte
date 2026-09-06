@@ -1,6 +1,6 @@
 <script lang="ts">
-  import BlockContent from '$lib/components/BlockContent.svelte'
-  import SectionFullWidthMedia from '$lib/components/sections/SectionFullWidthMedia.svelte'
+  import BlockContent from '$lib/components/sanity/BlockContent.svelte'
+  import SectionFullWidthMedia from '$lib/components/sanity/sections/SectionFullWidthMedia.svelte'
 
   let { data } = $props()
   const homepage = $derived(data?.homepage ?? null)

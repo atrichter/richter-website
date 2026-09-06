@@ -1,7 +1,7 @@
 <script lang="ts">
   import type { CardData } from '$lib/cms/types'
-  import SanityImage from '$lib/components/SanityImage.svelte'
-  import StyledText from '$lib/components/StyledText.svelte'
+  import SanityImage from '$lib/components/sanity/SanityImage.svelte'
+  import StyledText from '$lib/components/sanity/StyledText.svelte'
 
   interface Props {
     /** Card data (from component.card). */
