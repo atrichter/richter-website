@@ -1,5 +1,5 @@
 <script lang="ts">
-  import PageBuilder from '$lib/components/PageBuilder.svelte'
+  import PageBuilder from '$lib/components/sanity/PageBuilder.svelte'
 
   let { data } = $props()
   const page = $derived(data?.page ?? null)

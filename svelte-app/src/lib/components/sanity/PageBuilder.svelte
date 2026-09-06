@@ -1,8 +1,8 @@
 <script lang="ts">
   import type { PageSection } from '$lib/cms/types'
   import { SECTION_FULL_WIDTH_MEDIA, SECTION_CONTENT } from '$lib/cms/types'
-  import SectionFullWidthMedia from '$lib/components/sections/SectionFullWidthMedia.svelte'
-  import SectionGrid from '$lib/components/sections/SectionGrid.svelte'
+  import SectionFullWidthMedia from '$lib/components/sanity/sections/SectionFullWidthMedia.svelte'
+  import SectionGrid from '$lib/components/sanity/sections/SectionGrid.svelte'
 
   interface Props {
     /** Resolved sections from the page document (sections[]->). */
