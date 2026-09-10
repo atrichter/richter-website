@@ -7,86 +7,79 @@
   <title>Theme | Andrew Richter</title>
 </svelte:head>
 
-<main class="container-narrow">
-  <header>
+<main class="theme-page">
+  <header class="container">
     <h1>Theme</h1>
     <p>Showcase of text, colors, and components.</p>
   </header>
 
-  <section class="typography">
-    <h2>Typography</h2>
+  <section class="typography container layout-grid">
+    <h2 class="col-span-4 lg:col-span-12">Typography</h2>
 
     {#each Object.entries(themeFonts) as [, font]}
-      <h3 style:font-family="{font.name}, {font.fallback}">{font.name}</h3>
-      {#each Object.entries(font.weights) as [weightName, weightValue]}
-        <small style:text-transform="capitalize">
-          {weightName}
-          {weightValue}
-        </small>
-        <p style:font-family="{font.name}, {font.fallback}" style:font-weight={weightValue} style:margin-top="0">
-          The quick brown fox jumps over the lazy dog.
-        </p>
-        <small style:text-transform="capitalize">
-          {weightName}
-          {weightValue} italic
-        </small>
-        <p
-          style:font-family="{font.name}, {font.fallback}"
-          style:font-weight={weightValue}
-          style:font-style="italic"
-          style:margin-top="0"
-        >
-          The quick brown fox jumps over the lazy dog.
-        </p>
-      {/each}
+      <div class="col-span-4 lg:col-span-6">
+        <h3 style:font-family="{font.name}, {font.fallback}">{font.name}</h3>
+        {#each Object.entries(font.weights) as [weightName, weightValue]}
+          <small class="capitalize">
+            {weightName}
+            {weightValue}
+          </small>
+          <p class="mt-0" style:font-family="{font.name}, {font.fallback}" style:font-weight={weightValue}>
+            The quick brown fox jumps over the lazy dog.
+          </p>
+          <small class="capitalize">
+            {weightName}
+            {weightValue} italic
+          </small>
+          <p class="mt-0 italic" style:font-family="{font.name}, {font.fallback}" style:font-weight={weightValue}>
+            The quick brown fox jumps over the lazy dog.
+          </p>
+        {/each}
+      </div>
     {/each}
 
-    <h1>Heading 1</h1>
-    <h2>Heading 2</h2>
-    <h3>Heading 3</h3>
-    <h4>Heading 4</h4>
-    <h5>Heading 5</h5>
+    <div class="col-span-4 lg:col-span-6">
+      <h1>Heading 1</h1>
+      <h2>Heading 2</h2>
+      <h3>Heading 3</h3>
+      <h4>Heading 4</h4>
+      <h5>Heading 5</h5>
 
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
-    <p>The quick brown fox jumps over the lazy dog.</p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+        laborum.
+      </p>
+      <p>The quick brown fox jumps over the lazy dog.</p>
 
-    <small>Small caption text</small>
+      <small>Small caption text</small>
 
-    <ul>
-      <li>First item</li>
-      <li>
-        Second item
-        <ol>
-          <li>First subitem</li>
-          <li>Second subitem</li>
-          <li>Third subitem</li>
-        </ol>
-      </li>
-      <li>Third item</li>
-    </ul>
+      <ul>
+        <li>First item</li>
+        <li>
+          Second item
+          <ol>
+            <li>First subitem</li>
+            <li>Second subitem</li>
+            <li>Third subitem</li>
+          </ol>
+        </li>
+        <li>Third item</li>
+      </ul>
+    </div>
   </section>
 
-  <section class="colors">
-    <h2>Colors</h2>
-    <p>Pairs of inverse colors.</p>
-    <div class="swatch-grid">
+  <section class="colors container layout-grid">
+    <div class="col-span-4 lg:col-span-12 mb-8">
+      <h2>Color Palette</h2>
+      <p>Pairs of inverse colors.</p>
+    </div>
+    <div class="col-span-2 lg:col-span-4 grid grid-cols-2 gap-4">
       {#each Object.entries(themeColors) as [name, hex]}
         <ColorSwatch {name} {hex} />
       {/each}
     </div>
   </section>
 </main>
-
-<style>
-  .colors .swatch-grid {
-    display: grid;
-    grid-template-columns: repeat(2, max-content);
-    gap: 0.5rem;
-    margin-top: 2rem;
-  }
-</style>

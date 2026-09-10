@@ -13,27 +13,16 @@
   let { sections, class: className = '' }: Props = $props()
 </script>
 
-<div class="page-builder {className}">
+<div class="page-builder container-full-width {className}">
   {#each sections ?? [] as section (section._id)}
     {#if section._type === SECTION_FULL_WIDTH_MEDIA}
       <SectionFullWidthMedia {section} />
     {:else if section._type === SECTION_CONTENT}
-      <div class="page-builder-content">
-        <SectionGrid {section} />
+      <div class="container layout-grid">
+        <SectionGrid {section} class="col-span-4 lg:col-span-12" />
       </div>
     {:else}
       <!-- Unknown section type: {section._type} -->
     {/if}
   {/each}
 </div>
-
-<style>
-  .page-builder {
-    width: 100%;
-  }
-  .page-builder-content {
-    max-width: 65ch;
-    margin: 0 auto;
-    padding: 0 1rem;
-  }
-</style>

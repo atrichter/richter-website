@@ -17,8 +17,8 @@
     {/if}
 
     {#if homepage.content?.length}
-      <section class="page-content">
-        <BlockContent blocks={homepage.content} class="block-content" />
+      <section class="container layout-grid">
+        <BlockContent blocks={homepage.content} class="block-content col-span-4 lg:col-span-8 lg:col-start-3" />
       </section>
     {/if}
 
@@ -29,22 +29,3 @@
     <p>Loading… or no homepage document in Sanity. Create a “Homepage” document in the Studio.</p>
   {/if}
 </main>
-
-<style>
-  .homepage {
-    padding: 2rem 0;
-  }
-  .page-content {
-    max-width: 65ch;
-    margin: 2rem auto 0;
-    padding: 0 1rem;
-  }
-  .page-content :global([data-block]) {
-    margin-bottom: 0.75rem;
-  }
-  .page-content :global(.block-content-image) {
-    margin: 1rem 0;
-    max-width: 100%;
-    height: auto;
-  }
-</style>
