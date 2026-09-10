@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head>
-  <title>Andrew Richter | Theme</title>
+  <title>Theme | Andrew Richter</title>
 </svelte:head>
 
 <main class="container-narrow">
