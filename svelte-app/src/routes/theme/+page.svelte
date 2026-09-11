@@ -19,22 +19,26 @@
     {#each Object.entries(themeFonts) as [, font]}
       <div class="col-span-4 lg:col-span-6">
         <h3 style:font-family="{font.name}, {font.fallback}">{font.name}</h3>
-        {#each Object.entries(font.weights) as [weightName, weightValue]}
-          <small class="capitalize">
-            {weightName}
-            {weightValue}
-          </small>
-          <p class="mt-0" style:font-family="{font.name}, {font.fallback}" style:font-weight={weightValue}>
-            The quick brown fox jumps over the lazy dog.
-          </p>
-          <small class="capitalize">
-            {weightName}
-            {weightValue} italic
-          </small>
-          <p class="mt-0 italic" style:font-family="{font.name}, {font.fallback}" style:font-weight={weightValue}>
-            The quick brown fox jumps over the lazy dog.
-          </p>
-        {/each}
+        <p>
+          {#each Object.entries(font.weights) as [weightName, weightValue]}
+            <span
+              class="capitalize inline-block whitespace-nowrap mr-4 text-3xl"
+              style:font-family="{font.name}, {font.fallback}"
+              style:font-weight={weightValue}
+            >
+              {weightName}
+              <sup class="relative -top-6 -ml-2 text-xs">{weightValue}</sup>
+            </span>
+            <span
+              class="italic capitalize inline-block whitespace-nowrap mr-4 text-3xl"
+              style:font-family="{font.name}, {font.fallback}"
+              style:font-weight={weightValue}
+            >
+              {weightName} italic
+              <sup class="relative -top-6 -ml-2 text-xs">{weightValue}</sup>
+            </span>
+          {/each}
+        </p>
       </div>
     {/each}
 
