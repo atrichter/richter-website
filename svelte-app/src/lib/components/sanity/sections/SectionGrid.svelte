@@ -15,57 +15,23 @@
   const items = $derived(section.items ?? [])
 </script>
 
-<section class="section-grid {className}">
-  {#if items.length}
-    <div class="section-grid-list">
-      {#each items as item (item._id)}
-        {#if item._type === COMPONENT_TEXT}
-          <BlockContent blocks={item.body} class="section-grid-item section-grid-text" />
-        {:else if item._type === COMPONENT_MEDIA && item.mediaType === 'image' && item.image}
-          <SanityImage
-            image={item.image}
-            alt={item.image.alt ?? ''}
-            class="section-grid-item section-grid-media"
-            width={640}
-          />
-        {:else if item._type === COMPONENT_MEDIA && item.mediaType === 'video' && item.videoUrl}
-          <div class="section-grid-item section-grid-media">
-            <iframe
-              src={item.videoUrl}
-              title="Video"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
-          </div>
-        {:else if item._type === COMPONENT_CARD}
-          <Card card={item} class="section-grid-item" />
-        {/if}
-      {/each}
+<section class="section-content layout-grid {className}">
+  {#each items as item (item._id)}
+    <div class="col-span-4 lg:col-span-4 lg:col-start-5">
+      {#if item._type === COMPONENT_TEXT}
+        <BlockContent blocks={item.body} />
+      {:else if item._type === COMPONENT_MEDIA && item.mediaType === 'image' && item.image}
+        <SanityImage image={item.image} alt={item.image.alt ?? ''} />
+      {:else if item._type === COMPONENT_MEDIA && item.mediaType === 'video' && item.videoUrl}
+        <iframe
+          src={item.videoUrl}
+          title="Video"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      {:else if item._type === COMPONENT_CARD}
+        <Card card={item} />
+      {/if}
     </div>
-  {/if}
+  {/each}
 </section>
-
-<style>
-  .section-grid {
-    margin-bottom: 2rem;
-  }
-  .section-grid-list {
-    display: grid;
-    gap: 1.5rem;
-    grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
-  }
-  .section-grid-text {
-    grid-column: 1 / -1;
-  }
-  .section-grid-media {
-    max-width: min(100%, 640px);
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-  .section-grid-media iframe {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    border: 0;
-  }
-</style>

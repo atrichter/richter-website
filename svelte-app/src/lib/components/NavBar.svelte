@@ -2,34 +2,10 @@
   import AMark from './AMark.svelte'
 </script>
 
-<nav class="container-wide nav" aria-label="Main">
-  <div class="nav-inner">
-    <a class="mark" href="/" aria-label="Home">
+<nav class="fixed inset-x-0 top-0 z-10 bg-transparent text-white mix-blend-difference">
+  <div class="container flex justify-between py-8">
+    <a class="block text-[2.5rem] text-white" href="/" aria-label="Home">
       <AMark />
     </a>
   </div>
 </nav>
-
-<style>
-  .nav {
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    color: var(--color-white);
-    background: transparent;
-    mix-blend-mode: difference;
-  }
-
-  .nav-inner {
-    display: flex;
-    /* align-items: flex-end; */
-    justify-content: space-between;
-    padding: 2rem 0;
-  }
-
-  .mark {
-    display: block;
-    color: var(--color-white);
-    font-size: 2.5rem;
-  }
-</style>

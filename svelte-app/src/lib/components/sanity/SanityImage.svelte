@@ -18,13 +18,5 @@
 </script>
 
 {#if srcWithWidth}
-  <img src={srcWithWidth} {alt} class={className} loading="lazy" decoding="async" />
+  <img src={srcWithWidth} {alt} class="h-auto w-full {className}" loading="lazy" decoding="async" />
 {/if}
-
-<style>
-  img {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
-</style>

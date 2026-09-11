@@ -3,7 +3,7 @@
 
   let { data } = $props()
   const page = $derived(data?.page ?? null)
-  const pageTitle = $derived(page?.title ? `Andrew Richter | ${page.title}` : 'Andrew Richter')
+  const pageTitle = $derived(page?.title ? `${page.title} | Andrew Richter` : 'Andrew Richter')
 </script>
 
 <svelte:head>
@@ -20,24 +20,3 @@
     <p>Loading…</p>
   {/if}
 </main>
-
-<style>
-  .page-builder-page {
-    padding: 2rem 0;
-  }
-  .page-title {
-    margin: 0 0 1rem;
-    font-size: 1.5rem;
-  }
-  .visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
-  }
-</style>
