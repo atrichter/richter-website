@@ -56,9 +56,7 @@
         pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
         laborum.
       </p>
-      <p>The quick brown fox jumps over the lazy dog.</p>
-
-      <small>Small caption text</small>
+      <p>The quick brown fox jumps over the <a href="/">lazy dog</a>.</p>
 
       <ul>
         <li>First item</li>
@@ -72,6 +70,8 @@
         </li>
         <li>Third item</li>
       </ul>
+
+      <p><small>Small caption text</small></p>
     </div>
   </section>
 
