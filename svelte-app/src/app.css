@@ -112,6 +112,9 @@
   --color-slate: #50555a;
   --color-gray: #afaaa5;
 
+  --color-charcoal: #1e2323;
+  --color-cloud: #e1dcdc;
+
   /* Color variables used by shared UI components */
 
   --color-background: var(--color-paper);
