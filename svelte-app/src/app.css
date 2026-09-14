@@ -1,13 +1,15 @@
 @import 'tailwindcss';
 
 @theme {
-  /* Breakpoints */
+  /* BREAKPOINTS */
 
   --breakpoint-sm: 32rem; /* 512px  */
   --breakpoint-lg: 64rem; /* 1024px */
   --breakpoint-xl: 128rem; /* 2048px */
 
-  /* Spacing — named to match Tailwind's default numeric scale (n × 0.25rem baseline) */
+  /* SPACING */
+
+  /* Named to match Tailwind's default numeric scale (n × 0.25rem baseline) */
 
   --spacing-1: clamp(0.2rem, 0.19rem + 0.05vw, 0.25rem);
   --spacing-2: clamp(0.4rem, 0.37rem + 0.1vw, 0.5rem);
@@ -22,7 +24,7 @@
   --spacing-20: clamp(4rem, 3.7rem + 1vw, 5rem);
   --spacing-40: clamp(8rem, 7.4rem + 2vw, 10rem);
 
-  /* Typography */
+  /* TYPOGRAPHY */
 
   --font-stix: 'STIX Two Text', serif;
   --font-weight-stix-regular: 400;
@@ -64,7 +66,9 @@
   --text-5xl: clamp(2.75rem, 2.2rem + 2.5vw, 4rem);
   --text-5xl--line-height: 1;
 
-  /* Colors - pairs of inverse colors */
+  /* COLORS */
+
+  /* Pairs of inverse colors */
 
   --color-black: #000000;
   --color-white: #ffffff;
@@ -107,6 +111,30 @@
 
   --color-slate: #50555a;
   --color-gray: #afaaa5;
+
+  --color-charcoal: #1e2323;
+  --color-cloud: #e1dcdc;
+
+  /* Color variables used by shared UI components */
+
+  --color-background: var(--color-paper);
+  --color-foreground: var(--color-ink);
+
+  --color-primary: var(--color-ink);
+  --color-primary-foreground: var(--color-paper);
+
+  --color-secondary: var(--color-blue);
+  --color-secondary-foreground: var(--color-paper);
+
+  --color-muted: var(--color-cloud);
+  --color-muted-foreground: var(--color-charcoal);
+
+  --color-border: var(--color-cloud);
+  --color-input: var(--color-cloud);
+  --color-ring: var(--color-blue);
+
+  --color-destructive: var(--color-scarlet);
+  --color-destructive-foreground: var(--color-paper);
 }
 
 /* Override Tailwind's built-in `container` */
@@ -140,6 +168,7 @@
   }
 
   h1 {
+    color: var(--color-ink);
     font-family: var(--font-stix);
     font-weight: var(--font-weight-stix-bold);
     font-size: var(--text-4xl);
@@ -148,6 +177,7 @@
   }
 
   h2 {
+    color: var(--color-ink);
     font-family: var(--font-stix);
     font-weight: var(--font-weight-stix-regular);
     font-size: var(--text-2xl);
@@ -166,6 +196,7 @@
   }
 
   h3 {
+    color: var(--color-ink);
     font-family: var(--font-lato);
     font-weight: var(--font-weight-lato-bold);
     font-size: var(--text-lg);
@@ -181,6 +212,7 @@
   }
 
   h5 {
+    color: var(--color-slate);
     font-family: var(--font-lato);
     font-weight: var(--font-weight-lato-bold);
     font-size: var(--text-sm);

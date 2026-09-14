@@ -1,5 +1,6 @@
 <script lang="ts">
   import ColorSwatch from '$lib/components/ColorSwatch.svelte'
+  import Button from '$lib/components/ui/Button.svelte'
   import { themeColors, themeFonts } from '$lib/theme'
 </script>
 
@@ -84,6 +85,49 @@
       {#each Object.entries(themeColors) as [name, hex]}
         <ColorSwatch {name} {hex} />
       {/each}
+    </div>
+  </section>
+
+  <section class="buttons container layout-grid">
+    <div class="col-span-4 lg:col-span-12">
+      <h2>Buttons</h2>
+      <p>Variants, sizes, icons, and states.</p>
+    </div>
+
+    <div class="col-span-4 lg:col-span-12 flex flex-wrap items-center gap-3">
+      <Button>Default</Button>
+      <Button variant="outline">Outline</Button>
+      <Button variant="secondary">Secondary</Button>
+      <Button variant="ghost">Ghost</Button>
+      <Button variant="destructive">Destructive</Button>
+      <Button variant="link" href="/">Link</Button>
+    </div>
+
+    <div class="col-span-4 lg:col-span-12 flex flex-wrap items-center gap-3">
+      <Button size="xs">Extra small</Button>
+      <Button size="sm">Small</Button>
+      <Button>Default</Button>
+      <Button size="lg">Large</Button>
+    </div>
+
+    <div class="col-span-4 lg:col-span-12 flex flex-wrap items-center gap-3">
+      <Button size="icon-xs" aria-label="Extra small plus icon">+</Button>
+      <Button size="icon-sm" aria-label="Small plus icon">+</Button>
+      <Button size="icon" aria-label="Plus icon">+</Button>
+      <Button size="icon-lg" aria-label="Large plus icon">+</Button>
+      <Button variant="secondary">
+        <span aria-hidden="true">+</span>
+        With icon
+      </Button>
+      <Button variant="outline" size="lg">
+        <span aria-hidden="true">+</span>
+        Large icon button
+      </Button>
+    </div>
+
+    <div class="col-span-4 lg:col-span-12 flex flex-wrap items-center gap-3">
+      <Button disabled>Disabled</Button>
+      <Button variant="outline" href="/" disabled>Disabled link</Button>
     </div>
   </section>
 </main>

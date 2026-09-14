@@ -64,4 +64,7 @@ export const themeColors = {
 
   slate: '#50555a',
   gray: '#afaaa5',
+
+  charcoal: `#1e2323`,
+  cloud: `#e1dcdc`,
 } as const
