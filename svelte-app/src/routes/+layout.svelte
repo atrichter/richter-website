@@ -1,21 +1,12 @@
 <script lang="ts">
   import '../app.css'
+  import Footer from '$lib/components/Footer.svelte'
   import NavBar from '$lib/components/NavBar.svelte'
 
   let { children } = $props()
 </script>
 
 <svelte:head>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&display=swap"
-    rel="stylesheet"
-  />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&display=swap"
-    rel="stylesheet"
-  />
   <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="shortcut icon" href="/favicon.ico" />
@@ -23,6 +14,12 @@
   <link rel="manifest" href="/site.webmanifest" />
 </svelte:head>
 
-<NavBar />
+<div class="flex min-h-dvh flex-col">
+  <NavBar />
 
-{@render children()}
+  <div class="flex-1">
+    {@render children()}
+  </div>
+
+  <Footer />
+</div>

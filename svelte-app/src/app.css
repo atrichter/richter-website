@@ -153,6 +153,8 @@
 @layer base {
   :root {
     color-scheme: light;
+    /* Navbar height is the logo size plus its vertical padding. */
+    --nav-height: calc(var(--spacing-8) * 2 + 2.5rem);
   }
 
   body {
