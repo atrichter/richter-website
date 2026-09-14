@@ -126,11 +126,11 @@
   --color-secondary: var(--color-blue);
   --color-secondary-foreground: var(--color-paper);
 
-  --color-muted: var(--color-gray);
-  --color-muted-foreground: var(--color-slate);
+  --color-muted: var(--color-cloud);
+  --color-muted-foreground: var(--color-charcoal);
 
-  --color-border: var(--color-gray);
-  --color-input: var(--color-gray);
+  --color-border: var(--color-cloud);
+  --color-input: var(--color-cloud);
   --color-ring: var(--color-blue);
 
   --color-destructive: var(--color-scarlet);
