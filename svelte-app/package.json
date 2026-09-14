@@ -30,6 +30,8 @@
   },
   "dependencies": {
     "@sanity/client": "^7.16.0",
-    "@sanity/image-url": "^2.0.3"
+    "@sanity/image-url": "^2.0.3",
+    "tailwind-merge": "^3.7.0",
+    "tailwind-variants": "^3.3.1"
   }
 }
