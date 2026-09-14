@@ -1,5 +1,6 @@
 <script lang="ts">
   import '../app.css'
+  import Footer from '$lib/components/Footer.svelte'
   import NavBar from '$lib/components/NavBar.svelte'
 
   let { children } = $props()
@@ -13,6 +14,12 @@
   <link rel="manifest" href="/site.webmanifest" />
 </svelte:head>
 
-<NavBar />
+<div class="flex min-h-dvh flex-col">
+  <NavBar />
 
-{@render children()}
+  <div class="flex-1">
+    {@render children()}
+  </div>
+
+  <Footer />
+</div>
