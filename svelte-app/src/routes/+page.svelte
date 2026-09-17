@@ -1,4 +1,5 @@
 <script lang="ts">
+  import Intro from '$lib/components/Intro.svelte'
   import BlockContent from '$lib/components/sanity/BlockContent.svelte'
   import SectionFullWidthMedia from '$lib/components/sanity/sections/SectionFullWidthMedia.svelte'
 
@@ -11,6 +12,8 @@
 </svelte:head>
 
 <main class="homepage">
+  <Intro />
+
   {#if homepage}
     {#if homepage.hero}
       <SectionFullWidthMedia section={homepage.hero} />
