@@ -1,7 +1,7 @@
 <script lang="ts">
   import '../app.css'
+  import Nav from '$lib/components/Nav.svelte'
   import Footer from '$lib/components/Footer.svelte'
-  import NavBar from '$lib/components/NavBar.svelte'
 
   let { children } = $props()
 </script>
@@ -15,7 +15,7 @@
 </svelte:head>
 
 <div class="flex min-h-dvh flex-col">
-  <NavBar />
+  <Nav />
 
   <div class="flex-1">
     {@render children()}
