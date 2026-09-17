@@ -1,7 +1,7 @@
 <script lang="ts">
   import { page } from '$app/stores'
   import { getIntroScrollRatio } from '$lib/utils'
-  import Brand from './Brand.svelte'
+  import Brand from './brand/Brand.svelte'
 
   let containerEl: HTMLDivElement | undefined = $state()
 
