@@ -36,7 +36,7 @@
 >
   <div class="container layout-grid grid-rows-(--intro-grid-rows) h-(--intro-height)">
     <div class="bg-evergreen shadow col-span-2 col-start-3 row-start-1 content-end lg:col-span-4 lg:col-start-9">
-      <div class="mix-blend-difference p-4 tracking-wider">
+      <div class="mix-blend-difference p-6 tracking-wider">
         <h1 class="visually-hidden">Andrew Richter</h1>
         <p class="text-white mt-0" style="line-height: {lineHeight};">
           I'm a software engineer who bridges design and development to ship polished, scalable web applications across
