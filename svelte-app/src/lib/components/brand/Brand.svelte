@@ -80,7 +80,7 @@
 </script>
 
 <a
-  class="brand inline-flex items-baseline text-white font-stix text-4xl leading-none whitespace-nowrap"
+  class="brand inline-flex items-baseline text-white font-stix text-4xl no-underline leading-none whitespace-nowrap"
   class:scroll-linked={scrollLinked}
   style="letter-spacing: {letterSpacing}px; font-weight: {fontWeight};"
   href="/"

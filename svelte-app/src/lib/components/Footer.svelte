@@ -12,6 +12,17 @@
     <h2 class="footer-heading">Explore</h2>
     <ul>
       <li><Button variant="link" class="px-0 text-gray hover:text-slate" href="/theme">Theme</Button></li>
+      <li>
+        <Button
+          variant="link"
+          class="px-0 text-gray hover:text-slate"
+          href="/resume.pdf"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Resume
+        </Button>
+      </li>
     </ul>
   </div>
 
