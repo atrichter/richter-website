@@ -13,7 +13,7 @@
 <main class="page-builder-page">
   {#if page}
     {#if page.title}
-      <h1 class="page-title visually-hidden">{page.title}</h1>
+      <h1 class="page-title sr-only">{page.title}</h1>
     {/if}
     <PageBuilder sections={page.sections} />
   {:else}
