@@ -239,7 +239,7 @@
   }
 
   a:hover {
-    color: var(--color-navy);
+    text-decoration: underline;
   }
 
   small {
