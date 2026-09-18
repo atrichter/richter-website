@@ -155,6 +155,9 @@
     color-scheme: light;
     /* Navbar height is the logo size plus its vertical padding. */
     --nav-height: calc(var(--spacing-8) * 2 + 2.5rem);
+    --intro-height: 90vh;
+    --intro-grid-rows: 2fr 1fr;
+    --intro-nav-scroll-ratio: 0.6;
   }
 
   body {
@@ -166,7 +169,7 @@
   }
 
   header {
-    margin-top: var(--spacing-40);
+    margin-top: var(--spacing-20);
   }
 
   h1 {
@@ -175,7 +178,7 @@
     font-weight: var(--font-weight-stix-bold);
     font-size: var(--text-4xl);
     line-height: var(--text-5xl--line-height);
-    margin: var(--spacing-16) 0 var(--spacing-8);
+    margin: var(--spacing-12) 0 var(--spacing-8);
   }
 
   h2 {
@@ -277,15 +280,7 @@
 }
 
 @layer components {
-  .glass {
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.125);
-  }
-
-  .visually-hidden {
+  .sr-only {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -295,5 +290,96 @@
     clip: rect(0, 0, 0, 0);
     white-space: nowrap;
     border: 0;
+  }
+
+  /* FILTERS */
+
+  .glass {
+    position: relative;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(2px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 1rem;
+    box-shadow:
+      0 8px 32px rgba(31, 38, 135, 0.2),
+      inset 0 4px 20px rgba(255, 255, 255, 0.3);
+  }
+
+  .glass::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+    backdrop-filter: blur(1px);
+    box-shadow:
+      inset -10px -8px 0px -11px rgba(255, 255, 255, 1),
+      inset 0px -9px 0px -8px rgba(255, 255, 255, 1);
+    opacity: 0.25;
+    z-index: -1;
+    filter: blur(1px) drop-shadow(10px 4px 6px black) brightness(100%);
+  }
+
+  .grain,
+  [class*='grain-'] {
+    position: relative;
+    isolation: isolate;
+  }
+
+  .grain::after,
+  [class*='grain-']::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    mix-blend-mode: var(--grain-blend, overlay);
+    background-repeat: repeat;
+    background-attachment: fixed;
+  }
+
+  .grain-none::after {
+    display: none;
+  }
+
+  .grain-xs::after {
+    opacity: var(--grain-opacity, 0.04);
+    background-size: var(--grain-size, 140px 140px);
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' seed='2' stitchTiles='stitch'/><feColorMatrix type='matrix' values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 8 -3'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  }
+
+  .grain-sm::after {
+    opacity: var(--grain-opacity, 0.07);
+    background-size: var(--grain-size, 160px 160px);
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='2' seed='2' stitchTiles='stitch'/><feColorMatrix type='matrix' values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 10 -4'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  }
+
+  .grain::after,
+  .grain-md::after {
+    opacity: var(--grain-opacity, 0.12);
+    background-size: var(--grain-size, 180px 180px);
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.55' numOctaves='3' seed='2' stitchTiles='stitch'/><feColorMatrix type='matrix' values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 12 -4'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+    /* background: radial-gradient(ellipse at 70%, navy, rgba(0, 0, 0, 0)), url("data:image/svg+xml,%3Csvg viewBox='0 0 400 310' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.55' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"); */
+    filter: contrast(150%) brightness(700%);
+  }
+
+  .grain-lg::after {
+    opacity: var(--grain-opacity, 0.17);
+    background-size: var(--grain-size, 200px 200px);
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.48' numOctaves='3' seed='2' stitchTiles='stitch'/><feColorMatrix type='matrix' values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 16 -6'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  }
+
+  .grain-xl::after {
+    opacity: var(--grain-opacity, 0.22);
+    background-size: var(--grain-size, 220px 220px);
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.4' numOctaves='4' seed='2' stitchTiles='stitch'/><feColorMatrix type='matrix' values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 22 -9'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  }
+
+  .grain-2xl::after {
+    opacity: var(--grain-opacity, 0.28);
+    background-size: var(--grain-size, 260px 260px);
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.3' numOctaves='5' seed='2' stitchTiles='stitch'/><feColorMatrix type='matrix' values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 28 -12'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
   }
 }
