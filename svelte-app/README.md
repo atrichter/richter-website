@@ -1,77 +1,53 @@
-# sv
+# svelte-app
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+The live site: [andrewtrichter.com](https://www.andrewtrichter.com/). SvelteKit + Svelte 5 frontend styled with Tailwind CSS v4. Content is fetched from the Sanity Studio in [`../sanity-cms`](../sanity-cms) rather than hardcoded.
 
-## Creating a project
+## Structure
 
-If you're seeing this, you've probably already done this step. Congrats!
+- **`src/routes/`** — pages. `+page.svelte`/`+page.server.ts` fetch content server-side; `[slug]/` handles generic CMS pages, `theme/` is a live swatch/style reference for the brand fonts and colors.
+- **`src/lib/cms/`** — `queries.ts` (GROQ queries) and `types.ts` (matching TypeScript types). Keep these in sync with the schema in `sanity-cms/schemaTypes/`.
+- **`src/lib/components/sanity/`** — components that render Sanity content: `StyledText` (single text + style), `BlockContent` (rich text — headings, paragraphs, links, images), `SanityImage` (responsive images), `Card`, `PageBuilder`, and section renderers under `sections/`.
+- **`src/lib/components/ui/`** — plain reusable UI primitives (e.g. `Button`).
+- **`src/lib/theme.ts`** — brand fonts (STIX Two Text, Lato) and the named color palette. Prefer these tokens over raw hex values.
+- **`src/lib/sanity.ts`** — the Sanity client + image URL builder.
 
-```sh
-# create a new project
-npx sv create my-app
+## Environment variables
+
+Copy `.env.example` to `.env`:
+
+```env
+VITE_SANITY_PROJECT_ID=650bubqo
+VITE_SANITY_DATASET=development
 ```
 
-To recreate this project with the same configuration:
+Must be prefixed `VITE_` to be exposed to the browser. Defaults already point at the live project/dataset.
 
-```sh
-# recreate this project
-npx sv create --template minimal --types ts --no-install svelte-app
-```
+## Commands
 
-## Developing
-
-This project uses **Yarn 4 only** (no npm). Yarn 1 has a tar bug on Node 22, so we use Yarn 4 via Corepack.
-
-**One-time setup** — so that plain `yarn` uses Yarn 4:
-
-1. Remove any global Yarn (Corepack will provide `yarn`):
-   ```sh
-   npm uninstall -g yarn
-   brew uninstall yarn   # if you use Homebrew
-   ```
-2. Enable Corepack (installs the `yarn` shim that uses your project’s version):
-   ```sh
-   corepack enable
-   ```
-3. Open a **new terminal** (or run `hash -r`) so your shell picks up the right `yarn`.
-4. Check that `yarn` is from Corepack: `which yarn` should be under your Node path (e.g. `~/.nvm/versions/node/.../bin/yarn`), not `/usr/local/bin` or Homebrew.
-
-Then install and run:
+Uses **Yarn 4** (via Corepack) — not npm, not Yarn 1 (which has a tar bug on Node 22).
 
 ```sh
 yarn install
-yarn dev
+yarn dev             # dev server (add -- --open to open a browser tab)
+yarn build            # production build
+yarn preview          # preview the build
+yarn check            # svelte-kit sync + svelte-check (type checking)
+yarn fmt / fmt:check  # prettier
 ```
 
-After that, **`yarn`**, **`yarn dev`**, **`yarn add`**, **`yarn build`** all use Yarn 4. No npm needed.
+**One-time setup**, so plain `yarn` resolves to Yarn 4:
 
-Start a development server:
+1. Remove any global Yarn: `npm uninstall -g yarn` (and `brew uninstall yarn` if installed via Homebrew).
+2. `corepack enable` — this installs a `yarn` shim that uses the version pinned in this repo.
+3. Open a new terminal (or run `hash -r`) so your shell picks up the right `yarn`.
+4. Confirm with `which yarn` — it should resolve under your Node path, not `/usr/local/bin` or Homebrew's.
 
-```sh
-yarn dev
+## Deploying
 
-# or start the server and open the app in a new browser tab
-yarn dev -- --open
-```
+Currently on `@sveltejs/adapter-auto`, which auto-detects common platforms. If deploying somewhere it doesn't support, swap in the platform-specific [adapter](https://svelte.dev/docs/kit/adapters).
 
-## Building
+## Adding a new page or section
 
-To create a production version of your app:
-
-```sh
-yarn build
-```
-
-You can preview the production build with `yarn preview`.
-
-## Sanity CMS
-
-Content is loaded from the Sanity project defined in `sanity-cms/`. Copy `.env.example` to `.env` and set `VITE_SANITY_PROJECT_ID` and `VITE_SANITY_DATASET` to match your Studio (defaults point to the same project/dataset). Reusable building-block components live in `$lib/components/`:
-
-- **StyledText** – single text + style (e.g. hero title, subtitle)
-- **BlockContent** – rich text (headings, paragraphs, links, images) for page content
-- **SanityImage** – responsive images with optional width
-
-The homepage fetches the “Homepage” document and renders hero (title, subtitle, description, image) and page content (block content). Add more pages by adding GROQ queries in `$lib/cms/queries.ts` and using these components.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+1. Add/extend a schema in `sanity-cms/schemaTypes/`.
+2. Add a matching GROQ query + type in `src/lib/cms/`.
+3. Render it with a route and/or component here, reusing `src/lib/components/sanity/` where possible.

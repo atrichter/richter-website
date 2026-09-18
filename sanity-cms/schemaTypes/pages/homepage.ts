@@ -1,6 +1,6 @@
 import { defineField, defineType } from 'sanity'
 import { HomeIcon } from '@sanity/icons'
-import { styledTextFieldValidation } from '../types/styledText'
+import { sectionFullWidthMediaName } from '../sections'
 
 export default defineType({
   name: 'homepage',
@@ -9,40 +9,10 @@ export default defineType({
   icon: HomeIcon,
   fields: [
     defineField({
-      name: 'test',
-      title: 'Test',
-      type: 'string',
-      validation: (Rule) => Rule.required(),
-    }),
-    defineField({
       name: 'hero',
-      title: 'Hero Section',
-      type: 'object',
-      fields: [
-        defineField({
-          name: 'title',
-          title: 'Main Title',
-          type: 'styledHeadingText',
-          validation: styledTextFieldValidation(true),
-        }),
-        defineField({
-          name: 'subtitle',
-          title: 'Subtitle',
-          type: 'styledHeadingText',
-          validation: styledTextFieldValidation(true),
-        }),
-        defineField({
-          name: 'description',
-          title: 'Description',
-          type: 'styledBodyText',
-        }),
-        defineField({
-          name: 'heroImage',
-          title: 'Hero Image',
-          type: 'image',
-          options: { hotspot: true },
-        }),
-      ],
+      title: 'Hero',
+      type: 'reference' as const,
+      to: [{ type: sectionFullWidthMediaName }],
     }),
     defineField({
       name: 'content',

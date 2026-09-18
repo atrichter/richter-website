@@ -19,9 +19,7 @@ export function styledTextObjectValidation(value: { text?: string; style?: strin
 /** Returns a validation function for use in defineField; composes required (when true) with the cross-field styledText rule. */
 export function styledTextFieldValidation(required: boolean) {
   return (rule: Rule) =>
-    required
-      ? rule.required().custom(styledTextObjectValidation)
-      : rule.custom(styledTextObjectValidation)
+    required ? rule.required().custom(styledTextObjectValidation) : rule.custom(styledTextObjectValidation)
 }
 
 /**

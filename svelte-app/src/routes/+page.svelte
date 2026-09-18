@@ -1,74 +1,74 @@
 <script lang="ts">
-	import StyledText from '$lib/components/StyledText.svelte'
-	import BlockContent from '$lib/components/BlockContent.svelte'
-	import SanityImage from '$lib/components/SanityImage.svelte'
+  import BlockLogo from '$lib/components/logos/BlockLogo.svelte'
+  import SixDegreesLogo from '$lib/components/logos/SixDegreesLogo.svelte'
+  import CernerLogo from '$lib/components/logos/CernerLogo.svelte'
+  import TrumanLogo from '$lib/components/logos/TrumanLogo.svelte'
 
-	let { data } = $props()
-	const homepage = $derived(data?.homepage ?? null)
+  import Intro from '$lib/components/Intro.svelte'
+  import List, { type ListItem } from '$lib/components/ExperienceList.svelte'
+
+  // let { data } = $props()
+  // const homepage = $derived(data?.homepage ?? null)
+  const experience: ListItem[] = [
+    {
+      date: '2022-2026',
+      title: 'Block',
+      subtitle: 'Software Engineer',
+      description:
+        "Full-stack engineer building and maintaining Block's public website and an internal CMS, owning projects spanning content infrastructure, careers platform integrations, and compliance-critical product work.",
+      icon: BlockLogo,
+      website: 'https://block.xyz',
+      accentColor: 'var(--color-ink)',
+    },
+    {
+      date: '2020-2022',
+      title: '6 Degrees Health',
+      subtitle: 'Software Developer',
+      description:
+        'Healthcare startup full-stack developer, building internal tooling and mobile app features while improving backend reliability and performance.',
+      icon: SixDegreesLogo,
+      website: 'https://6degreeshealth.com',
+      accentColor: 'var(--color-orange)',
+    },
+    {
+      date: '2019',
+      title: 'Oracle Health (formerly Cerner)',
+      subtitle: 'Software Intern',
+      description:
+        'Built a full-stack internal tool for managing patient charting content licenses, covering both frontend interface and backend data model.',
+      icon: CernerLogo,
+      website: 'https://www.oracle.com/health',
+      accentColor: 'var(--color-ocean)',
+    },
+    {
+      date: '2016-2020',
+      title: 'Truman State University',
+      subtitle: 'B.S. Computer Science, Minor in Design',
+      description:
+        'Graduated Summa Cum Laude with Departmental Honors, combining technical coursework with design training and recognized with a competitive, department-wide scholarship.',
+      icon: TrumanLogo,
+      website: 'https://www.truman.edu',
+      accentColor: 'var(--color-purple)',
+    },
+  ]
 </script>
 
+<svelte:head>
+  <title>Andrew Richter</title>
+</svelte:head>
+
 <main class="homepage">
-	{#if homepage}
-		{#if homepage.hero}
-			<header class="hero">
-				<StyledText block={homepage.hero.title} class="hero-title" />
-				<StyledText block={homepage.hero.subtitle} class="hero-subtitle" />
-				<StyledText block={homepage.hero.description} class="hero-description" />
-				{#if homepage.hero.heroImage}
-					<SanityImage image={homepage.hero.heroImage} alt="" class="hero-image" width={1200} />
-				{/if}
-			</header>
-		{/if}
+  <Intro />
 
-		{#if homepage.content?.length}
-			<section class="page-content">
-				<BlockContent blocks={homepage.content} class="block-content" />
-			</section>
-		{/if}
-
-		{#if !homepage.hero && !homepage.content?.length}
-			<p>No content yet. Add content in the Sanity Studio.</p>
-		{/if}
-	{:else}
-		<p>Loading… or no homepage document in Sanity. Create a “Homepage” document in the Studio.</p>
-	{/if}
+  <section class="experience container layout-grid mt-24">
+    <div class="col-span-4 lg:col-span-10 lg:col-start-2 mb-12">
+      <h2>My Experience</h2>
+      <p>
+        See my <a href="/resume.pdf" target="_blank" rel="noreferrer">resume</a> for more information.
+      </p>
+    </div>
+    <div class="col-span-4 lg:col-span-10 lg:col-start-2">
+      <List items={experience} />
+    </div>
+  </section>
 </main>
-
-<style>
-	.homepage {
-		max-width: 65ch;
-		margin: 0 auto;
-		padding: 2rem 1rem;
-	}
-	.hero {
-		margin-bottom: 2rem;
-	}
-	.hero :global(.hero-title) {
-		font-size: 2.5rem;
-		margin-bottom: 0.5rem;
-	}
-	.hero :global(.hero-subtitle) {
-		font-size: 1.5rem;
-		color: var(--color-text-soft, #555);
-		margin-bottom: 1rem;
-	}
-	.hero :global(.hero-description) {
-		margin-bottom: 1.5rem;
-	}
-	.hero :global(.hero-image) {
-		width: 100%;
-		height: auto;
-		border-radius: 0.5rem;
-	}
-	.page-content {
-		margin-top: 2rem;
-	}
-	.page-content :global([data-block]) {
-		margin-bottom: 0.75rem;
-	}
-	.page-content :global(.block-content-image) {
-		margin: 1rem 0;
-		max-width: 100%;
-		height: auto;
-	}
-</style>
