@@ -3,11 +3,12 @@
   import { brandExpansion } from '$lib/state/brand-expansion.svelte'
   import { getIntroScrollRatio } from '$lib/utils'
 
-  let introElement: HTMLElement
-  let lineHeight = $state(2) // starting line-height rem
-
+  // Intro text line-height bounds in rem
   const LINE_HEIGHT_START = 2.25
   const LINE_HEIGHT_END = 0.75
+
+  let introElement: HTMLElement
+  let lineHeight = $state(LINE_HEIGHT_START)
 
   onMount(() => {
     brandExpansion.sentinel = introElement
