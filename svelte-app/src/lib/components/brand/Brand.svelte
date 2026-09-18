@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { page } from '$app/stores'
+  import { page } from '$app/state'
   import AMark from './AMark.svelte'
   import RMark from './RMark.svelte'
   import { brandExpansion } from '$lib/state/brand-expansion.svelte'
@@ -7,9 +7,11 @@
 
   let { containerEl = null }: { containerEl?: HTMLElement | null } = $props()
 
-  let isHome = $derived($page.url.pathname === '/')
+  let isHome = $derived(page.url.pathname === '/')
   let hovering = $state(false)
   let stuck = $state(false)
+  let sentinelReady = $state(false)
+  let trailVisible = $state(false)
 
   let maxLetterSpacing = $state(0) // px, computed to fill containerEl
   let weightRegular = $state(400)
@@ -19,11 +21,19 @@
 
   // While on home and the intro hasn't scrolled past yet, scroll owns `t`.
   // Otherwise (docked, or any other page) hover owns it, animated.
-  let scrollLinked = $derived(isHome && !stuck)
+  let scrollLinked = $derived(isHome && sentinelReady && !stuck)
   let t = $derived(scrollLinked ? brandExpansion.t : hovering ? 1 : 0)
 
   let letterSpacing = $derived(t * maxLetterSpacing)
   let fontWeight = $derived(Math.round(weightRegular + t * (weightBold - weightRegular)))
+
+  function handleTrailTransitionEnd(event: TransitionEvent) {
+    if (event.propertyName === 'opacity' && t <= 0) trailVisible = false
+  }
+
+  $effect(() => {
+    if (t > 0) trailVisible = true
+  })
 
   // Watch the intro sentinel (set by Intro.svelte) and toggle `stuck`
   // when it scrolls out of view. Reactive so it works regardless of
@@ -31,9 +41,12 @@
   $effect(() => {
     if (!isHome || !brandExpansion.sentinel) {
       stuck = false
+      sentinelReady = false
       return
     }
     const target = brandExpansion.sentinel
+    stuck = target.getBoundingClientRect().bottom <= 0
+    sentinelReady = true
     const observer = new IntersectionObserver(([entry]) => {
       stuck = !entry.isIntersecting
     })
@@ -79,15 +92,17 @@
     class="mark relative inline-block align-baseline min-w-[1cap] [-webkit-text-fill-color:transparent] me-[0.05em]"
     aria-hidden="true">A<span class="mark-svg"><AMark /></span></span
   >
-  <span class="trail" style="opacity: {t};">
-    <span class="trail-inner">
-      ndrew
-      <span
-        class="mark relative inline-block align-baseline min-w-[1cap] [-webkit-text-fill-color:transparent]"
-        aria-hidden="true">R<span class="mark-svg"><RMark /></span></span
-      >ichter
+  {#if trailVisible}
+    <span class="trail" style="opacity: {t};" ontransitionend={handleTrailTransitionEnd}>
+      <span class="trail-inner">
+        ndrew
+        <span
+          class="mark relative inline-block align-baseline min-w-[1cap] [-webkit-text-fill-color:transparent]"
+          aria-hidden="true">R<span class="mark-svg"><RMark /></span></span
+        >ichter
+      </span>
     </span>
-  </span>
+  {/if}
 </a>
 
 <!-- Hidden probe used purely for width measurement, kept in sync with .brand's font -->
