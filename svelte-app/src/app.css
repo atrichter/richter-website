@@ -337,7 +337,16 @@
     pointer-events: none;
     mix-blend-mode: var(--grain-blend, overlay);
     background-repeat: repeat;
-    background-attachment: fixed;
+    /* Fixed SVG backgrounds force expensive repainting during iOS scrolling.
+       The visual only needs to stay fixed on desktop, where it is intentional. */
+    background-attachment: scroll;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .grain::after,
+    [class*='grain-']::after {
+      background-attachment: fixed;
+    }
   }
 
   .grain-none::after {
