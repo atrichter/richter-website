@@ -5,6 +5,8 @@ export default defineCliConfig({
     projectId: '650bubqo',
     dataset: process.env.SANITY_STUDIO_DATASET ?? 'development',
   },
+  // Studio is deployed to https://richter-website.sanity.studio
+  studioHost: 'richter-website',
   deployment: {
     /**
      * Enable auto-updates for studios.
