@@ -2,7 +2,7 @@ import { defineType, defineField } from 'sanity'
 import { SquareIcon } from '@sanity/icons/Square'
 import { styledTextFieldValidation } from '../types/styledText'
 import { definePreview } from '../preview'
-import { componentMediaName } from './index'
+import { componentMediaName } from './media'
 
 export const componentCardName = 'component.card'
 
