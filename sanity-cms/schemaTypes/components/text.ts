@@ -1,5 +1,5 @@
 import { defineType, defineField } from 'sanity'
-import { TextIcon } from '@sanity/icons'
+import { TextIcon } from '@sanity/icons/Text'
 import { componentNameField } from '../fields'
 
 export const componentTextName = 'component.text'
