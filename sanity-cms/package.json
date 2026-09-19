@@ -23,11 +23,11 @@
     "@sanity/cli": "^6.7.0",
     "@sanity/codegen": "^6.1.0",
     "@sanity/telemetry": "^0.9.0",
-    "@sanity/vision": "5.31.1",
+    "@sanity/vision": "^6",
     "react": "^19.2.2",
     "react-dom": "^19.2.2",
     "react-is": "^19.2.2",
-    "sanity": "5.31.1",
+    "sanity": "^6",
     "sanity-plugin-media": "^4.1.1",
     "styled-components": "^6.3.9"
   },
