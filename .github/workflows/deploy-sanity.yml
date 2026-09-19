@@ -1,11 +1,3 @@
-# Deploy Sanity Studio to sanity.studio on push to main.
-#
-# Setup:
-# 1. Create a Sanity API token with Editor (or higher) at https://www.sanity.io/manage
-# 2. Add repo secret: Settings → Secrets and variables → Actions → SANITY_AUTH_TOKEN
-# 3. After first manual `sanity deploy`, set deployment.host in sanity-cms/sanity.cli.ts
-#    so this workflow can deploy without prompting for a hostname.
-
 name: Deploy Sanity Studio
 
 on:
@@ -22,15 +14,15 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Enable Corepack (Yarn 4)
+        run: corepack enable
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: '24'
           cache: 'yarn'
           cache-dependency-path: sanity-cms/yarn.lock
-
-      - name: Enable Corepack (Yarn 4)
-        run: corepack enable
 
       - name: Install dependencies
         working-directory: sanity-cms
