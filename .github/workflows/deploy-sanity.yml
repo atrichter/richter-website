@@ -13,6 +13,8 @@ on:
     branches: [main]
     paths:
       - 'sanity-cms/**'
+      - '.github/workflows/deploy-sanity.yml'
+  workflow_dispatch:
 
 jobs:
   deploy:
