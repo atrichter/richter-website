@@ -1,5 +1,5 @@
 import { defineType, defineField } from 'sanity'
-import { SquareIcon } from '@sanity/icons'
+import { SquareIcon } from '@sanity/icons/Square'
 import { styledTextFieldValidation } from '../types/styledText'
 import { definePreview } from '../preview'
 import { componentMediaName } from './index'

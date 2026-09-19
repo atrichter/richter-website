@@ -1,5 +1,5 @@
 import { defineType, defineField, defineArrayMember } from 'sanity'
-import { StackCompactIcon } from '@sanity/icons'
+import { StackCompactIcon } from '@sanity/icons/StackCompact'
 import { componentTextName, componentCardName, componentMediaName } from '../components'
 import { componentNameField } from '../fields'
 
