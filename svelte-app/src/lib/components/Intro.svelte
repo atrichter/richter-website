@@ -12,29 +12,55 @@
 
   onMount(() => {
     brandExpansion.sentinel = introElement
+    let animationFrame: number | undefined
+    let introTop = 0
+    let introHeight = 1
+
+    const updateMetrics = () => {
+      const bounds = introElement.getBoundingClientRect()
+      introTop = window.scrollY + bounds.top
+      introHeight = bounds.height
+    }
 
     const updatePosition = () => {
-      const bounds = introElement.getBoundingClientRect()
-      const scrollProgress = Math.min(1, Math.max(0, 1 - bounds.bottom / bounds.height))
+      // Keep scroll work write-only. Reading a bounding rect during every
+      // scroll event can force layout on iOS, especially while the brand's
+      // tracking and variable font weight are changing.
+      const scrollProgress = Math.min(1, Math.max(0, (window.scrollY - introTop) / introHeight))
       const stickyProgress = Math.min(1, Math.max(0, window.scrollY / (window.innerHeight * getIntroScrollRatio())))
       brandExpansion.t = 1 - stickyProgress
       lineHeight = LINE_HEIGHT_START - scrollProgress * (LINE_HEIGHT_START - LINE_HEIGHT_END)
     }
 
+    const scheduleUpdate = () => {
+      if (animationFrame !== undefined) return
+      animationFrame = requestAnimationFrame(() => {
+        animationFrame = undefined
+        updatePosition()
+      })
+    }
+
+    updateMetrics()
     updatePosition()
-    window.addEventListener('scroll', updatePosition, { passive: true })
+    const resizeObserver = new ResizeObserver(() => {
+      updateMetrics()
+      scheduleUpdate()
+    })
+    resizeObserver.observe(introElement)
+    window.addEventListener('scroll', scheduleUpdate, { passive: true })
+    window.addEventListener('resize', scheduleUpdate)
 
     return () => {
-      window.removeEventListener('scroll', updatePosition)
+      if (animationFrame !== undefined) cancelAnimationFrame(animationFrame)
+      resizeObserver.disconnect()
+      window.removeEventListener('scroll', scheduleUpdate)
+      window.removeEventListener('resize', scheduleUpdate)
       if (brandExpansion.sentinel === introElement) brandExpansion.sentinel = null
     }
   })
 </script>
 
-<header
-  class="intro -mt-(--nav-height) bg-fixed grain-lg bg-linear-to-br from-evergreen to-teal"
-  bind:this={introElement}
->
+<header class="intro -mt-(--nav-height) grain-lg bg-linear-to-br from-evergreen to-teal" bind:this={introElement}>
   <div class="container layout-grid grid-rows-(--intro-grid-rows) h-(--intro-height)">
     <div class="col-span-2 col-start-3 row-start-1 content-end lg:col-span-4 lg:col-start-9">
       <div class="pb-8 lg:p-0 mix-blend-difference tracking-wider">

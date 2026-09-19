@@ -16,26 +16,39 @@
       return
     }
 
+    let animationFrame: number | undefined
+
     const update = () => {
       const dropDistance = window.innerHeight * getIntroScrollRatio()
       dropOffset = Math.max(0, dropDistance - window.scrollY)
       positionReady = true
     }
 
+    // iOS can dispatch several scroll events between paints. Updating the
+    // sticky transform once per frame keeps this in step with async scrolling.
+    const scheduleUpdate = () => {
+      if (animationFrame !== undefined) return
+      animationFrame = requestAnimationFrame(() => {
+        animationFrame = undefined
+        update()
+      })
+    }
+
     update()
-    window.addEventListener('scroll', update, { passive: true })
-    window.addEventListener('resize', update)
+    window.addEventListener('scroll', scheduleUpdate, { passive: true })
+    window.addEventListener('resize', scheduleUpdate)
 
     return () => {
-      window.removeEventListener('scroll', update)
-      window.removeEventListener('resize', update)
+      if (animationFrame !== undefined) cancelAnimationFrame(animationFrame)
+      window.removeEventListener('scroll', scheduleUpdate)
+      window.removeEventListener('resize', scheduleUpdate)
     }
   })
 </script>
 
 <nav
   class="container layout-grid sticky top-0 z-100 h-(--nav-height) bg-transparent text-white mix-blend-difference"
-  style="transform: translateY({dropOffset}px); visibility: {positionReady ? 'visible' : 'hidden'};"
+  style="transform: translate3d(0, {dropOffset}px, 0); visibility: {positionReady ? 'visible' : 'hidden'};"
 >
   <div class="flex items-center justify-between h-full col-span-4 lg:col-span-8" bind:this={containerEl}>
     <Brand {containerEl} />
