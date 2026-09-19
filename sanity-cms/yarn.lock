@@ -13688,6 +13688,7 @@ __metadata:
     "@sanity/codegen": "npm:^6.1.0"
     "@sanity/eslint-config-studio": "npm:^6.0.0"
     "@sanity/telemetry": "npm:^0.9.0"
+    "@sanity/ui": "npm:^4.2.1"
     "@sanity/vision": "npm:^6"
     "@types/node": "npm:^26.6.1"
     "@types/react": "npm:^19.2.13"

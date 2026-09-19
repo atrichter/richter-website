@@ -32,4 +32,5 @@ jobs:
         working-directory: sanity-cms
         env:
           SANITY_AUTH_TOKEN: ${{ secrets.SANITY_AUTH_TOKEN }}
+          SANITY_STUDIO_DATASET: production
         run: yarn deploy
