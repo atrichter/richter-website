@@ -155,9 +155,9 @@
     color-scheme: light;
     /* Navbar height is the logo size plus its vertical padding. */
     --nav-height: calc(var(--spacing-8) * 2 + 2.5rem);
-    --intro-height: 90vh;
+    --nav-home-offset: 60svh; /* 2/3rds of intro height, matches intro grid row ratio*/
+    --intro-height: 90svh;
     --intro-grid-rows: 2fr 1fr;
-    --intro-nav-scroll-ratio: 0.6;
   }
 
   body {
@@ -170,6 +170,11 @@
 
   header {
     margin-top: var(--spacing-20);
+  }
+
+  /* Nav reserves its home offset and height in normal flow; the intro occupies both. */
+  .homepage {
+    margin-top: calc(-1 * (var(--nav-home-offset) + var(--nav-height)));
   }
 
   h1 {
