@@ -80,10 +80,6 @@
     padding: 0;
   }
 
-  li {
-    margin-top: var(--spacing-4);
-  }
-
   li::before {
     content: none;
   }
