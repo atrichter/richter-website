@@ -9,13 +9,6 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
 
-export function getIntroScrollRatio(): number {
-  const ratio = Number.parseFloat(
-    getComputedStyle(document.documentElement).getPropertyValue('--intro-nav-scroll-ratio')
-  )
-  return Number.isFinite(ratio) ? ratio : 2 / 3
-}
-
 /**
  * Given a container and a probe element containing the text to fit,
  * returns the letter-spacing (in px) that makes the probe's natural

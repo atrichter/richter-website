@@ -12,6 +12,7 @@
   let stuck = $state(false)
   let sentinelReady = $state(false)
   let trailVisible = $state(false)
+  let trailHideTimer: number | undefined
 
   let maxLetterSpacing = $state(0) // px, computed to fill containerEl
   let weightRegular = $state(400)
@@ -32,8 +33,40 @@
   }
 
   $effect(() => {
-    if (t > 0) trailVisible = true
+    if (trailHideTimer !== undefined) {
+      clearTimeout(trailHideTimer)
+      trailHideTimer = undefined
+    }
+
+    if (t > 0) {
+      trailVisible = true
+      return
+    }
+
+    // Browsers can skip transitionend when scrolling or compositing is
+    // interrupted. Always remove a collapsed trail after its fade time.
+    trailHideTimer = window.setTimeout(() => {
+      trailVisible = false
+      trailHideTimer = undefined
+    }, 150)
+
+    return () => {
+      if (trailHideTimer !== undefined) {
+        clearTimeout(trailHideTimer)
+        trailHideTimer = undefined
+      }
+    }
   })
+
+  function handlePointerEnter(event: PointerEvent) {
+    // Touch browsers can synthesize mouse events after a tap without a
+    // matching leave. Only a physical mouse/trackpad controls expansion.
+    if (event.pointerType === 'mouse') hovering = true
+  }
+
+  function handlePointerLeave(event: PointerEvent) {
+    if (event.pointerType === 'mouse') hovering = false
+  }
 
   // Watch the intro sentinel (set by Intro.svelte) and toggle `stuck`
   // when it scrolls out of view. Reactive so it works regardless of
@@ -85,8 +118,8 @@
   style="letter-spacing: {letterSpacing}px; font-weight: {fontWeight};"
   href="/"
   aria-label="Andrew Richter, home"
-  onmouseenter={() => (hovering = true)}
-  onmouseleave={() => (hovering = false)}
+  onpointerenter={handlePointerEnter}
+  onpointerleave={handlePointerLeave}
 >
   <span
     class="mark relative inline-block align-baseline min-w-[1cap] [-webkit-text-fill-color:transparent] me-[0.05em]"
