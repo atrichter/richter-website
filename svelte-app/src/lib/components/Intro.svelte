@@ -20,7 +20,8 @@
     const updatePosition = (scrollY = window.scrollY) => {
       if (navHomeOffset === undefined) return
       const stickyProgress = Math.min(1, Math.max(0, scrollY / navHomeOffset))
-      brandExpansion.t = 1 - stickyProgress    }
+      brandExpansion.t = 1 - stickyProgress
+    }
 
     updateMetrics()
     updatePosition()
