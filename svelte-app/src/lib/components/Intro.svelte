@@ -40,7 +40,7 @@
   })
 </script>
 
-<header class="intro -mt-(--nav-height) grain-lg bg-linear-to-br from-evergreen to-teal" bind:this={introElement}>
+<header class="intro -mt-(--nav-height) grain-xl bg-linear-to-br from-ink to-evergreen to-75%" bind:this={introElement}>
   <div class="container layout-grid grid-rows-(--intro-grid-rows) h-(--intro-height)">
     <div class="col-span-2 col-start-3 row-start-1 content-end lg:col-span-4 lg:col-start-9">
       <div class="pb-8 lg:p-0 mix-blend-difference tracking-wider">
