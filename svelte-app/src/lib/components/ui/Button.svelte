@@ -9,7 +9,7 @@
       variant: {
         default: 'bg-primary text-primary-foreground hover:bg-primary/80 shadow',
         outline:
-          'border-[0.5px] border-border bg-background hover:bg-muted hover:text-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 aria-expanded:bg-muted aria-expanded:text-foreground shadow',
+          'border-1 border-border bg-background hover:bg-muted hover:text-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 aria-expanded:bg-muted aria-expanded:text-foreground shadow',
         secondary:
           'bg-secondary text-secondary-foreground hover:bg-[color-mix(in_oklch,var(--color-secondary),var(--color-foreground)_10%)] aria-expanded:bg-secondary aria-expanded:text-secondary-foreground shadow',
         ghost:
