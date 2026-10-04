@@ -35,8 +35,8 @@
         <Button
           variant="outline"
           size="icon-lg"
-          class="border-(--button-accent) text-(--button-accent) hover:bg-(--button-accent)! hover:text-(--color-paper)!"
-          style={`--button-accent: ${item.accentColor}`}
+          class="hover:bg-(--accent)! hover:text-(--color-paper)!"
+          style={`--accent: ${item.accentColor}; border-color: var(--accent); color: var(--accent);`}
           href={item.website}
           target="_blank"
           rel="noreferrer"
