@@ -42,7 +42,9 @@
 
 <header class="intro -mt-(--nav-height) grain-xl bg-linear-to-br from-ink to-evergreen to-75%" bind:this={introElement}>
   <div class="container layout-grid grid-rows-(--intro-grid-rows) h-(--intro-height)">
-    <div class="col-span-2 col-start-3 row-start-1 content-end lg:col-span-4 lg:col-start-9">
+    <div
+      class="row-start-2 col-span-4 sm:col-start-3 sm:col-span-2 lg:row-start-1 lg:col-start-9 lg:col-span-4 lg:content-end"
+    >
       <div class="pb-8 lg:p-0 mix-blend-difference tracking-wider">
         <h1 class="sr-only">Andrew Richter</h1>
         <p class="text-white leading-10 mt-0">

@@ -153,11 +153,17 @@
 @layer base {
   :root {
     color-scheme: light;
-    /* Navbar height is the logo size plus its vertical padding. */
-    --nav-height: calc(var(--spacing-8) * 2 + 2.5rem);
-    --nav-home-offset: 60svh; /* 2/3rds of intro height, matches intro grid row ratio*/
-    --intro-height: 90svh;
-    --intro-grid-rows: 2fr 1fr;
+    --intro-grid-rows: 1fr 1fr;
+    --intro-height: max(90svh, 30rem);
+    --nav-height: calc(var(--spacing-8) * 2 + 2.5rem); /* logo size plus its vertical padding */
+    --nav-home-offset: calc(
+      var(--intro-height) / 2 - var(--nav-height)
+    ); /* minus nav height so nav sits at the bottom of the first row */
+
+    @variant lg {
+      --intro-grid-rows: 2fr 1fr;
+      --nav-home-offset: calc(var(--intro-height) * 2 / 3); /* matches intro grid row ratio */
+    }
   }
 
   body {
