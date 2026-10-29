@@ -11,7 +11,6 @@ Andrew Richter's personal portfolio site: `https://www.andrewtrichter.com/`. It'
 | `svelte-app/` | **The live site.** SvelteKit 2 + Svelte 5 frontend. This is where almost all work happens. | Active |
 | `sanity-cms/` | Sanity Studio (headless CMS) that the frontend pulls content from. | Active |
 | `root/` | The previous static HTML/CSS/JS version of the site. | **Legacy — being deleted soon. Do not edit or build on this. Ignore unless explicitly asked.** |
-| `original_files/` | Design source files (mockups, logos, raw images) kept for safekeeping/reference. | Archival only — not code, don't touch, and don't index/read into context (it's large). |
 
 If a task doesn't specify which app, assume `svelte-app/`. Each folder above also has its own README with more detail — check the relevant one before working in it.
 
@@ -92,7 +91,7 @@ Brand fonts and the full color palette are defined in `svelte-app/src/lib/theme.
 
 ## Keeping docs in sync
 
-This repo's READMEs (`README.md` at root, plus one in each of `svelte-app/`, `sanity-cms/`, `root/`, `original_files/`) and this `AGENTS.md` describe the current structure, stack, and commands. If a change you're making is large enough to make any of that inaccurate, update the relevant doc(s) in the same change — don't leave them to drift. This includes:
+This repo's READMEs (`README.md` at root, plus one in each of `svelte-app/`, `sanity-cms/`, and `root/`) and this `AGENTS.md` describe the current structure, stack, and commands. If a change you're making is large enough to make any of that inaccurate, update the relevant doc(s) in the same change — don't leave them to drift. This includes:
 
 - Adding, removing, or renaming a top-level folder, or changing one's purpose/status (e.g. `root/` finally being deleted)
 - Adding/removing a dependency that changes the tech stack section, or changing the package manager
@@ -106,6 +105,5 @@ Small, routine changes (a new page using existing patterns, a new color in the p
 ## Things to avoid
 
 - Don't edit, "modernize," or build features into `root/` — it's being deleted.
-- Don't read, embed, or optimize files in `original_files/` — it's large, archival, and irrelevant to the running app.
 - Don't switch package managers or run `npm install` in either app.
 - Don't change the Sanity `projectId` or default `dataset` in `sanity.config.ts` / `sanity.ts` without explicit instruction — this is a live, single-author site with real content.
