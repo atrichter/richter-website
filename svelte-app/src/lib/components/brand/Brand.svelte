@@ -11,8 +11,6 @@
   let hovering = $state(false)
   let stuck = $state(false)
   let sentinelReady = $state(false)
-  let trailVisible = $state(false)
-  let trailHideTimer: number | undefined
 
   let maxLetterSpacing = $state(0) // px, computed to fill containerEl
   let weightRegular = $state(400)
@@ -20,43 +18,73 @@
 
   let measureEl: HTMLSpanElement | undefined = $state()
 
-  // While on home and the intro hasn't scrolled past yet, scroll owns `t`.
-  // Otherwise (docked, or any other page) hover owns it, animated.
+  // While on home and the intro hasn't scrolled past yet, scroll owns the
+  // target. Otherwise (docked, or any other page) hover owns it.
   let scrollLinked = $derived(isHome && sentinelReady && !stuck)
-  let t = $derived(scrollLinked ? brandExpansion.t : hovering ? 1 : 0)
+  let targetT = $derived(scrollLinked ? brandExpansion.t : hovering ? 1 : 0)
 
-  let letterSpacing = $derived(t * maxLetterSpacing)
-  let fontWeight = $derived(Math.round(weightRegular + t * (weightBold - weightRegular)))
+  // `t` is the smoothed value rendered in the template. Everything the
+  // animation loop touches lives in plain (non-reactive) variables so the
+  // loop is never torn down by reactivity.
+  let t = $state(0)
+  let currentT = 0
+  let targetValue = 0
+  let rafId = 0
+  let lastTime = 0
+  let initialized = false
 
-  function handleTrailTransitionEnd(event: TransitionEvent) {
-    if (event.propertyName === 'opacity' && t <= 0) trailVisible = false
-  }
+  // Exponential smoothing, frame-rate independent, higher is snappier
+  const SMOOTHING = 25
 
-  $effect(() => {
-    if (trailHideTimer !== undefined) {
-      clearTimeout(trailHideTimer)
-      trailHideTimer = undefined
-    }
+  function tick(now: number) {
+    const dt = Math.min((now - lastTime) / 1000, 0.1) // clamp for background-tab jumps
+    lastTime = now
 
-    if (t > 0) {
-      trailVisible = true
+    const diff = targetValue - currentT
+    if (Math.abs(diff) < 0.001) {
+      currentT = targetValue
+      t = currentT
+      rafId = 0 // settled; the effect below restarts the loop when needed
       return
     }
 
-    // Browsers can skip transitionend when scrolling or compositing is
-    // interrupted. Always remove a collapsed trail after its fade time.
-    trailHideTimer = window.setTimeout(() => {
-      trailVisible = false
-      trailHideTimer = undefined
-    }, 150)
+    currentT += diff * (1 - Math.exp(-SMOOTHING * dt))
+    t = currentT
+    rafId = requestAnimationFrame(tick)
+  }
 
-    return () => {
-      if (trailHideTimer !== undefined) {
-        clearTimeout(trailHideTimer)
-        trailHideTimer = undefined
-      }
+  // Only pushes the new target and makes sure the loop is running. It never
+  // cancels a running loop, so rapid target changes (trackpad scrolling)
+  // don't interrupt the animation.
+  $effect(() => {
+    const target = targetT
+    targetValue = target
+
+    // Snap on first run (no ease-in from 0 on load) and for reduced motion.
+    if (!initialized || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      initialized = true
+      currentT = target
+      t = target
+      return
+    }
+
+    if (!rafId) {
+      lastTime = performance.now()
+      rafId = requestAnimationFrame(tick)
     }
   })
+
+  // Stop the loop on unmount.
+  $effect(() => {
+    return () => {
+      if (rafId) cancelAnimationFrame(rafId)
+      rafId = 0
+    }
+  })
+
+  let letterSpacing = $derived(t * maxLetterSpacing)
+  let fontWeight = $derived(weightRegular + t * (weightBold - weightRegular))
+  let trailVisible = $derived(t > 0)
 
   function handlePointerEnter(event: PointerEvent) {
     // Touch browsers can synthesize mouse events after a tap without a
@@ -114,7 +142,6 @@
 
 <a
   class="brand inline-flex items-baseline text-white font-stix text-4xl no-underline leading-none whitespace-nowrap"
-  class:scroll-linked={scrollLinked}
   style="letter-spacing: {letterSpacing}px; font-weight: {fontWeight};"
   href="/"
   aria-label="Andrew Richter, home"
@@ -126,7 +153,7 @@
     aria-hidden="true">A<span class="mark-svg"><AMark /></span></span
   >
   {#if trailVisible}
-    <span class="trail" style="opacity: {t};" ontransitionend={handleTrailTransitionEnd}>
+    <span class="trail" style="opacity: {t};">
       <span class="trail-inner">
         ndrew
         <span
@@ -147,20 +174,6 @@
 >
 
 <style>
-  .brand {
-    transition:
-      letter-spacing 300ms ease,
-      font-weight 300ms ease;
-  }
-
-  .brand.scroll-linked {
-    transition: none;
-  }
-
-  .trail {
-    transition: opacity 150ms ease;
-  }
-
   .mark-svg {
     position: absolute;
     display: flex;
