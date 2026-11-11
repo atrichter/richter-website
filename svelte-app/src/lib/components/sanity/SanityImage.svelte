@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { reveal } from '$lib/actions/reveal'
   import type { SanityImage as SanityImageType } from '$lib/cms/types'
   import { urlFor } from '$lib/sanity'
 
@@ -18,5 +19,5 @@
 </script>
 
 {#if srcWithWidth}
-  <img src={srcWithWidth} {alt} class="h-auto w-full {className}" loading="lazy" decoding="async" />
+  <img use:reveal src={srcWithWidth} {alt} class="reveal h-auto w-full {className}" loading="lazy" decoding="async" />
 {/if}

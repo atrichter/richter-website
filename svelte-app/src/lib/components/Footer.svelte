@@ -1,8 +1,9 @@
 <script lang="ts">
   import Button from '$lib/components/ui/Button.svelte'
+  import { reveal } from '$lib/actions/reveal'
 </script>
 
-<footer class="container layout-grid mt-16 pt-16 pb-24 gap-y-16">
+<footer use:reveal class:reveal class="container layout-grid mt-16 pt-16 pb-24 gap-y-16">
   <div class="col-span-4 lg:col-span-4">
     <h2 class="footer-heading">Andrew Richter</h2>
     <p class="text-gray">Portland, OR</p>

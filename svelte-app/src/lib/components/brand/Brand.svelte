@@ -1,9 +1,9 @@
-
 <script lang="ts">
   import { page } from '$app/state'
   import AMark from './AMark.svelte'
   import RMark from './RMark.svelte'
   import { brandExpansion } from '$lib/state/brand-expansion.svelte'
+  import { INITIAL_REVEAL_DELAY_MS } from '$lib/actions/reveal'
   import { measureMaxLetterSpacing } from '$lib/utils'
 
   let { containerEl = null }: { containerEl?: HTMLElement | null } = $props()
@@ -23,9 +23,7 @@
   // While on home and the intro hasn't scrolled past yet, scroll owns the
   // target. Otherwise (docked, or any other page) hover/focus owns it.
   let scrollLinked = $derived(isHome && sentinelReady && !stuck)
-  let targetT = $derived(
-    scrollLinked ? brandExpansion.t : hovering || focused ? 1 : 0
-  )
+  let targetT = $derived(scrollLinked ? brandExpansion.t : hovering || focused ? 1 : 0)
 
   // `t` is the smoothed value rendered in the template. Everything the
   // animation loop touches lives in plain (non-reactive) variables.
@@ -35,9 +33,11 @@
   let rafId = 0
   let lastTime = 0
   let initialized = false
+  let initialExpandDelayPending = true
+  let initialExpandTimer: ReturnType<typeof setTimeout> | undefined
 
   // Exponential smoothing, frame-rate independent, higher is snappier.
-  const SMOOTHING = 25
+  const SMOOTHING = 12
 
   function tick(now: number) {
     const dt = Math.min((now - lastTime) / 1000, 0.1)
@@ -71,15 +71,31 @@
       return
     }
 
-    if (!rafId) {
+    if (target > currentT && initialExpandDelayPending) {
+      initialExpandDelayPending = false
+      if (scrollLinked && !hovering && !focused) {
+        initialExpandTimer = setTimeout(() => {
+          initialExpandTimer = undefined
+          if (!rafId) {
+            lastTime = performance.now()
+            rafId = requestAnimationFrame(tick)
+          }
+        }, INITIAL_REVEAL_DELAY_MS)
+        return
+      }
+    }
+
+    if (!rafId && !initialExpandTimer) {
       lastTime = performance.now()
       rafId = requestAnimationFrame(tick)
     }
   })
 
-  // Stop the loop on unmount.
+  // Stop pending work and the animation loop on unmount.
   $effect(() => {
     return () => {
+      if (initialExpandTimer) clearTimeout(initialExpandTimer)
+      initialExpandTimer = undefined
       if (rafId) cancelAnimationFrame(rafId)
       rafId = 0
     }

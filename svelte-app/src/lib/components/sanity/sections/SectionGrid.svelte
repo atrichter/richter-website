@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { reveal } from '$lib/actions/reveal'
   import type { SectionContent } from '$lib/cms/types'
   import { COMPONENT_CARD, COMPONENT_MEDIA, COMPONENT_TEXT } from '$lib/cms/types'
   import Card from '$lib/components/sanity/Card.svelte'
@@ -24,6 +25,8 @@
         <SanityImage image={item.image} alt={item.image.alt ?? ''} />
       {:else if item._type === COMPONENT_MEDIA && item.mediaType === 'video' && item.videoUrl}
         <iframe
+          use:reveal
+          class:reveal
           src={item.videoUrl}
           title="Video"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

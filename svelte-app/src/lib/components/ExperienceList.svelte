@@ -14,6 +14,7 @@
 
 <script lang="ts">
   import Button from '$lib/components/ui/Button.svelte'
+  import { reveal } from '$lib/actions/reveal'
 
   export let items: ListItem[] = []
 </script>
@@ -21,6 +22,8 @@
 <ul class="m-0 p-0">
   {#each items as item}
     <li
+      use:reveal
+      class:reveal
       class="layout-grid border-b-[0.5px] first:border-t-[0.5px] border-ink py-16 before:content-none sm:gap-4 lg:grid-cols-10"
     >
       <small class="m-0 col-start-3 col-span-2 row-start-1 text-right lg:col-span-1 lg:col-start-1 lg:text-left">
@@ -30,7 +33,9 @@
         <h3 class="m-0">{item.title}</h3>
         <h4 class="mt-1">{item.subtitle}</h4>
       </div>
-      <p class="row-start-3 m-0 col-span-4 lg:col-span-3 lg:col-start-6 lg:row-start-auto">{item.description}</p>
+      <p class="row-start-3 m-0 col-span-4 lg:col-span-3 lg:col-start-6 lg:row-start-auto">
+        {item.description}
+      </p>
       <div class="col-start-1 row-start-1 place-items-center self-start lg:col-start-10 lg:justify-self-end">
         <Button
           variant="outline"

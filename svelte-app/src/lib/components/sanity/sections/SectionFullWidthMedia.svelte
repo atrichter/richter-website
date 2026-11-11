@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { reveal } from '$lib/actions/reveal'
   import type { SectionFullWidthMedia as SectionFullWidthMediaType } from '$lib/cms/types'
   import SanityImage from '$lib/components/sanity/SanityImage.svelte'
 
@@ -17,6 +18,8 @@
     <SanityImage image={media.image} alt={media.image.alt ?? ''} />
   {:else if media?.mediaType === 'video' && media.videoUrl}
     <iframe
+      use:reveal
+      class:reveal
       src={media.videoUrl}
       title="Video"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

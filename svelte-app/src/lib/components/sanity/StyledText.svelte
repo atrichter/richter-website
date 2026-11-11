@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { reveal } from '$lib/actions/reveal'
   import type { StyledText as StyledTextType } from '$lib/cms/types'
 
   interface Props {
@@ -27,5 +28,5 @@
 </script>
 
 {#if text}
-  <svelte:element this={tag} class={className}>{text}</svelte:element>
+  <svelte:element this={tag} use:reveal class="reveal {className}">{text}</svelte:element>
 {/if}
