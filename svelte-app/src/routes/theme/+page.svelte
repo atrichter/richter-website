@@ -31,6 +31,7 @@
               {weightName}
               <sup class="relative -top-6 -ml-2 text-xs">{weightValue}</sup>
             </span>
+            <br class="sm:hidden" />
             <span
               class="italic capitalize inline-block whitespace-nowrap mr-4 text-3xl"
               style:font-family="{font.name}, {font.fallback}"
@@ -39,6 +40,7 @@
               {weightName} italic
               <sup class="relative -top-6 -ml-2 text-xs">{weightValue}</sup>
             </span>
+            <br class="sm:hidden" />
           {/each}
         </p>
       </div>
