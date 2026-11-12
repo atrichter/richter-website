@@ -37,7 +37,7 @@
   let initialExpandTimer: ReturnType<typeof setTimeout> | undefined
 
   // Exponential smoothing, frame-rate independent, higher is snappier.
-  const SMOOTHING = 12
+  const SMOOTHING = 20
 
   function tick(now: number) {
     const dt = Math.min((now - lastTime) / 1000, 0.1)

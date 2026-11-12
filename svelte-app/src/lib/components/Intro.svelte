@@ -48,9 +48,12 @@
     >
       <div class="pb-8 lg:p-0 mix-blend-difference tracking-wider">
         <h1 class="sr-only">Andrew Richter</h1>
-        <p use:reveal={INITIAL_REVEAL_DELAY_MS} class="reveal text-white leading-10 mt-0">
+        <p use:reveal={INITIAL_REVEAL_DELAY_MS} class:reveal class="text-white leading-10 mt-0">
           I'm a software engineer who bridges design and development to ship polished, scalable web applications across
           modern frontend and backend systems.
+        </p>
+        <p use:reveal={INITIAL_REVEAL_DELAY_MS} class:reveal class="text-white italic mb-0">
+          I'm currently looking for work!
         </p>
       </div>
     </div>
