@@ -1,5 +1,102 @@
 @import 'tailwindcss';
 
+/* Self-hosted Lato and STIX Two Text faces. */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url('/fonts/lato/LatoLatin-Thin.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 100;
+  font-display: swap;
+  src: url('/fonts/lato/LatoLatin-ThinItalic.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('/fonts/lato/LatoLatin-Light.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+  src: url('/fonts/lato/LatoLatin-LightItalic.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/lato/LatoLatin-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/lato/LatoLatin-Italic.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/lato/LatoLatin-Bold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/lato/LatoLatin-BoldItalic.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url('/fonts/lato/LatoLatin-Black.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 900;
+  font-display: swap;
+  src: url('/fonts/lato/LatoLatin-BlackItalic.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'STIX Two Text';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('/fonts/stix-two-text/STIXTwoText-Variable.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'STIX Two Text';
+  font-style: italic;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('/fonts/stix-two-text/STIXTwoText-Italic-Variable.woff2') format('woff2');
+}
+
 @theme {
   /* BREAKPOINTS */
 
@@ -159,6 +256,11 @@
     --nav-home-offset: calc(
       var(--intro-height) / 2 - var(--nav-height)
     ); /* minus nav height so nav sits at the bottom of the first row */
+    --reveal-blur: 5px;
+    --reveal-offset: var(--spacing-4);
+    --reveal-fade-duration: 500ms;
+    --reveal-move-duration: 500ms;
+    --reveal-easing: cubic-bezier(0.16, 1, 0.3, 1);
 
     @variant lg {
       --intro-grid-rows: 2fr 1fr;
@@ -287,6 +389,33 @@
     content: '⬝';
     position: absolute;
     left: calc(var(--spacing-3) * -1);
+  }
+}
+
+/* Shared one-time scroll reveal motion. The action adds .reveal after hydration,
+   so content remains visible when JavaScript is unavailable. */
+.js .reveal {
+  opacity: 0;
+  filter: blur(var(--reveal-blur));
+  transform: translateY(var(--reveal-offset));
+  transition:
+    opacity var(--reveal-fade-duration) ease-out,
+    filter var(--reveal-fade-duration) ease-out,
+    transform var(--reveal-move-duration) var(--reveal-easing);
+}
+
+.js .reveal.is-revealed {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .js .reveal {
+    opacity: 1;
+    filter: none;
+    transform: none;
+    transition: none;
   }
 }
 

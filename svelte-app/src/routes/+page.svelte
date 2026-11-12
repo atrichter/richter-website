@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { reveal } from '$lib/actions/reveal'
   import BlockLogo from '$lib/components/logos/BlockLogo.svelte'
   import SixDegreesLogo from '$lib/components/logos/SixDegreesLogo.svelte'
   import CernerLogo from '$lib/components/logos/CernerLogo.svelte'
@@ -62,8 +63,8 @@
 
   <section class="experience container layout-grid mt-24">
     <div class="col-span-4 lg:col-span-10 lg:col-start-2 mb-12">
-      <h2>My Experience</h2>
-      <p>
+      <h2 use:reveal class:reveal>My Experience</h2>
+      <p use:reveal class:reveal>
         See my <a href="/resume.pdf" target="_blank" rel="noreferrer">resume</a> for more information.
       </p>
     </div>

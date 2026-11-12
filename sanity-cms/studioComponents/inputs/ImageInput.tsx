@@ -141,11 +141,11 @@ export function ImageInput(props: ObjectInputProps<ImageValue>) {
   )
 
   return (
-    <Stack space={3}>
+    <Stack gap={3}>
       {props.renderDefault(props)}
       {assetRef && (
         <Card padding={3} radius={2} tone="transparent">
-          <Stack space={3}>
+          <Stack gap={3}>
             <Text size={1} weight="semibold">
               Asset metadata
             </Text>
@@ -154,7 +154,7 @@ export function ImageInput(props: ObjectInputProps<ImageValue>) {
                 Loading…
               </Text>
             ) : (
-              <Stack space={3}>
+              <Stack gap={3}>
                 {assetData?.originalFilename != null && assetData.originalFilename !== '' && (
                   <Box>
                     <Text size={0} weight="medium" style={{ marginBottom: 6 }} muted>

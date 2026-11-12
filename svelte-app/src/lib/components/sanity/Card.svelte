@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { reveal } from '$lib/actions/reveal'
   import type { CardData } from '$lib/cms/types'
   import SanityImage from '$lib/components/sanity/SanityImage.svelte'
   import StyledText from '$lib/components/sanity/StyledText.svelte'
@@ -27,10 +28,10 @@
       <StyledText block={card.subtitle} />
     {/if}
     {#if card.description}
-      <p>{card.description}</p>
+      <p use:reveal class:reveal>{card.description}</p>
     {/if}
     {#if hasLink}
-      <a href={linkHref!}>{linkText}</a>
+      <a use:reveal class:reveal href={linkHref!}>{linkText}</a>
     {/if}
   </div>
 </div>

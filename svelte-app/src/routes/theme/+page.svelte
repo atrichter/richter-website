@@ -1,5 +1,6 @@
 <script lang="ts">
   import ColorSwatch from '$lib/components/ColorSwatch.svelte'
+  import { reveal } from '$lib/actions/reveal'
   import Button from '$lib/components/ui/Button.svelte'
   import { themeColors, themeFonts } from '$lib/theme'
 </script>
@@ -9,12 +10,12 @@
 </svelte:head>
 
 <main class="theme-page">
-  <header class="container">
+  <header use:reveal class:reveal class="container">
     <h1>Theme</h1>
     <p>Showcase of text, colors, and components.</p>
   </header>
 
-  <section class="typography container layout-grid">
+  <section use:reveal class:reveal class="typography container layout-grid">
     <h2 class="col-span-4 lg:col-span-12">Typography</h2>
 
     {#each Object.entries(themeFonts) as [, font]}
@@ -30,6 +31,7 @@
               {weightName}
               <sup class="relative -top-6 -ml-2 text-xs">{weightValue}</sup>
             </span>
+            <br class="sm:hidden" />
             <span
               class="italic capitalize inline-block whitespace-nowrap mr-4 text-3xl"
               style:font-family="{font.name}, {font.fallback}"
@@ -38,6 +40,7 @@
               {weightName} italic
               <sup class="relative -top-6 -ml-2 text-xs">{weightValue}</sup>
             </span>
+            <br class="sm:hidden" />
           {/each}
         </p>
       </div>
@@ -76,7 +79,7 @@
     </div>
   </section>
 
-  <section class="colors container layout-grid">
+  <section use:reveal class:reveal class="colors container layout-grid">
     <div class="col-span-4 lg:col-span-12 mb-8">
       <h2>Color Palette</h2>
       <p>Pairs of inverse colors.</p>
@@ -88,7 +91,7 @@
     </div>
   </section>
 
-  <section class="buttons container layout-grid">
+  <section use:reveal class:reveal class="buttons container layout-grid">
     <div class="col-span-4 lg:col-span-12">
       <h2>Buttons</h2>
       <p>Variants, sizes, icons, and states.</p>

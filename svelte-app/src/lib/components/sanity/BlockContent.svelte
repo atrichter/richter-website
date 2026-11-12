@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { reveal } from '$lib/actions/reveal'
   import type { BlockContentItem, PortableTextBlock, PortableTextSpan, BlockContentImage } from '$lib/cms/types'
   import SanityImageComponent from '$lib/components/sanity/SanityImage.svelte'
 
@@ -129,7 +130,7 @@
 </script>
 
 {#snippet renderList(items: ListItemNode[], listItem: NonNullable<PortableTextBlock['listItem']>)}
-  <svelte:element this={listTag(listItem)} data-block>
+  <svelte:element this={listTag(listItem)} use:reveal class:reveal data-block>
     {#each items as item, itemIndex (listItemKey(item, itemIndex))}
       {@const html = blockHtml(item.block)}
       <li>
@@ -149,7 +150,7 @@
         {@const tag = blockTag(segment.block.style)}
         {@const html = blockHtml(segment.block)}
         {#if html}
-          <svelte:element this={tag} data-block>{@html html}</svelte:element>
+          <svelte:element this={tag} use:reveal class:reveal data-block>{@html html}</svelte:element>
         {/if}
       {:else if segment.kind === 'list'}
         {@render renderList(buildListTree(segment.items), segment.listItem)}
