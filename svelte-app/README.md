@@ -8,6 +8,7 @@ The live site: [andrewtrichter.com](https://www.andrewtrichter.com/). SvelteKit 
 - **`src/lib/cms/`** — `queries.ts` (GROQ queries) and `types.ts` (matching TypeScript types). Keep these in sync with the schema in `sanity-cms/schemaTypes/`.
 - **`src/lib/components/sanity/`** — components that render Sanity content: `StyledText` (single text + style), `BlockContent` (rich text — headings, paragraphs, links, images), `SanityImage` (responsive images), `Card`, `PageBuilder`, and section renderers under `sections/`.
 - **`src/lib/components/ui/`** — plain reusable UI primitives (e.g. `Button`).
+- **`src/lib/assets/images/`** — local image assets. Use Svelte's `enhanced:img` for local raster images displayed on pages; Vite generates responsive AVIF/WebP variants at build time. Sanity-hosted images use the Sanity CDN through `SanityImage`.
 - **`src/lib/theme.ts`** — brand fonts (STIX Two Text, Lato) and the named color palette. Prefer these tokens over raw hex values.
 - **`src/lib/sanity.ts`** — the Sanity client + image URL builder.
 
