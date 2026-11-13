@@ -1,7 +1,7 @@
 export const INITIAL_REVEAL_DELAY_MS = 100
 const REVEAL_STAGGER_MS = 100
 const REVEAL_BOTTOM_INSET_PX = 32
-const REVEAL_INTERSECTION_THRESHOLD = 0
+const REVEAL_INTERSECTION_THRESHOLD = 0.05
 
 type RevealQueueEntry = { element: HTMLElement; readyAt: number }
 
