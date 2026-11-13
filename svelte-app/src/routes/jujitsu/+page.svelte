@@ -266,10 +266,10 @@
 <main>
   <header use:reveal class:reveal class="container layout-grid py-16">
     <div class="col-span-4 lg:col-span-10 lg:col-start-2">
-      <h1>Truman State University Ultimate</h1>
+      <h1>Truman State Ultimate</h1>
       <p>
-        I joined JujiTSU men's club ultimate frisbee team in 2016 and served as captain, PR, photographer, and designer
-        for the team.
+        I joined JujiTSU college men's club ultimate frisbee team in 2016 and served as captain, PR, photographer, and
+        designer.
       </p>
       <p>
         Photo albums are linked on this page, original files for logos, posters, and more can be found <a
