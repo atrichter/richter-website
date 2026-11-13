@@ -264,7 +264,7 @@
 </svelte:head>
 
 <main>
-  <header use:reveal class:reveal class="container layout-grid py-16">
+  <header use:reveal class:reveal class="container layout-grid">
     <div class="col-span-4 lg:col-span-10 lg:col-start-2">
       <h1>Truman State Ultimate</h1>
       <p>
@@ -281,63 +281,61 @@
     </div>
   </header>
 
-  <div class="container pb-24">
-    <section class="layout-grid" aria-label="Tournament photos">
-      <div class="col-span-4 layout-grid lg:col-span-10 lg:col-start-2 lg:grid-cols-10">
-        {#each seasons as season}
-          <div use:reveal class:reveal class="col-span-4 layout-grid mb-16 lg:col-span-10 lg:grid-cols-10">
-            <h2 id="season-{season.year}" class="col-span-4 mb-6 lg:col-span-10">
-              {season.year}
-            </h2>
-            {#each season.tournaments as tournament}
-              <div class="col-span-2 min-w-0 pb-6 sm:col-span-1 lg:col-span-2">
-                <a
-                  class="group block overflow-hidden rounded-xl bg-muted"
-                  href={assetUrl(tournament.gallery)}
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label="View {tournament.title} photos"
-                >
-                  <enhanced:img
-                    class="aspect-square w-full object-cover transition-transform duration-300 group-hover:scale-[1.05]"
-                    sizes="(min-width: 64rem) 17vw, (min-width: 32rem) 25vw, 50vw"
-                    src={images[`/src/lib/assets/images/jujitsu/${tournament.image}`].default}
-                    alt={tournament.title}
-                    loading="lazy"
-                  />
+  <section class="container layout-grid" aria-label="Tournament photos">
+    <div class="col-span-4 layout-grid lg:col-span-10 lg:col-start-2 lg:grid-cols-10">
+      {#each seasons as season}
+        <div use:reveal class:reveal class="col-span-4 layout-grid lg:col-span-10 lg:grid-cols-10">
+          <h2 id="season-{season.year}" class="mt-20 col-span-4 lg:col-span-10">
+            {season.year}
+          </h2>
+          {#each season.tournaments as tournament}
+            <div class="col-span-2 min-w-0 pb-5 sm:col-span-1 lg:col-span-2">
+              <a
+                class="group block overflow-hidden rounded-xl bg-muted"
+                href={assetUrl(tournament.gallery)}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="View {tournament.title} photos"
+              >
+                <enhanced:img
+                  class="aspect-square w-full object-cover transition-transform duration-300 group-hover:scale-[1.05]"
+                  sizes="(min-width: 64rem) 17vw, (min-width: 32rem) 25vw, 50vw"
+                  src={images[`/src/lib/assets/images/jujitsu/${tournament.image}`].default}
+                  alt={tournament.title}
+                  loading="lazy"
+                />
+              </a>
+              <h3 class="mt-3 mb-0">
+                <a class="text-ink font-bold" href={assetUrl(tournament.gallery)} target="_blank" rel="noreferrer">
+                  {tournament.title}
                 </a>
-                <h3 class="mt-3 mb-0">
-                  <a class="text-ink font-bold" href={assetUrl(tournament.gallery)} target="_blank" rel="noreferrer">
-                    {tournament.title}
+              </h3>
+              <small>
+                {#if tournament.placement && tournament.placementUrl}
+                  <a class="text-gray" href={assetUrl(tournament.placementUrl)} target="_blank" rel="noreferrer">
+                    {tournament.placement}
                   </a>
-                </h3>
-                <small>
-                  {#if tournament.placement && tournament.placementUrl}
-                    <a class="text-gray" href={assetUrl(tournament.placementUrl)} target="_blank" rel="noreferrer">
-                      {tournament.placement}
-                    </a>
-                    <span aria-hidden="true"> | </span>
-                  {/if}
-                  {tournament.items}
-                  {tournament.items === 1 ? 'item' : 'items'}
-                </small>
-              </div>
-            {/each}
-          </div>
-        {/each}
-      </div>
-    </section>
-
-    <section use:reveal class:reveal class="layout-grid pt-12" aria-labelledby="videos-heading">
-      <div class="col-span-4 lg:col-span-10 lg:col-start-2">
-        <h2 id="videos-heading" class="mb-2">Videos</h2>
-        <p class="mb-6">Video credit to the publishing channels.</p>
-        <ul>
-          {#each videos as video}
-            <li><a href={video.url} target="_blank" rel="noreferrer">{video.title}</a></li>
+                  <span aria-hidden="true"> | </span>
+                {/if}
+                {tournament.items}
+                {tournament.items === 1 ? 'item' : 'items'}
+              </small>
+            </div>
           {/each}
-        </ul>
-      </div>
-    </section>
-  </div>
+        </div>
+      {/each}
+    </div>
+  </section>
+
+  <section use:reveal class:reveal class="container layout-grid" aria-labelledby="videos-heading">
+    <div class="col-span-4 lg:col-span-10 lg:col-start-2">
+      <h2 id="videos-heading" class="mt-20">Videos</h2>
+      <p>Video credit to the publishing channels.</p>
+      <ul>
+        {#each videos as video}
+          <li><a href={video.url} target="_blank" rel="noreferrer">{video.title}</a></li>
+        {/each}
+      </ul>
+    </div>
+  </section>
 </main>
