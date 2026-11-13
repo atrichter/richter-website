@@ -1,5 +1,7 @@
 <script lang="ts">
   import { reveal } from '$lib/actions/reveal'
+  import glassCaseUrl from '$lib/assets/images/jujitsu/glassCase.gif?url'
+  import teamRankingsUrl from '$lib/assets/images/jujitsu/usaUltimate-teamRankings-dIII-2020.pdf?url'
 
   type Tournament = {
     title: string
@@ -12,13 +14,17 @@
 
   type Season = { year: string; tournaments: Tournament[] }
 
-  const images = import.meta.glob('/src/lib/assets/images/jujitsu/*', {
+  const images = import.meta.glob('/src/lib/assets/images/jujitsu/*.jpg', {
     eager: true,
-    query: '?url',
-    import: 'default',
-  }) as Record<string, string>
+    query: { enhanced: true, imgWidth: '768' },
+  }) as Record<string, { default: string }>
 
-  const assetUrl = (path: string) => (path.startsWith('http') ? path : images[`/src/lib/assets/images/jujitsu/${path}`])
+  const linkedAssets: Record<string, string> = {
+    'glassCase.gif': glassCaseUrl,
+    'usaUltimate-teamRankings-dIII-2020.pdf': teamRankingsUrl,
+  }
+  const assetUrl = (path: string) =>
+    path.startsWith('http') ? path : (linkedAssets[path] ?? images[`/src/lib/assets/images/jujitsu/${path}`])
 
   const seasons: Season[] = [
     {
@@ -51,7 +57,12 @@
           placementUrl: 'https://play.usaultimate.org/events/Windy-City-Invite2/',
           items: 311,
         },
-        { title: 'MLC', image: 'mlc-2019.jpg', gallery: 'https://photos.app.goo.gl/2ZXYRZkbdFL7cd316', items: 200 },
+        {
+          title: 'MLC',
+          image: 'mlc-2019.jpg',
+          gallery: 'https://photos.app.goo.gl/2ZXYRZkbdFL7cd316',
+          items: 200,
+        },
         {
           title: 'TUB',
           image: 'tub-2019.jpg',
@@ -103,7 +114,12 @@
           placementUrl: 'https://play.usaultimate.org/events/Glory-Days-2018/',
           items: 369,
         },
-        { title: 'MLC', image: 'mlc-2018.jpg', gallery: 'https://photos.app.goo.gl/MhZ1VfKYPSFvCPRY6', items: 104 },
+        {
+          title: 'MLC',
+          image: 'mlc-2018.jpg',
+          gallery: 'https://photos.app.goo.gl/MhZ1VfKYPSFvCPRY6',
+          items: 104,
+        },
         {
           title: 'TUB',
           image: 'tub-2018.jpg',
@@ -173,7 +189,12 @@
           gallery: 'https://photos.app.goo.gl/ebgN5rVCBxmJA5mv8',
           items: 187,
         },
-        { title: 'MLC', image: 'mlc-2017.jpg', gallery: 'https://photos.app.goo.gl/p2Vpj9BUF7h1j1MK9', items: 330 },
+        {
+          title: 'MLC',
+          image: 'mlc-2017.jpg',
+          gallery: 'https://photos.app.goo.gl/p2Vpj9BUF7h1j1MK9',
+          items: 330,
+        },
         {
           title: 'Harvest',
           image: 'harvest-2017.jpg',
@@ -277,9 +298,10 @@
                   rel="noreferrer"
                   aria-label="View {tournament.title} photos"
                 >
-                  <img
+                  <enhanced:img
                     class="aspect-square w-full object-cover transition-transform duration-300 group-hover:scale-[1.05]"
-                    src={images[`/src/lib/assets/images/jujitsu/${tournament.image}`]}
+                    sizes="(min-width: 64rem) 17vw, (min-width: 32rem) 25vw, 50vw"
+                    src={images[`/src/lib/assets/images/jujitsu/${tournament.image}`].default}
                     alt={tournament.title}
                     loading="lazy"
                   />
