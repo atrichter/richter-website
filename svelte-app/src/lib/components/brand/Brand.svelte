@@ -178,7 +178,7 @@
     const container = containerEl
     const el = measureEl
 
-    document.fonts?.ready?.then(() => {
+    document.fonts?.load?.(`${weightBold} 1em "STIX Two Text"`, el?.textContent ?? 'Andrew Richter').then(() => {
       if (active && container && el) {
         maxLetterSpacing = measureMaxLetterSpacing(container, el)
       }
